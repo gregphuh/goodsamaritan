@@ -38,37 +38,40 @@ export default async function Home({
       <Section surface="inverse" density="spacious">
         <Container width="wide">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start md:items-center">
-            {/* Brand identity — cross + motto + verse, anchored left */}
+            {/* Brand identity — cross + motto + verse, anchored left.
+                Cross draws in on page load (animated prop); motto fades
+                in after the cross finishes drawing. */}
             <div className="md:col-span-5 flex md:block flex-col items-center md:items-start text-center md:text-left">
               <BrandCross
-                size={160}
-                strokeWidth={1.5}
-                className="text-ink-inverse/80"
+                size={200}
+                strokeWidth={5.5}
+                animated
+                className="text-ink-inverse/85"
               />
-              <p className="mt-8 font-display italic text-h2 text-accent leading-tight max-w-[16ch] mx-auto md:mx-0">
-                &ldquo;{tSite("motto")}&rdquo;
+              <p className="motto-fade-in mt-6 font-cursive text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] text-accent leading-[1.1] max-w-[14ch] mx-auto md:mx-0">
+                {tSite("motto")}
               </p>
-              <p className="mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider">
+              <p className="motto-fade-in mt-3 text-body-sm text-ink-inverse/70 uppercase tracking-wider font-semibold">
                 {tSite("mottoReference")}
               </p>
             </div>
 
             {/* Message — eyebrow + headline + subhead + CTAs */}
-            <div className="md:col-span-7 max-w-[44ch]">
-              <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-caption font-semibold uppercase tracking-wider">
+            <div className="md:col-span-7">
+              <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-body-sm font-semibold uppercase tracking-wider">
                 <span className="inline-flex items-center gap-2">
-                  <RomaniaFlag height={18} title="Flag of Romania" />
+                  <RomaniaFlag height={20} title="Flag of Romania" />
                   <span className="text-accent">{tHero("eyebrowLocale")}</span>
                 </span>
                 <span aria-hidden="true" className="text-ink-inverse/40">·</span>
                 <span className="text-ink-inverse/70">{tHero("eyebrowFaith")} since 1994</span>
               </div>
-              <Heading as="h1" size="display" className="text-ink-inverse">
+              <h1 className="font-display font-medium text-[2.25rem] md:text-[2.75rem] lg:text-[3.5rem] leading-[1.1] tracking-tight text-ink-inverse text-balance">
                 {tHero("headline")}
-              </Heading>
-              <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
+              </h1>
+              <p className="mt-6 text-[1.125rem] md:text-[1.375rem] leading-[1.5] text-ink-inverse/90 max-w-[58ch]">
                 {tHero("subhead")}
-              </Text>
+              </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <LinkButton href="/donate" variant="primary" size="lg">
                   {tCta("giveMonthly")}

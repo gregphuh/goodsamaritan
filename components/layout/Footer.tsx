@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { NAV_ITEMS } from "@/lib/nav";
+import { FOOTER_NAV_ITEMS } from "@/lib/nav";
 import { Container } from "@/components/primitives/Container";
 import { BrandBible } from "@/components/brand/BrandBible";
 import { BrandCross } from "@/components/brand/BrandCross";
@@ -53,7 +53,7 @@ export async function Footer() {
           <nav aria-label="Footer">
             <p className="text-caption uppercase text-ink-inverse/60 mb-3">Pages</p>
             <ul className="space-y-2">
-              {NAV_ITEMS.map((item) => (
+              {FOOTER_NAV_ITEMS.map((item) => (
                 <li key={item.key}>
                   <Link
                     href={item.href}

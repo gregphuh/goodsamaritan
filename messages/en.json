@@ -9,7 +9,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "stories": "Stories",
+    "annualReports": "Annual reports",
     "missionTrips": "Mission trips",
     "volunteer": "Volunteer",
     "contact": "Contact",
@@ -44,7 +44,7 @@
       "eyebrowSince": "Serving since 1994",
       "eyebrowFaith": "A Christian 501(c)(3)",
       "headline": "Walking with Romanian families since 1994.",
-      "subhead": "In 2024 we sent nearly $100,000 to named families for groceries, medicine, firewood, and home repair. Ninety-eight cents of every dollar reached the field."
+      "subhead": "To fulfill the Gospel, our goal is to annually send over $100,000 to named families for groceries, medicine, firewood, and home repair."
     },
     "trustBand": {
       "label": "Three things to know about us",
@@ -205,7 +205,7 @@
     },
     "team": {
       "heading": "Our team",
-      "lead": "Every member of our team is a volunteer. No one on this board is compensated.",
+      "lead": "Every member of our team is a volunteer. No one is compensated.",
       "body": "We take our convictions and turn them into action. Every board member volunteers their time and effort for planning and implementing projects. Travel to Romania is paid out of our own pockets. None of your gift ever pays a salary, and nothing ever has. That has been true since 1994 and we have not seen a reason to change it."
     },
     "history": {

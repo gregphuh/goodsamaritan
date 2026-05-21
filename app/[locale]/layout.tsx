@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { Sacramento, Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
 import { DonateBar } from "@/components/layout/DonateBar";
 import { Footer } from "@/components/layout/Footer";
@@ -21,6 +21,13 @@ const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
   subsets: ["latin", "latin-ext"],
   weight: ["400", "600"],
+  display: "swap",
+});
+
+const sacramento = Sacramento({
+  variable: "--font-sacramento",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -75,7 +82,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sourceSerif.variable} ${sourceSans.variable} h-full`}
+      className={`${sourceSerif.variable} ${sourceSans.variable} ${sacramento.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-surface text-ink pb-[5rem] md:pb-0">
         <a

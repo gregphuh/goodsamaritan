@@ -10,7 +10,7 @@
     "home": "Acasă",
     "about": "Despre noi",
     "projects": "Proiecte",
-    "stories": "Mărturii",
+    "annualReports": "Rapoarte anuale",
     "missionTrips": "Misiuni",
     "volunteer": "Voluntariat",
     "contact": "Contact",
@@ -45,7 +45,7 @@
       "eyebrowSince": "Slujind din 1994",
       "eyebrowFaith": "Organizație creștină 501(c)(3)",
       "headline": "Alături de familiile din România din 1994.",
-      "subhead": "În 2024 am trimis aproape 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case. Nouăzeci și opt de cenți din fiecare dolar au ajuns pe teren."
+      "subhead": "Pentru a împlini Evanghelia, scopul nostru este să trimitem anual peste 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case."
     },
     "trustBand": {
       "label": "Trei lucruri de știut despre noi",
@@ -206,7 +206,7 @@
     },
     "team": {
       "heading": "Echipa noastră",
-      "lead": "Fiecare membru al echipei este voluntar. Nimeni din consiliu nu este remunerat.",
+      "lead": "Fiecare membru al echipei este voluntar. Nimeni nu este remunerat.",
       "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm."
     },
     "history": {
