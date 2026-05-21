@@ -133,8 +133,8 @@ The cost of not solving this: the org's primary growth lever — recurring US do
 
 **Technical**
 
-- Next.js 15 App Router, Tailwind with custom tokens (no default blue/gray surfaced).
-- next-intl with EN (default) + RO routing (`/ro/...` prefix).
+- Next.js 16 App Router (latest stable as of scaffold), React 19, Tailwind v4 with `@theme inline` tokens in CSS (no JS config file; default Tailwind colors banned in components).
+- next-intl 4.x with EN (default) + RO routing (`/ro/...` prefix).
 - MDX in `/content/{projects,stories}`, Zod-validated frontmatter.
 - Givebutter embed on `/donate`, recurring giving enabled.
 - Buttondown API for newsletter capture.
@@ -229,8 +229,8 @@ RO content parity is a parallel track that may lag launch by ~2 weeks if transla
 
 ## Architectural Decisions (no re-litigation)
 
-1. **Next.js 15 App Router on Vercel.** Stable features only, no canary.
-2. **Tailwind + custom tokens.** No CSS-in-JS. Raw Tailwind color names (`bg-blue-500`) forbidden in components — must reference token names.
+1. **Next.js 16 App Router on Vercel.** Stable features only, no canary. (Originally specced as Next 15; bumped to 16 at scaffold time — 16 was current stable.)
+2. **Tailwind v4 + CSS-defined tokens.** Token values live in `app/globals.css` under `@theme inline`. No JS Tailwind config. Raw Tailwind color names (`bg-blue-500`) forbidden in components — must reference token names.
 3. **MDX in `/content/{projects,stories}`** with Zod-validated frontmatter.
 4. **next-intl, `/` (EN) + `/ro` routing.** No subdomain split.
 5. **Givebutter for donations.** Embedded form; org keeps Zelle + PayPal + mailing as alternates.
