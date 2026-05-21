@@ -1,0 +1,38 @@
+{
+  "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. See docs/spec.md Q2.",
+  "Site": {
+    "name": "Good Samaritan International",
+    "tagline": "Alături de familiile din România din 1994"
+  },
+  "Nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "projects": "Proiecte",
+    "stories": "Mărturii",
+    "missionTrips": "Misiuni",
+    "volunteer": "Voluntariat",
+    "contact": "Contact",
+    "donate": "Donează"
+  },
+  "CTA": {
+    "giveMonthly": "Donează lunar",
+    "giveOnce": "Donează o dată",
+    "readReport": "Citește raportul 2024",
+    "skipToContent": "Sari la conținut"
+  },
+  "Footer": {
+    "ein": "EIN 38-3401779",
+    "status501c3": "Organizație caritabilă 501(c)(3)",
+    "address": "2060 Curtis Rd, Addison Twp, MI 48307",
+    "tagline": "Donațiile sunt deductibile fiscal în SUA"
+  },
+  "LanguageSwitcher": {
+    "label": "Limbă",
+    "en": "English",
+    "ro": "Română"
+  },
+  "Preview": {
+    "label": "Good Samaritan International · Sistem de design v1",
+    "subhead": "Aceasta este o previzualizare a tokenelor și componentelor de bază — nu este încă pagina principală. Eroul real apare în Faza 2."
+  }
+}

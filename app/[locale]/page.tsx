@@ -1,3 +1,4 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button, LinkButton } from "@/components/primitives/Button";
 import { Card } from "@/components/primitives/Card";
 import { Container } from "@/components/primitives/Container";
@@ -9,23 +10,32 @@ import { Text } from "@/components/primitives/Text";
 
 /**
  * Phase 1 preview — design-system showcase. Replaced in Phase 2 by the real
- * home page. Lives at `/` so the team can sanity-check tokens visually.
+ * home page. Lives at `/` (and `/ro`) so the team can sanity-check tokens
+ * visually and verify both locales render.
  */
-export default function DesignSystemPreview() {
+export default async function DesignSystemPreview({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("Preview");
+  const tSite = await getTranslations("Site");
+
   return (
     <main id="main" className="flex flex-col">
       {/* Header band — brand surface */}
       <Section surface="inverse" density="spacious">
         <Container width="standard">
           <Text size="caption" tone="accent" className="mb-4">
-            Good Samaritan International · Design system v1
+            {t("label")}
           </Text>
           <Heading as="h1" size="display" className="text-ink-inverse max-w-[20ch]">
-            Walking with Romanian families since 1994.
+            {tSite("tagline")}.
           </Heading>
           <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
-            This is a token-and-primitives preview, not the home page yet. The real
-            hero arrives in Phase 2.
+            {t("subhead")}
           </Text>
           <div className="mt-10 flex flex-wrap gap-4">
             <LinkButton href="#" variant="primary" size="lg">Give monthly</LinkButton>

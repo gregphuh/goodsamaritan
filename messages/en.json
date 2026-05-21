@@ -1,0 +1,37 @@
+{
+  "Site": {
+    "name": "Good Samaritan International",
+    "tagline": "Walking with Romanian families since 1994"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "stories": "Stories",
+    "missionTrips": "Mission trips",
+    "volunteer": "Volunteer",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "CTA": {
+    "giveMonthly": "Give monthly",
+    "giveOnce": "Give once",
+    "readReport": "Read the 2024 report",
+    "skipToContent": "Skip to content"
+  },
+  "Footer": {
+    "ein": "EIN 38-3401779",
+    "status501c3": "501(c)(3) charitable organization",
+    "address": "2060 Curtis Rd, Addison Twp, MI 48307",
+    "tagline": "All donations tax-deductible"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "ro": "Română"
+  },
+  "Preview": {
+    "label": "Good Samaritan International · Design system v1",
+    "subhead": "This is a token-and-primitives preview, not the home page yet. The real hero arrives in Phase 2."
+  }
+}
