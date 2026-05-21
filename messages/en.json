@@ -128,6 +128,50 @@
     },
     "receiptBody": "Thank you. Your gift reaches a named Romanian family this week. We are grateful for you."
   },
+  "About": {
+    "hero": {
+      "eyebrow": "About the organization",
+      "headline": "Founded in 1994. Still walking with the same families.",
+      "subhead": "Good Samaritan International began the year Nistor and Floare Forgaciu started taking groceries and firewood to widows and elderly neighbors in their corner of Romania. Thirty years later, the relationships are still by name."
+    },
+    "founders": {
+      "heading": "The Forgaciu family",
+      "body": "Nistor and Floare Forgaciu founded the organization in 1994 with one conviction: that following Jesus meant remembering the poor. They started small, in their own region. The work has grown, but the way it works has not changed. The board still visits each named family in person, pays for their own travel, and prays with each family before any aid is delivered."
+    },
+    "mission": {
+      "heading": "Our mission",
+      "body": "To help and serve widows, orphans, families, and local church communities by the grace of God with a humble and obedient heart."
+    },
+    "faith": {
+      "heading": "What we believe",
+      "body": "We are a Christian 501(c)(3). Our work is rooted in the call of the apostles to remember the poor (Galatians 2:10). We partner with local churches in every region we serve. The families we walk with are not projects to be completed but neighbors to be loved."
+    },
+    "where": {
+      "heading": "Where we serve",
+      "body": "Romania carries 76% of 2024 aid, with the United States at 16%, the United Kingdom at 5%, and Africa at 3%. Past years have reached Moldova, Canada, Spain, Uganda, Haiti, Rwanda, and Greece."
+    },
+    "funds": {
+      "heading": "Where your dollar goes",
+      "body": "From the 2024 annual report.",
+      "needyLabel": "Needy families",
+      "missionLabel": "Missionary support",
+      "housingLabel": "Housing repair and purchase",
+      "aidLabel": "Aid delivery",
+      "schoolLabel": "Scholarships",
+      "adminLabel": "Administration"
+    },
+    "accountability": {
+      "heading": "Accountability",
+      "body": "Every board member is a volunteer. Every trip to Romania is paid out of pocket. The 2024 annual report names families, villages, and project categories so every dollar is traceable.",
+      "reportLink": "Read the 2024 annual report (PDF)",
+      "irsLink": "Verify our 501(c)(3) status with the IRS",
+      "einLine": "IRS EIN 38-3401779"
+    },
+    "contact": {
+      "heading": "Get in touch",
+      "body": "Email gsworldoutreach@gmail.com or write to 2060 Curtis Rd, Addison Twp, MI 48307."
+    }
+  },
   "Preview": {
     "label": "Good Samaritan International · Design system v1",
     "subhead": "This is a token-and-primitives preview, not the home page yet. The real hero arrives in Phase 2."

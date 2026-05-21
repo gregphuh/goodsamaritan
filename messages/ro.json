@@ -129,6 +129,50 @@
     },
     "receiptBody": "Mulțumim. Donația ta ajunge săptămâna aceasta la o familie din România, cunoscută după nume. Suntem recunoscători pentru tine."
   },
+  "About": {
+    "hero": {
+      "eyebrow": "Despre organizație",
+      "headline": "Fondată în 1994. Încă mergem alături de aceleași familii.",
+      "subhead": "Good Samaritan International a început în anul în care Nistor și Floare Forgaciu au început să ducă alimente și lemne de foc văduvelor și bătrânilor din colțul lor de România. Treizeci de ani mai târziu, relațiile sunt încă pe nume."
+    },
+    "founders": {
+      "heading": "Familia Forgaciu",
+      "body": "Nistor și Floare Forgaciu au fondat organizația în 1994 cu o singură convingere: că a-L urma pe Isus înseamnă a-i aminti pe cei săraci. Au început modest, în regiunea lor. Lucrarea a crescut, dar felul în care funcționează nu s-a schimbat. Consiliul încă vizitează personal fiecare familie pe nume, își plătește singur călătoria și se roagă cu fiecare familie înainte de a livra orice ajutor."
+    },
+    "mission": {
+      "heading": "Misiunea noastră",
+      "body": "Să ajutăm și să slujim văduvelor, orfanilor, familiilor și comunităților bisericești locale prin harul lui Dumnezeu, cu o inimă umilă și ascultătoare."
+    },
+    "faith": {
+      "heading": "Ce credem",
+      "body": "Suntem o organizație creștină 501(c)(3). Lucrarea noastră este înrădăcinată în chemarea apostolilor de a-i aminti pe cei săraci (Galateni 2:10). Colaborăm cu bisericile locale în fiecare regiune în care slujim. Familiile alături de care mergem nu sunt proiecte de finalizat, ci aproapele de iubit."
+    },
+    "where": {
+      "heading": "Unde slujim",
+      "body": "România reprezintă 76% din ajutorul oferit în 2024, cu Statele Unite la 16%, Marea Britanie la 5% și Africa la 3%. Anii anteriori au ajuns în Moldova, Canada, Spania, Uganda, Haiti, Rwanda și Grecia."
+    },
+    "funds": {
+      "heading": "Unde ajunge dolarul tău",
+      "body": "Din raportul anual 2024.",
+      "needyLabel": "Familii în nevoie",
+      "missionLabel": "Susținere misionari",
+      "housingLabel": "Reparații și achiziții de locuințe",
+      "aidLabel": "Distribuirea ajutorului",
+      "schoolLabel": "Burse",
+      "adminLabel": "Administrație"
+    },
+    "accountability": {
+      "heading": "Responsabilitate",
+      "body": "Fiecare membru al consiliului este voluntar. Fiecare călătorie în România este plătită din buzunar. Raportul anual 2024 numește familii, sate și categorii de proiecte, astfel încât fiecare dolar este urmăribil.",
+      "reportLink": "Citește raportul anual 2024 (PDF)",
+      "irsLink": "Verifică statutul nostru 501(c)(3) la IRS",
+      "einLine": "IRS EIN 38-3401779"
+    },
+    "contact": {
+      "heading": "Contactează-ne",
+      "body": "Scrie la gsworldoutreach@gmail.com sau la 2060 Curtis Rd, Addison Twp, MI 48307."
+    }
+  },
   "Preview": {
     "label": "Good Samaritan International · Sistem de design v1",
     "subhead": "Aceasta este o previzualizare a tokenelor și componentelor de bază, nu este încă pagina principală. Eroul real apare în Faza 2."
