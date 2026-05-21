@@ -79,7 +79,7 @@ export function NewsletterForm() {
         {state === "submitting" ? "Sending…" : t("submit")}
       </button>
       {state === "error" && errorMsg ? (
-        <p id="newsletter-error" className="text-body-sm text-danger sm:basis-full">
+        <p id="newsletter-error" className="text-body-sm text-danger-bright sm:basis-full" role="alert">
           {errorMsg}
         </p>
       ) : null}

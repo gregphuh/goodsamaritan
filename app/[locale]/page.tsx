@@ -59,9 +59,9 @@ export default async function Home({
       {/* ──────────────────────────── Trust band */}
       <Section surface="sunken" density="default">
         <Container width="wide">
-          <Text size="caption" className="mb-10 text-ink-muted">
+          <h2 className="mb-10 text-caption text-ink-muted font-body font-semibold uppercase tracking-wider">
             {tTrust("label")}
-          </Text>
+          </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
             <ImpactStat
               value={tTrust("stat1Value")}
@@ -133,11 +133,11 @@ export default async function Home({
       {/* ──────────────────────────── Story preview */}
       <Section surface="sunken" density="default">
         <Container width="content">
-          <Text size="caption" className="mb-6 text-ink-muted">
+          <h2 className="mb-6 text-caption text-ink-muted font-body font-semibold uppercase tracking-wider">
             {tStory("heading")}
-          </Text>
+          </h2>
           <article className="bg-surface-raised border border-rule rounded-md p-8 md:p-10">
-            <Heading as="h2" size="h2">
+            <Heading as="h3" size="h2">
               {tStory("title")}
             </Heading>
             <Text size="body-lg" tone="soft" className="mt-6">

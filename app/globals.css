@@ -95,7 +95,8 @@
   /* Semantic states */
   --color-success: #2f7a4b;
   --color-warning: #b88a1f;
-  --color-danger:  #b03a3a;
+  --color-danger:  #b03a3a;          /* readable on cream surfaces */
+  --color-danger-bright: #ef9d9d;    /* readable on dark/inverse surfaces */
 
   /* Category tints */
   --color-housing:  var(--gs-clay);

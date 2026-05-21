@@ -139,6 +139,8 @@ export default async function DonatePage({
               Docs: https://givebutter.com/help/articles/embed-options */}
           <div
             id="givebutter-mount"
+            role="region"
+            aria-label="Donation form"
             data-givebutter-campaign-id="TODO-CAMPAIGN-ID"
             className="mt-8 bg-surface-raised border-2 border-dashed border-rule rounded-md p-10 text-center"
           >

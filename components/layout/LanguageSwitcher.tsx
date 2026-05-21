@@ -21,9 +21,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             <Link
               href={pathname}
               locale={code}
-              aria-current={isActive ? "true" : undefined}
+              aria-current={isActive ? "page" : undefined}
               className={cn(
-                "px-1 py-0.5 rounded-xs transition-colors duration-[150ms]",
+                "inline-flex items-center min-h-[44px] min-w-[44px] justify-center px-3 rounded-sm transition-colors duration-[150ms]",
                 isActive
                   ? "font-semibold text-ink-strong underline underline-offset-4 decoration-accent decoration-2"
                   : "text-ink-soft hover:text-ink-strong",
