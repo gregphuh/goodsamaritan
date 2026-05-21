@@ -3,6 +3,9 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
+import { DonateBar } from "@/components/layout/DonateBar";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -72,14 +75,19 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${sourceSerif.variable} ${sourceSans.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-surface text-ink">
+      <body className="min-h-full flex flex-col bg-surface text-ink pb-[5rem] md:pb-0">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-brand focus:text-ink-inverse focus:px-4 focus:py-2 focus:rounded-sm"
         >
           {t("skipToContent")}
         </a>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          <div className="flex-1 flex flex-col">{children}</div>
+          <Footer />
+          <DonateBar />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

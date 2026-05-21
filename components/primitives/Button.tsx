@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import NextLink from "next/link";
+import { Link as IntlLink } from "@/i18n/routing";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -77,8 +77,8 @@ export function LinkButton({
     );
   }
   return (
-    <NextLink href={href} className={classes}>
+    <IntlLink href={href} className={classes}>
       {children}
-    </NextLink>
+    </IntlLink>
   );
 }
