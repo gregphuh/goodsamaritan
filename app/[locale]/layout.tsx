@@ -6,7 +6,9 @@ import { notFound } from "next/navigation";
 import { DonateBar } from "@/components/layout/DonateBar";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
+import { buildOrganizationSchema } from "@/lib/seo";
 import "../globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -88,6 +90,7 @@ export default async function LocaleLayout({
           <Footer />
           <DonateBar />
         </NextIntlClientProvider>
+        <JsonLd data={buildOrganizationSchema()} />
       </body>
     </html>
   );

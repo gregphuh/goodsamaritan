@@ -6,6 +6,8 @@ import { Heading } from "@/components/primitives/Heading";
 import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
 import { CopyableField } from "@/components/donate/CopyableField";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildDonateActionSchema } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -54,6 +56,7 @@ export default async function DonatePage({
 
   return (
     <main id="main" className="flex flex-col">
+      <JsonLd data={buildDonateActionSchema(locale)} />
       {/* ──────────────────────────── Intro */}
       <Section surface="inverse" density="default">
         <Container width="content">

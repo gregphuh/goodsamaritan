@@ -10,6 +10,8 @@ import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
 import { getAllProjectSlugs, getProjectBySlug } from "@/lib/content";
 import { getMdxComponents } from "@/lib/mdx-components";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildProjectSchema } from "@/lib/seo";
 import { Link } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
@@ -50,6 +52,18 @@ export default async function ProjectDetailPage({
 
   return (
     <main id="main" className="flex flex-col">
+      <JsonLd
+        data={buildProjectSchema({
+          slug: project.slug,
+          locale: project.locale,
+          title: project.title,
+          summary: project.summary,
+          category: project.category,
+          year: project.year,
+          families: project.families,
+          villages: project.villages,
+        })}
+      />
       {/* ──────────────────────────── Hero */}
       <Section surface="inverse" density="default">
         <Container width="content">

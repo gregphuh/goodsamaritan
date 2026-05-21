@@ -6,6 +6,8 @@ import { Heading } from "@/components/primitives/Heading";
 import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
 import { LinkButton } from "@/components/primitives/Button";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildFoundersSchema, buildRomaniaPlaceSchema } from "@/lib/seo";
 
 const USE_OF_FUNDS = [
   { key: "needy" as const, pct: 56 },
@@ -59,6 +61,10 @@ export default async function AboutPage({
 
   return (
     <main id="main" className="flex flex-col">
+      {buildFoundersSchema().map((person) => (
+        <JsonLd key={person["@id"]} data={person} />
+      ))}
+      <JsonLd data={buildRomaniaPlaceSchema()} />
       {/* ──────────────────────────── Hero */}
       <Section surface="inverse" density="default">
         <Container width="content">
