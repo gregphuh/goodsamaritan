@@ -39,8 +39,86 @@ export type Project = ProjectFrontmatter & {
   localeFellBack: boolean; // true when the requested locale didn't have this file
 };
 
-// Stories will use a different schema with mandatory consent:true. Lands in
-// Phase 4 when family consent (spec Q1) is confirmed.
+// Stories: same loading pattern, but with mandatory consent:true literal so
+// no story can render without explicit family permission baked into the file.
+const StoryFrontmatter = z.object({
+  title: z.string().min(3).max(120),
+  family: z.string().min(1),
+  village: z.string().min(1),
+  category: z.enum(PROJECT_CATEGORIES),
+  year: z.number().int().min(1994).max(2030),
+  consent: z.literal(true, {
+    errorMap: () => ({
+      message: "Story frontmatter MUST have consent: true. No story renders without explicit family permission.",
+    }),
+  }),
+  excerpt: z.string().min(20).max(280),
+  heroImage: z.string().optional(),
+});
+
+export type StoryFrontmatter = z.infer<typeof StoryFrontmatter>;
+
+export type Story = StoryFrontmatter & {
+  slug: string;
+  locale: Locale;
+  content: string;
+  localeFellBack: boolean;
+};
+
+async function listStorySlugs(locale: Locale): Promise<string[]> {
+  const dir = path.join(CONTENT_ROOT, locale, "stories");
+  try {
+    const entries = await fs.readdir(dir);
+    return entries.filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""));
+  } catch {
+    return [];
+  }
+}
+
+async function readStoryFile(
+  locale: Locale,
+  slug: string,
+): Promise<{ raw: string; fellBack: boolean } | null> {
+  const primary = path.join(CONTENT_ROOT, locale, "stories", `${slug}.mdx`);
+  try {
+    return { raw: await fs.readFile(primary, "utf8"), fellBack: false };
+  } catch {
+    if (locale === "en") return null;
+    const fallback = path.join(CONTENT_ROOT, "en", "stories", `${slug}.mdx`);
+    try {
+      return { raw: await fs.readFile(fallback, "utf8"), fellBack: true };
+    } catch {
+      return null;
+    }
+  }
+}
+
+export async function getStoryBySlug(locale: Locale, slug: string): Promise<Story | null> {
+  const file = await readStoryFile(locale, slug);
+  if (!file) return null;
+  const { data, content } = matter(file.raw);
+  const parsed = StoryFrontmatter.safeParse(data);
+  if (!parsed.success) {
+    throw new Error(
+      `Invalid frontmatter in stories/${slug}.mdx: ${parsed.error.issues
+        .map((i) => `${i.path.join(".")}: ${i.message}`)
+        .join(", ")}`,
+    );
+  }
+  return { ...parsed.data, slug, locale, content, localeFellBack: file.fellBack };
+}
+
+export async function getAllStories(locale: Locale): Promise<Story[]> {
+  const slugs = await listStorySlugs("en");
+  const stories = await Promise.all(slugs.map((slug) => getStoryBySlug(locale, slug)));
+  return stories
+    .filter((s): s is Story => s !== null)
+    .sort((a, b) => (a.year !== b.year ? b.year - a.year : a.slug.localeCompare(b.slug)));
+}
+
+export async function getAllStorySlugs(): Promise<string[]> {
+  return listStorySlugs("en");
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // File-system loader
