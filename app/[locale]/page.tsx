@@ -1,177 +1,173 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Button, LinkButton } from "@/components/primitives/Button";
-import { Card } from "@/components/primitives/Card";
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { LinkButton } from "@/components/primitives/Button";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
 import { ImpactStat } from "@/components/primitives/ImpactStat";
 import { Scripture } from "@/components/primitives/Scripture";
 import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
+import { NewsletterForm } from "@/components/home/NewsletterForm";
+import { Link } from "@/i18n/routing";
 
-/**
- * Phase 1 preview — design-system showcase. Replaced in Phase 2 by the real
- * home page. Lives at `/` (and `/ro`) so the team can sanity-check tokens
- * visually and verify both locales render.
- */
-export default async function DesignSystemPreview({
+export default async function Home({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("Preview");
-  const tSite = await getTranslations("Site");
+
+  const tHero = await getTranslations("Home.hero");
+  const tTrust = await getTranslations("Home.trustBand");
+  const tProj = await getTranslations("Home.projects");
+  const tStory = await getTranslations("Home.story");
+  const tNews = await getTranslations("Home.newsletter");
+  const tCta = await getTranslations("CTA");
 
   return (
     <main id="main" className="flex flex-col">
-      {/* Header band — brand surface */}
+      {/* ──────────────────────────── Hero */}
       <Section surface="inverse" density="spacious">
-        <Container width="standard">
-          <Text size="caption" tone="accent" className="mb-4">
-            {t("label")}
-          </Text>
-          <Heading as="h1" size="display" className="text-ink-inverse max-w-[20ch]">
-            {tSite("tagline")}.
-          </Heading>
-          <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
-            {t("subhead")}
-          </Text>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <LinkButton href="#" variant="primary" size="lg">Give monthly</LinkButton>
-            <LinkButton href="#" variant="secondary" size="lg">Read our 2024 report</LinkButton>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Scripture — Galatians 2:10, the org's anchor verse */}
-      <Section density="default">
-        <Container width="content">
-          <Scripture reference="Galatians 2:10" translation="NIV">
-            All they asked was that we should continue to remember the poor — the
-            very thing I was eager to do.
-          </Scripture>
-        </Container>
-      </Section>
-
-      {/* Trust band — real 2024 numbers */}
-      <Section surface="sunken" density="default">
         <Container width="wide">
-          <Text size="caption" className="mb-8 text-ink-muted">
-            2024 in numbers · from the annual report
-          </Text>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <ImpactStat value="$100K" label="Distributed in 2024" detail="To named families and missionaries" />
-            <ImpactStat value="76%" label="Reached Romania" detail="USA 16% · UK 5% · Africa 3%" />
-            <ImpactStat value="2%" label="Admin overhead" detail="98¢ of every dollar reaches the field" />
-            <ImpactStat value="1994" label="Founded" detail="Nistor & Floare Forgaciu" />
-          </div>
-        </Container>
-      </Section>
-
-      {/* Type scale */}
-      <Section density="default">
-        <Container width="content">
-          <Text size="caption" className="mb-6">Type scale</Text>
-          <div className="space-y-6">
-            <Heading as="h2" size="display">Display — Fraunces 500</Heading>
-            <Heading as="h2" size="h1">Headline 1 — section opener</Heading>
-            <Heading as="h2" size="h2">Headline 2 — group title</Heading>
-            <Heading as="h3" size="h3">Headline 3 — sub-group</Heading>
-            <Heading as="h4" size="h4">Headline 4 — minor title</Heading>
-            <Text size="body-lg">Body large — used for hero subheads and intro paragraphs at 20–22px.</Text>
-            <Text size="body">
-              Body — the floor for all prose at 18px. This is the size Margaret
-              reads with her reading glasses on her iPhone in the evenings. We
-              never go below this in story or project content. Romanian
-              diacritics work: ăâîșțĂÂÎȘȚ.
+          <div className="max-w-[42ch]">
+            <Text size="caption" tone="accent" className="mb-6">
+              {tHero("eyebrow")}
             </Text>
-            <Text size="body-sm" tone="soft">Body small — captions, supporting copy, form labels.</Text>
-            <Text size="caption" tone="muted">Caption — uppercase categorical labels</Text>
+            <Heading as="h1" size="display" className="text-ink-inverse">
+              {tHero("headline")}
+            </Heading>
+            <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
+              {tHero("subhead")}
+            </Text>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <LinkButton href="/donate" variant="primary" size="lg">
+                {tCta("giveMonthly")}
+              </LinkButton>
+              <a
+                href="/annual-reports/2024.pdf"
+                className="inline-flex items-center justify-center gap-2 h-14 px-8 text-body-lg font-semibold rounded-sm border border-ink-inverse/30 text-ink-inverse hover:bg-brand-strong transition-colors duration-[160ms]"
+              >
+                {tCta("readReport")}
+                <ArrowUpRight size={20} weight="regular" aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </Container>
       </Section>
 
-      {/* Buttons */}
+      {/* ──────────────────────────── Trust band */}
       <Section surface="sunken" density="default">
-        <Container width="standard">
-          <Text size="caption" className="mb-6">Buttons</Text>
-          <div className="space-y-6">
-            <div className="flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="sm">Give now</Button>
-              <Button variant="primary" size="md">Give now</Button>
-              <Button variant="primary" size="lg">Give monthly</Button>
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <Button variant="secondary" size="md">Read the 2024 report</Button>
-              <Button variant="ghost" size="md">Maybe later</Button>
-              <Button variant="primary" size="md" disabled>Processing…</Button>
-            </div>
+        <Container width="wide">
+          <Text size="caption" className="mb-10 text-ink-muted">
+            {tTrust("label")}
+          </Text>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+            <ImpactStat
+              value={tTrust("stat1Value")}
+              label={tTrust("stat1Label")}
+              detail={tTrust("stat1Detail")}
+            />
+            <ImpactStat
+              value={tTrust("stat2Value")}
+              label={tTrust("stat2Label")}
+              detail={tTrust("stat2Detail")}
+            />
+            <ImpactStat
+              value={tTrust("stat3Value")}
+              label={tTrust("stat3Label")}
+              detail={tTrust("stat3Detail")}
+            />
+            <ImpactStat
+              value={tTrust("stat4Value")}
+              label={tTrust("stat4Label")}
+              detail={tTrust("stat4Detail")}
+            />
           </div>
         </Container>
       </Section>
 
-      {/* Cards */}
+      {/* ──────────────────────────── Scripture moment */}
+      <Section density="default">
+        <Container width="content" className="text-center">
+          <div className="inline-block text-left">
+            <Scripture reference="Galatians 2:10" translation="NIV">
+              All they asked was that we should continue to remember the poor — the very thing I was eager to do.
+            </Scripture>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ──────────────────────────── Projects teaser */}
       <Section density="default">
         <Container width="wide">
-          <Text size="caption" className="mb-6">Cards</Text>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card>
-              <Heading as="h3" size="h4">Housing</Heading>
-              <Text size="body-sm" tone="soft" className="mt-2">
-                Home repair, electrical service, insulation. Dragomir family
-                received a home in Sept 2023.
-              </Text>
-            </Card>
-            <Card>
-              <Heading as="h3" size="h4">Medical</Heading>
-              <Text size="body-sm" tone="soft" className="mt-2">
-                Surgeries, medicine, hospital travel. Marta Lutac's treatment;
-                Bogdan's two eye surgeries.
-              </Text>
-            </Card>
-            <Card>
-              <Heading as="h3" size="h4">Firewood &amp; winter</Heading>
-              <Text size="body-sm" tone="soft" className="mt-2">
-                Ciobanasu family in Avrameni; Murariu family in Moldova; firewood
-                + utility bills before the cold.
-              </Text>
-            </Card>
+          <Heading as="h2" size="h2" className="max-w-[24ch]">
+            {tProj("heading")}
+          </Heading>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ProjectCard
+              category="housing"
+              title={tProj("housingTitle")}
+              body={tProj("housingBody")}
+              href="/projects/housing"
+              cta={tCta("seeHousing")}
+            />
+            <ProjectCard
+              category="medical"
+              title={tProj("medicalTitle")}
+              body={tProj("medicalBody")}
+              href="/projects/medical"
+              cta={tCta("seeMedical")}
+            />
+            <ProjectCard
+              category="firewood"
+              title={tProj("firewoodTitle")}
+              body={tProj("firewoodBody")}
+              href="/projects/firewood"
+              cta={tCta("seeWinterAid")}
+            />
           </div>
         </Container>
       </Section>
 
-      {/* Color tokens */}
+      {/* ──────────────────────────── Story preview */}
       <Section surface="sunken" density="default">
-        <Container width="wide">
-          <Text size="caption" className="mb-6">Semantic color tokens</Text>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            <Swatch name="surface" />
-            <Swatch name="surface-raised" />
-            <Swatch name="surface-sunken" />
-            <Swatch name="surface-inverse" dark />
-            <Swatch name="ink" dark />
-            <Swatch name="ink-soft" dark />
-            <Swatch name="ink-muted" />
-            <Swatch name="accent" />
-            <Swatch name="accent-strong" dark />
-            <Swatch name="accent-soft" />
-            <Swatch name="brand" dark />
-            <Swatch name="brand-soft" />
-            <Swatch name="housing" dark />
-            <Swatch name="medical" dark />
-            <Swatch name="firewood" dark />
-            <Swatch name="mission" dark />
-          </div>
+        <Container width="content">
+          <Text size="caption" className="mb-6 text-ink-muted">
+            {tStory("heading")}
+          </Text>
+          <article className="bg-surface-raised border border-rule rounded-md p-8 md:p-10">
+            <Heading as="h2" size="h2">
+              {tStory("title")}
+            </Heading>
+            <Text size="body-lg" tone="soft" className="mt-6">
+              {tStory("excerpt")}
+            </Text>
+            <Link
+              href="/stories/lutac-family"
+              className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
+            >
+              {tCta("readStory")}
+              <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+            </Link>
+          </article>
         </Container>
       </Section>
 
-      {/* Footer placeholder */}
-      <Section surface="inverse" density="compact">
-        <Container width="standard">
-          <Text size="body-sm" tone="inverse">
-            Good Samaritan Org · 501(c)(3) · EIN 38-3401779 · 2060 Curtis Rd,
-            Addison Twp, MI 48307 · gsworldoutreach@gmail.com
+      {/* ──────────────────────────── Newsletter */}
+      <Section surface="inverse" density="default">
+        <Container width="content">
+          <Heading as="h2" size="h2" className="text-ink-inverse max-w-[22ch]">
+            {tNews("heading")}
+          </Heading>
+          <Text size="body-lg" tone="inverse" className="mt-4 max-w-[60ch]">
+            {tNews("body")}
+          </Text>
+          <div className="mt-8">
+            <NewsletterForm />
+          </div>
+          <Text size="body-sm" tone="inverse" className="mt-4 text-ink-inverse/70">
+            {tNews("trust")}
           </Text>
         </Container>
       </Section>
@@ -179,18 +175,44 @@ export default async function DesignSystemPreview({
   );
 }
 
-function Swatch({ name, dark = false }: { name: string; dark?: boolean }) {
+type Category = "housing" | "medical" | "firewood";
+
+function ProjectCard({
+  category,
+  title,
+  body,
+  href,
+  cta,
+}: {
+  category: Category;
+  title: string;
+  body: string;
+  href: string;
+  cta: string;
+}) {
+  const accentColor = `var(--color-${category})`;
   return (
-    <div className="border border-rule rounded-md overflow-hidden">
+    <article className="bg-surface-raised border border-rule rounded-md overflow-hidden flex flex-col">
       <div
-        className="h-20"
-        style={{ backgroundColor: `var(--color-${name})` }}
+        aria-hidden="true"
+        className="h-2"
+        style={{ backgroundColor: accentColor }}
       />
-      <div className="px-3 py-2 bg-surface-raised">
-        <code className={`text-caption ${dark ? "text-ink-strong" : "text-ink"}`}>
-          {name}
-        </code>
+      <div className="p-6 md:p-7 flex-1 flex flex-col">
+        <Heading as="h3" size="h3">
+          {title}
+        </Heading>
+        <Text size="body" tone="soft" className="mt-3 flex-1">
+          {body}
+        </Text>
+        <Link
+          href={href}
+          className="mt-6 inline-flex items-center gap-2 text-body-sm font-semibold text-accent-strong hover:underline underline-offset-4"
+        >
+          {cta}
+          <ArrowUpRight size={16} weight="regular" aria-hidden="true" />
+        </Link>
       </div>
-    </div>
+    </article>
   );
 }
