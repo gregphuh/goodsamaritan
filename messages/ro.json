@@ -41,7 +41,9 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "Organizație creștină 501(c)(3) din 1994",
+      "eyebrowLocale": "România",
+      "eyebrowSince": "Slujind din 1994",
+      "eyebrowFaith": "Organizație creștină 501(c)(3)",
       "headline": "Alături de familiile din România din 1994.",
       "subhead": "În 2024 am trimis aproape 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case. Nouăzeci și opt de cenți din fiecare dolar au ajuns pe teren."
     },

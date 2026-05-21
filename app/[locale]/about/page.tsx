@@ -7,6 +7,7 @@ import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
 import { LinkButton } from "@/components/primitives/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { RomaniaFlag } from "@/components/brand/RomaniaFlag";
 import { buildFoundersSchema, buildRomaniaPlaceSchema } from "@/lib/seo";
 
 const USE_OF_FUNDS = [
@@ -146,19 +147,35 @@ export default async function AboutPage({
           </Text>
 
           <div className="mt-10 space-y-3" role="list" aria-label="2024 geographic distribution of aid">
-            {GEOGRAPHIC_SPLIT.map((row) => (
-              <div key={row.country} className="flex items-center gap-4" role="listitem">
-                <div className="w-32 shrink-0 text-body font-semibold">{row.country}</div>
-                <div className="flex-1 h-3 bg-surface-raised rounded-pill overflow-hidden border border-rule">
-                  <div
-                    className="h-full bg-accent rounded-pill"
-                    style={{ width: `${row.pct}%` }}
-                    aria-hidden="true"
-                  />
+            {GEOGRAPHIC_SPLIT.map((row) => {
+              const isRomania = row.country === "Romania";
+              return (
+                <div key={row.country} className="flex items-center gap-4" role="listitem">
+                  <div className="w-40 shrink-0 flex items-center gap-2.5">
+                    {isRomania ? (
+                      <RomaniaFlag height={16} title="Flag of Romania" />
+                    ) : (
+                      <span aria-hidden="true" className="w-6 inline-block" />
+                    )}
+                    <span
+                      className={isRomania
+                        ? "text-body font-semibold text-ink-strong"
+                        : "text-body font-semibold"}
+                    >
+                      {row.country}
+                    </span>
+                  </div>
+                  <div className="flex-1 h-3 bg-surface-raised rounded-pill overflow-hidden border border-rule">
+                    <div
+                      className="h-full bg-accent rounded-pill"
+                      style={{ width: `${row.pct}%` }}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="w-12 text-right text-body font-semibold tabular-nums">{row.pct}%</div>
                 </div>
-                <div className="w-12 text-right text-body font-semibold tabular-nums">{row.pct}%</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </Section>

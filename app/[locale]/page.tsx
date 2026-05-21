@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { BrandCross } from "@/components/brand/BrandCross";
+import { RomaniaFlag } from "@/components/brand/RomaniaFlag";
 import { LinkButton } from "@/components/primitives/Button";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
@@ -45,9 +46,16 @@ export default async function Home({
 
             {/* Content */}
             <div className="md:col-span-8 max-w-[42ch]">
-              <Text size="caption" tone="accent" className="mb-4">
-                {tHero("eyebrow")}
-              </Text>
+              <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-caption font-semibold uppercase tracking-wider">
+                <span className="inline-flex items-center gap-2">
+                  <RomaniaFlag height={18} title="Flag of Romania" />
+                  <span className="text-accent">{tHero("eyebrowLocale")}</span>
+                </span>
+                <span aria-hidden="true" className="text-ink-inverse/40">·</span>
+                <span className="text-accent">{tHero("eyebrowSince")}</span>
+                <span aria-hidden="true" className="text-ink-inverse/40">·</span>
+                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")}</span>
+              </div>
               <Heading as="h1" size="display" className="text-ink-inverse">
                 {tHero("headline")}
               </Heading>

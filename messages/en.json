@@ -40,7 +40,9 @@
   },
   "Home": {
     "hero": {
-      "eyebrow": "A Christian 501(c)(3) since 1994",
+      "eyebrowLocale": "Romania",
+      "eyebrowSince": "Serving since 1994",
+      "eyebrowFaith": "A Christian 501(c)(3)",
       "headline": "Walking with Romanian families since 1994.",
       "subhead": "In 2024 we sent nearly $100,000 to named families for groceries, medicine, firewood, and home repair. Ninety-eight cents of every dollar reached the field."
     },
