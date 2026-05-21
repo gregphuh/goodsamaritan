@@ -5,10 +5,11 @@ import NextLink from "next/link";
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
 
+// :focus-visible ring comes from the base layer in globals.css — single source.
 const base =
   "inline-flex items-center justify-center gap-2 font-body font-semibold rounded-sm " +
   "transition-[transform,background-color,border-color,color] duration-[160ms] [transition-timing-function:var(--ease-out)] " +
-  "active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-2 " +
+  "active:scale-[0.97] " +
   "disabled:opacity-60 disabled:pointer-events-none";
 
 const variantClass: Record<Variant, string> = {

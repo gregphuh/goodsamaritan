@@ -18,7 +18,10 @@
   --gs-navy-900: #0d1024;
   --gs-navy-950: #060815;
 
-  /* Cream — warm surface family. Not white; faith editorial warmth. */
+  /* Cream — warm surface family. Not white; faith editorial warmth.
+   * cream-25 sits between pure white and surface — used for raised
+   * panels so we never ship literal #ffffff (impeccable: "never use #fff"). */
+  --gs-cream-25:  #fdfaf3;
   --gs-cream-50:  #faf6ef;
   --gs-cream-100: #f3ecdd;
   --gs-cream-200: #e9dec5;
@@ -62,7 +65,7 @@
 
   /* Surfaces */
   --color-surface:         var(--gs-cream-50);
-  --color-surface-raised:  #ffffff;
+  --color-surface-raised:  var(--gs-cream-25);
   --color-surface-sunken:  var(--gs-cream-100);
   --color-surface-inverse: var(--gs-navy-900);
 
@@ -105,9 +108,15 @@
   --color-transparent: transparent;
   --color-current:     currentColor;
 
-  /* ---------------------------------------------------------------- Fonts */
-  /* next/font injects --font-fraunces and --font-source-sans onto <html>. */
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  /* ---------------------------------------------------------------- Fonts
+   * next/font injects --font-source-serif and --font-source-sans onto <html>.
+   * Source Serif 4 + Source Sans 3 are the Adobe Source family — designed
+   * to pair. Chose this over Fraunces because Fraunces is on impeccable's
+   * reflex-reject list (over-used for "warm tech-brand" landing pages); the
+   * Source family reads as institutional / quietly-confident, which fits a
+   * faith 501(c)(3) better than Fraunces' editorial register.
+   * ---------------------------------------------------------------------- */
+  --font-display: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --font-body:    var(--font-source-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* ---------------------------------------------------------------- Type

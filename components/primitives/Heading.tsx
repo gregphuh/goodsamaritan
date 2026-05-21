@@ -12,6 +12,17 @@ const sizeClass: Record<Size, string> = {
   h4: "text-h4",
 };
 
+// Default visual size when only `as` is supplied. h5/h6 share the h4 scale —
+// they're for outline structure, not extra size steps.
+const sizeForTag: Record<As, Size> = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h4",
+  h6: "h4",
+};
+
 export function Heading({
   as = "h2",
   size,
@@ -24,7 +35,7 @@ export function Heading({
   children: ReactNode;
 }) {
   const Component = as;
-  const resolvedSize = size ?? (as === "h5" || as === "h6" ? "h4" : (as as Size));
+  const resolvedSize = size ?? sizeForTag[as];
   return (
     <Component className={cn("font-display text-ink-strong", sizeClass[resolvedSize], className)}>
       {children}
