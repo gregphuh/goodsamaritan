@@ -129,6 +129,35 @@
     },
     "receiptBody": "Mulțumim. Donația ta ajunge săptămâna aceasta la o familie din România, cunoscută după nume. Suntem recunoscători pentru tine."
   },
+  "Contact": {
+    "hero": {
+      "eyebrow": "Contactează-ne",
+      "headline": "Scrie direct consiliului.",
+      "subhead": "Fiecare mesaj ajunge la aceeași adresă de e-mail pe care consiliul o citește zilnic. Cineva răspunde în maximum șapte zile."
+    },
+    "form": {
+      "nameLabel": "Numele tău",
+      "emailLabel": "Adresa ta de e-mail",
+      "subjectLabel": "Despre ce este vorba?",
+      "subjectGeneral": "Generale",
+      "subjectTrip": "Călătorie misionară",
+      "subjectPartner": "Partener român / familie în nevoie",
+      "subjectPress": "Presă sau media",
+      "messageLabel": "Mesaj",
+      "messagePlaceholder": "Spune-ne cât de mult sau cât de puțin dorești.",
+      "submit": "Trimite consiliului",
+      "submitting": "Se trimite…",
+      "successHeading": "Mulțumim. Consiliul a primit mesajul.",
+      "successBody": "Cineva din consiliu răspunde în șapte zile. Dacă este urgent, scrie direct la gsworldoutreach@gmail.com.",
+      "errorPrefix": "Nu s-a putut trimite"
+    },
+    "alt": {
+      "heading": "Sau scrie direct",
+      "emailLabel": "E-mail",
+      "mailLabel": "Poștă",
+      "zelleLabel": "Zelle (donații)"
+    }
+  },
   "About": {
     "hero": {
       "eyebrow": "Despre organizație",

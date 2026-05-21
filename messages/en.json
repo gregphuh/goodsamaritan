@@ -128,6 +128,35 @@
     },
     "receiptBody": "Thank you. Your gift reaches a named Romanian family this week. We are grateful for you."
   },
+  "Contact": {
+    "hero": {
+      "eyebrow": "Get in touch",
+      "headline": "Reach the board directly.",
+      "subhead": "Every message goes to the same email the board reads daily. Someone responds within seven days."
+    },
+    "form": {
+      "nameLabel": "Your name",
+      "emailLabel": "Your email",
+      "subjectLabel": "What is this about?",
+      "subjectGeneral": "General",
+      "subjectTrip": "Mission trip",
+      "subjectPartner": "Romanian partner / familie în nevoie",
+      "subjectPress": "Press or media",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us as much or as little as you would like.",
+      "submit": "Send to the board",
+      "submitting": "Sending…",
+      "successHeading": "Thank you. The board has the message.",
+      "successBody": "Someone from the board responds within seven days. If it is urgent, write to gsworldoutreach@gmail.com directly.",
+      "errorPrefix": "Could not send"
+    },
+    "alt": {
+      "heading": "Or write directly",
+      "emailLabel": "Email",
+      "mailLabel": "Mail",
+      "zelleLabel": "Zelle (donations)"
+    }
+  },
   "About": {
     "hero": {
       "eyebrow": "About the organization",
