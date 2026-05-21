@@ -8,6 +8,7 @@ import { Heading } from "@/components/primitives/Heading";
 import { LinkButton } from "@/components/primitives/Button";
 import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
+import Image from "next/image";
 import { getAllProjectSlugs, getProjectBySlug } from "@/lib/content";
 import { getMdxComponents } from "@/lib/mdx-components";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -15,6 +16,39 @@ import { buildProjectSchema } from "@/lib/seo";
 import { Link } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
+
+const CATEGORY_HERO: Record<string, { src: string; alt: string; caption: string }> = {
+  housing: {
+    src: "/images/courtyard-1.jpg",
+    alt: "The courtyard of a Romanian home in need of repair.",
+    caption: "Current conditions at the home our housing fund is rebuilding.",
+  },
+  medical: {
+    src: "/images/food-delivery.jpg",
+    alt: "Open car trunk loaded with groceries, oil, and supplies for a Romanian family.",
+    caption: "Supplies headed to a family the board visited.",
+  },
+  firewood: {
+    src: "/images/goats.jpg",
+    alt: "Two men with a herd of goats in rural Romania.",
+    caption: "Rural life in a Romanian village we serve.",
+  },
+  mission: {
+    src: "/images/dorin-and-kids.jpg",
+    alt: "A teacher leading a Romanian Sunday school class.",
+    caption: "Missionary support at a partner church.",
+  },
+  school: {
+    src: "/images/classroom-children.jpg",
+    alt: "Children in a Romanian Sunday school classroom.",
+    caption: "Scholarships and supplies for Romanian schoolchildren.",
+  },
+  general: {
+    src: "/images/countryside.jpg",
+    alt: "A Carpathian valley in Romania.",
+    caption: "Where most of the work happens.",
+  },
+};
 
 export async function generateStaticParams() {
   const slugs = await getAllProjectSlugs();
@@ -100,6 +134,27 @@ export default async function ProjectDetailPage({
               ) : null}
             </dl>
           ) : null}
+        </Container>
+      </Section>
+
+      {/* ──────────────────────────── Photo banner */}
+      <Section density="compact">
+        <Container width="standard">
+          <figure>
+            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+              <Image
+                src={(CATEGORY_HERO[project.category] ?? CATEGORY_HERO.general).src}
+                alt={(CATEGORY_HERO[project.category] ?? CATEGORY_HERO.general).alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-3 text-caption text-ink-muted text-center">
+              {(CATEGORY_HERO[project.category] ?? CATEGORY_HERO.general).caption}
+            </figcaption>
+          </figure>
         </Container>
       </Section>
 

@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
@@ -76,7 +77,17 @@ export default async function StoriesPage({
 
 function EmptyState() {
   return (
-    <div className="bg-surface-raised border border-rule rounded-md p-10 md:p-14 text-center max-w-2xl mx-auto">
+    <div className="bg-surface-raised border border-rule rounded-md overflow-hidden max-w-2xl mx-auto">
+      <div className="relative aspect-[16/9] bg-surface-sunken">
+        <Image
+          src="/images/classroom-children.jpg"
+          alt="Children in a Romanian Sunday-school classroom, listening to a teacher at the table."
+          fill
+          sizes="(max-width: 768px) 100vw, 672px"
+          className="object-cover"
+        />
+      </div>
+      <div className="p-10 md:p-14 text-center">
       <Heading as="h2" size="h3">Stories are coming, with permission.</Heading>
       <Text size="body" tone="soft" className="mt-4 max-w-[55ch] mx-auto">
         We&rsquo;re confirming consent with the families we walked with in 2024 before publishing their stories on a public site. We expect the first five stories — the Lutac, Dragomir, Anton, Ciobanasu, and Murariu families — within the next several weeks.
@@ -95,6 +106,7 @@ function EmptyState() {
         <LinkButton href="/projects" variant="secondary" size="md">
           See projects by category
         </LinkButton>
+      </div>
       </div>
     </div>
   );

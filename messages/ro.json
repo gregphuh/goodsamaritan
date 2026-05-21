@@ -50,8 +50,8 @@
     "trustBand": {
       "label": "Trei lucruri de știut despre noi",
       "stat1Value": "100%",
-      "stat1Label": "Consiliu voluntar",
-      "stat1Detail": "Niciun personal plătit, vreodată. Membrii consiliului își plătesc singuri călătoriile.",
+      "stat1Label": "Voluntari",
+      "stat1Detail": "Niciun personal plătit, vreodată. Ne plătim singuri călătoriile.",
       "stat2Value": "98¢",
       "stat2Label": "Din fiecare dolar pe teren",
       "stat2Detail": "Toate donațiile merg la familii, misionari și proiecte.",
@@ -69,9 +69,9 @@
       "firewoodBody": "Familia Ciobanaşu din Avrameni și familia Murariu din Moldova au primit lemne de foc și provizii înainte de frig."
     },
     "story": {
-      "heading": "Familii reale. Pe nume.",
-      "title": "Familia Lutac, Răuseni",
-      "excerpt": "Marta urmează tratament. Nepotul ei Bogdan a avut nevoie de două operații la ochi anul acesta. Consiliul s-a rugat împreună cu familia în această vară și a acoperit medicamentele și transportul la spital."
+      "heading": "Un proiect actual",
+      "title": "O familie care are nevoie de o casă.",
+      "excerpt": "O familie cu mai multe generații dintr-o zonă rurală a României, trăind într-o casă deteriorată cu o curte stricată. Strângem fondurile pentru a le oferi un acoperiș adevărat și o bucătărie care să țină căldura iarna. Pastorul local îi cunoaște după nume și a mers alături de noi și înainte."
     },
     "newsletter": {
       "heading": "O scrisoare din România, de patru ori pe an",
@@ -210,7 +210,7 @@
       "lead": "Fiecare membru al echipei este voluntar. Nimeni din consiliu nu este remunerat.",
       "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm.",
       "stat1Value": "100%",
-      "stat1Label": "Consiliu voluntar",
+      "stat1Label": "Voluntari",
       "stat2Value": "$0",
       "stat2Label": "Plătit personalului, vreodată",
       "stat3Value": "98¢",
@@ -234,7 +234,6 @@
     },
     "funds": {
       "heading": "Unde ajunge dolarul tău",
-      "body": "Din raportul anual 2024.",
       "needyLabel": "Familii în nevoie",
       "missionLabel": "Susținere misionari",
       "housingLabel": "Reparații și achiziții de locuințe",

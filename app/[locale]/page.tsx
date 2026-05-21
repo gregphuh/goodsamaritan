@@ -31,44 +31,45 @@ export default async function Home({
 
   return (
     <main id="main" className="flex flex-col">
-      {/* ──────────────────────────── Hero — cross left, motto + content right */}
+      {/* ──────────────────────────── Hero
+           Left column carries the brand mark (cross + motto + verse).
+           Right column carries the message (eyebrow + headline + CTAs).
+           This split de-crowds the center of the banner. */}
       <Section surface="inverse" density="spacious">
         <Container width="wide">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
-            {/* Cross — the brand mark from the original site */}
-            <div className="md:col-span-4 flex justify-center md:justify-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start md:items-center">
+            {/* Brand identity — cross + motto + verse, anchored left */}
+            <div className="md:col-span-5 flex md:block flex-col items-center md:items-start text-center md:text-left">
               <BrandCross
-                size={140}
+                size={160}
                 strokeWidth={1.5}
-                className="text-ink-inverse/70 md:scale-[1.6] md:origin-left"
+                className="text-ink-inverse/80"
               />
-            </div>
-
-            {/* Content */}
-            <div className="md:col-span-8 max-w-[42ch]">
-              <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-caption font-semibold uppercase tracking-wider">
-                <span className="inline-flex items-center gap-2">
-                  <RomaniaFlag height={18} title="Flag of Romania" />
-                  <span className="text-accent">{tHero("eyebrowLocale")}</span>
-                </span>
-                <span aria-hidden="true" className="text-ink-inverse/40">·</span>
-                <span className="text-accent">{tHero("eyebrowSince")}</span>
-                <span aria-hidden="true" className="text-ink-inverse/40">·</span>
-                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")}</span>
-              </div>
-              <Heading as="h1" size="display" className="text-ink-inverse">
-                {tHero("headline")}
-              </Heading>
-              <p className="mt-6 font-display italic text-h2 text-accent leading-snug">
+              <p className="mt-8 font-display italic text-h2 text-accent leading-tight max-w-[16ch] mx-auto md:mx-0">
                 &ldquo;{tSite("motto")}&rdquo;
               </p>
               <p className="mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider">
                 {tSite("mottoReference")}
               </p>
-              <Text size="body-lg" tone="inverse" className="mt-8 max-w-[55ch]">
+            </div>
+
+            {/* Message — eyebrow + headline + subhead + CTAs */}
+            <div className="md:col-span-7 max-w-[44ch]">
+              <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-caption font-semibold uppercase tracking-wider">
+                <span className="inline-flex items-center gap-2">
+                  <RomaniaFlag height={18} title="Flag of Romania" />
+                  <span className="text-accent">{tHero("eyebrowLocale")}</span>
+                </span>
+                <span aria-hidden="true" className="text-ink-inverse/40">·</span>
+                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")} since 1994</span>
+              </div>
+              <Heading as="h1" size="display" className="text-ink-inverse">
+                {tHero("headline")}
+              </Heading>
+              <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
                 {tHero("subhead")}
               </Text>
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-wrap gap-4">
                 <LinkButton href="/donate" variant="primary" size="lg">
                   {tCta("giveMonthly")}
                 </LinkButton>
@@ -163,8 +164,8 @@ export default async function Home({
           <article className="bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
             <div className="relative min-h-[280px] md:min-h-0 md:aspect-auto bg-surface-sunken">
               <Image
-                src="/images/lutac-prayer.jpg"
-                alt="Board members and the Lutac family praying together in Rauseni, Botosani county, summer 2024."
+                src="/images/family-1.jpg"
+                alt="The family at the center of our current housing project, photographed inside their Romanian home."
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -178,10 +179,10 @@ export default async function Home({
                 {tStory("excerpt")}
               </Text>
               <Link
-                href="/stories/lutac-family"
+                href="/projects/housing"
                 className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
               >
-                {tCta("readStory")}
+                Learn how housing aid works
                 <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
               </Link>
               <p className="mt-6 text-caption text-ink-muted">
@@ -217,16 +218,16 @@ type Category = "housing" | "medical" | "firewood";
 
 const CARD_PHOTO: Record<Category, { src: string; alt: string }> = {
   housing: {
-    src: "/images/family-visit.jpg",
-    alt: "A board member with a Romanian family outside their home, 2024 visit.",
+    src: "/images/courtyard-1.jpg",
+    alt: "Courtyard of a Romanian home in need of repair — the kind of project the housing fund supports.",
   },
   medical: {
-    src: "/images/medical-bedside.jpg",
-    alt: "Two board members at the bedside of a family member receiving medical care.",
+    src: "/images/food-delivery.jpg",
+    alt: "Car trunk packed with groceries and supplies for a Romanian family.",
   },
   firewood: {
-    src: "/images/firewood-delivery.jpg",
-    alt: "Two Romanian villagers next to a delivered pile of firewood, autumn 2024.",
+    src: "/images/goats.jpg",
+    alt: "A board member with a Romanian villager and his goats — rural life where the firewood fund makes the difference each winter.",
   },
 };
 

@@ -49,8 +49,8 @@
     "trustBand": {
       "label": "Three things to know about us",
       "stat1Value": "100%",
-      "stat1Label": "Volunteer board",
-      "stat1Detail": "No paid staff, ever. Board members pay their own travel.",
+      "stat1Label": "Volunteer",
+      "stat1Detail": "No paid staff, ever. We pay our own travel.",
       "stat2Value": "98¢",
       "stat2Label": "Of every dollar to the field",
       "stat2Detail": "All giving goes to families, missionaries, and projects.",
@@ -68,9 +68,9 @@
       "firewoodBody": "The Ciobanasu family in Avrameni and the Murariu family in Moldova received firewood and supplies before the cold."
     },
     "story": {
-      "heading": "Real families. By name.",
-      "title": "The Lutac family, Rauseni",
-      "excerpt": "Marta is in treatment. Her grandson Bogdan needed two eye surgeries this year. The board prayed with the family this summer and covered medicine and hospital travel."
+      "heading": "A current project",
+      "title": "A family in need of a home.",
+      "excerpt": "A multigenerational family in rural Romania, living in a damaged house with a broken courtyard. We are raising the funds to give them a real roof and a kitchen that holds heat through winter. The local pastor knows them by name and has walked with us before."
     },
     "newsletter": {
       "heading": "A letter from Romania, four times a year",
@@ -209,7 +209,7 @@
       "lead": "Every member of our team is a volunteer. No one on this board is compensated.",
       "body": "We take our convictions and turn them into action. Every board member volunteers their time and effort for planning and implementing projects. Travel to Romania is paid out of our own pockets. None of your gift ever pays a salary, and nothing ever has. That has been true since 1994 and we have not seen a reason to change it.",
       "stat1Value": "100%",
-      "stat1Label": "Volunteer board",
+      "stat1Label": "Volunteer",
       "stat2Value": "$0",
       "stat2Label": "Paid to staff, ever",
       "stat3Value": "98¢",
@@ -233,7 +233,6 @@
     },
     "funds": {
       "heading": "Where your dollar goes",
-      "body": "From the 2024 annual report.",
       "needyLabel": "Needy families",
       "missionLabel": "Missionary support",
       "housingLabel": "Housing repair and purchase",

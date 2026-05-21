@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
@@ -53,8 +54,19 @@ export default async function MissionTripsPage({
 
   return (
     <main id="main" className="flex flex-col">
-      <Section surface="inverse" density="default">
-        <Container width="content">
+      <Section surface="inverse" density="default" className="relative overflow-hidden">
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image
+            src="/images/countryside.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-surface-inverse/40" />
+        </div>
+        <Container width="content" className="relative">
           <Text size="caption" tone="accent" className="mb-6">{tHero("eyebrow")}</Text>
           <Heading as="h1" size="display" className="text-ink-inverse">{tHero("headline")}</Heading>
           <Text size="body-lg" tone="inverse" className="mt-6">{tHero("subhead")}</Text>
