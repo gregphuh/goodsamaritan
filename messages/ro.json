@@ -49,18 +49,15 @@
     },
     "trustBand": {
       "label": "Trei lucruri de știut despre noi",
-      "stat1Value": "$100K",
-      "stat1Label": "Către familii în 2024",
-      "stat1Detail": "Peste cincizeci de familii, cunoscute după nume. Fiecare dolar etichetat pe categorie.",
-      "stat2Value": "100%",
-      "stat2Label": "Consiliu voluntar",
-      "stat2Detail": "Niciun personal plătit, vreodată. Membrii consiliului își plătesc singuri călătoriile.",
-      "stat3Value": "98¢",
-      "stat3Label": "Din fiecare dolar pe teren",
-      "stat3Detail": "Toate donațiile merg la familii, misionari și proiecte.",
-      "stat4Value": "1994",
-      "stat4Label": "Organizație 501(c)(3)",
-      "stat4Detail": "IRS EIN 38-3401779. Deductibil fiscal. Raport anual public."
+      "stat1Value": "100%",
+      "stat1Label": "Consiliu voluntar",
+      "stat1Detail": "Niciun personal plătit, vreodată. Membrii consiliului își plătesc singuri călătoriile.",
+      "stat2Value": "98¢",
+      "stat2Label": "Din fiecare dolar pe teren",
+      "stat2Detail": "Toate donațiile merg la familii, misionari și proiecte.",
+      "stat3Value": "1994",
+      "stat3Label": "Organizație 501(c)(3)",
+      "stat3Detail": "IRS EIN 38-3401779. Deductibil fiscal. Raport anual public."
     },
     "projects": {
       "heading": "Unde au ajuns donațiile în 2024, în cinci categorii",

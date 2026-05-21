@@ -91,7 +91,7 @@ export default async function Home({
           <h2 className="mb-10 text-caption text-ink-muted font-body font-semibold uppercase tracking-wider">
             {tTrust("label")}
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
             <ImpactStat
               value={tTrust("stat1Value")}
               label={tTrust("stat1Label")}
@@ -106,11 +106,6 @@ export default async function Home({
               value={tTrust("stat3Value")}
               label={tTrust("stat3Label")}
               detail={tTrust("stat3Detail")}
-            />
-            <ImpactStat
-              value={tTrust("stat4Value")}
-              label={tTrust("stat4Label")}
-              detail={tTrust("stat4Detail")}
             />
           </div>
         </Container>
