@@ -60,7 +60,6 @@
       "stat3Detail": "IRS EIN 38-3401779. Deductibil fiscal. Raport anual public."
     },
     "projects": {
-      "heading": "Unde au ajuns donațiile în 2024, în cinci categorii",
       "housingTitle": "Locuințe",
       "housingBody": "Familia Dragomir a primit cheile casei lor în septembrie 2023. În 2024 am ajutat familia Anton să-și izoleze casa înainte de iarnă și am conectat casa familiei Barbalata la energie electrică.",
       "medicalTitle": "Medical",
@@ -208,13 +207,7 @@
     "team": {
       "heading": "Echipa noastră",
       "lead": "Fiecare membru al echipei este voluntar. Nimeni din consiliu nu este remunerat.",
-      "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm.",
-      "stat1Value": "100%",
-      "stat1Label": "Voluntari",
-      "stat2Value": "$0",
-      "stat2Label": "Plătit personalului, vreodată",
-      "stat3Value": "98¢",
-      "stat3Label": "Din fiecare dolar pe teren"
+      "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm."
     },
     "history": {
       "heading": "Istoria noastră",

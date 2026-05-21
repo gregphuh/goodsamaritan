@@ -126,10 +126,7 @@ export default async function Home({
       {/* ──────────────────────────── Projects teaser */}
       <Section density="default">
         <Container width="wide">
-          <Heading as="h2" size="h2" className="max-w-[24ch]">
-            {tProj("heading")}
-          </Heading>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <ProjectCard
               category="housing"
               title={tProj("housingTitle")}

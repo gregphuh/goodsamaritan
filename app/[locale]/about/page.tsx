@@ -106,21 +106,6 @@ export default async function AboutPage({
               <Text size="body-lg" tone="soft" className="mt-6">
                 {tTeam("body")}
               </Text>
-
-              <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <div>
-                  <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat1Value")}</dt>
-                  <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat1Label")}</dd>
-                </div>
-                <div>
-                  <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat2Value")}</dt>
-                  <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat2Label")}</dd>
-                </div>
-                <div>
-                  <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat3Value")}</dt>
-                  <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat3Label")}</dd>
-                </div>
-              </dl>
             </div>
 
             <figure className="lg:col-span-5 self-start">
