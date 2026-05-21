@@ -17,18 +17,116 @@
     "giveMonthly": "Give monthly",
     "giveOnce": "Give once",
     "readReport": "Read the 2024 report",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "seeHousing": "See housing",
+    "seeMedical": "See medical",
+    "seeWinterAid": "See winter aid",
+    "readStory": "Read the Lutacs' story",
+    "subscribe": "Subscribe"
   },
   "Footer": {
     "ein": "EIN 38-3401779",
     "status501c3": "501(c)(3) charitable organization",
     "address": "2060 Curtis Rd, Addison Twp, MI 48307",
-    "tagline": "All donations tax-deductible"
+    "tagline": "All donations tax-deductible",
+    "summary": "A small board, faithful donors, and families we know by name."
   },
   "LanguageSwitcher": {
     "label": "Language",
     "en": "English",
     "ro": "Română"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "A Christian 501(c)(3) since 1994",
+      "headline": "Walking with Romanian families since 1994.",
+      "subhead": "In 2024 we sent nearly $100,000 to named families for groceries, medicine, firewood, and home repair. Ninety-eight cents of every dollar reached the field."
+    },
+    "trustBand": {
+      "label": "2024 in numbers, from the annual report",
+      "stat1Value": "$100K",
+      "stat1Label": "Distributed in 2024",
+      "stat1Detail": "To fifty-plus named families and missionaries",
+      "stat2Value": "76%",
+      "stat2Label": "Reached Romania",
+      "stat2Detail": "USA 16% · UK 5% · Africa 3%",
+      "stat3Value": "2%",
+      "stat3Label": "Admin overhead",
+      "stat3Detail": "Board members pay their own travel",
+      "stat4Value": "1994",
+      "stat4Label": "Founded",
+      "stat4Detail": "By Nistor and Floare Forgaciu"
+    },
+    "projects": {
+      "heading": "Where 2024 went, in five categories",
+      "housingTitle": "Housing",
+      "housingBody": "The Dragomir family received the keys to their home in September 2023. In 2024 we helped the Anton family insulate theirs before winter, and connected the Barbalata home to electrical service.",
+      "medicalTitle": "Medical",
+      "medicalBody": "Marta Lutac is undergoing cancer treatment in Rauseni. Her grandson Bogdan had two eye surgeries this year. We covered medicine and hospital travel for both.",
+      "firewoodTitle": "Firewood and winter",
+      "firewoodBody": "The Ciobanasu family in Avrameni and the Murariu family in Moldova received firewood and supplies before the cold."
+    },
+    "story": {
+      "heading": "Real families. By name.",
+      "title": "The Lutac family, Rauseni",
+      "excerpt": "Marta is in treatment. Her grandson Bogdan needed two eye surgeries this year. The board prayed with the family this summer and covered medicine and hospital travel."
+    },
+    "newsletter": {
+      "heading": "A letter from Romania, four times a year",
+      "body": "Updates from the board's visits and the families we walk with. We email when there's something real to say.",
+      "placeholder": "Your email",
+      "submit": "Subscribe",
+      "trust": "No tracking pixels. Unsubscribe in one click."
+    }
+  },
+  "Donate": {
+    "intro": {
+      "headline": "Where every dollar lands.",
+      "subhead": "Choose a category below, or let us put your gift where the need is greatest this week. Ninety-eight cents of every dollar reaches the field; the board pays its own travel."
+    },
+    "funds": {
+      "generalLabel": "Where most needed",
+      "generalBody": "Let the board direct your gift to the family most in need this week.",
+      "housingLabel": "Housing",
+      "housingBody": "Home repair, insulation, electrical service. The Dragomir, Anton, and Barbalata families this year.",
+      "medicalLabel": "Medical",
+      "medicalBody": "Surgeries, medicine, hospital travel. Marta Lutac's treatment and Bogdan's eye surgeries this year.",
+      "firewoodLabel": "Firewood and winter",
+      "firewoodBody": "Firewood, utility bills, winter supplies. The Ciobanasu and Murariu families before the cold.",
+      "missionLabel": "Mission",
+      "missionBody": "Missionary support in Romania, the UK, the US, and Africa.",
+      "schoolLabel": "Scholarships",
+      "schoolBody": "School supplies and tuition aid in Detroit, Rwanda, and Romania."
+    },
+    "tiers": {
+      "tier25": "A week of groceries for one family.",
+      "tier50": "A month of firewood when the temperature drops.",
+      "tier100": "Medicine and supplies for one hospital visit.",
+      "tier250": "Insulating one wall before winter, like the Anton family.",
+      "tier500": "Connecting a home to electrical service, like the Barbalata family.",
+      "custom": "Other amount"
+    },
+    "cadence": {
+      "monthly": "Monthly",
+      "once": "One-time",
+      "monthlyHelp": "Recurring on the same date each month. Cancel anytime in one click.",
+      "onceHelp": "Single gift, with a receipt in your inbox in under a minute."
+    },
+    "otherWays": {
+      "heading": "Prefer to send it directly?",
+      "zelleHeading": "Zelle (we prefer this, no card fees)",
+      "zelleBody": "Send to gsworldoutreach@gmail.com from your bank app. The board sees your gift the same day.",
+      "paypalHeading": "PayPal",
+      "paypalCta": "Give via PayPal",
+      "checkHeading": "Check by mail",
+      "checkBody": "Make payable to: Good Samaritan. Mail to 2060 Curtis Rd, Addison Twp, MI 48307. Allow seven to ten days."
+    },
+    "trust": {
+      "taxDeductible": "Tax-deductible. 501(c)(3). EIN 38-3401779.",
+      "cancelAnytime": "Cancel monthly giving anytime in one click.",
+      "secureProcessing": "Card processing by Stripe via Givebutter."
+    },
+    "receiptBody": "Thank you. Your gift reaches a named Romanian family this week. We are grateful for you."
   },
   "Preview": {
     "label": "Good Samaritan International · Design system v1",

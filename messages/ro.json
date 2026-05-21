@@ -1,5 +1,5 @@
 {
-  "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. See docs/spec.md Q2.",
+  "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. See docs/spec.md Q2. Particular care needed on faith-tone (avoid both Catholic-Orthodox-specific and overly casual register) and donation language (Zelle/PayPal terms may stay English).",
   "Site": {
     "name": "Good Samaritan International",
     "tagline": "Alături de familiile din România din 1994"
@@ -18,21 +18,119 @@
     "giveMonthly": "Donează lunar",
     "giveOnce": "Donează o dată",
     "readReport": "Citește raportul 2024",
-    "skipToContent": "Sari la conținut"
+    "skipToContent": "Sari la conținut",
+    "seeHousing": "Vezi proiectele de locuințe",
+    "seeMedical": "Vezi proiectele medicale",
+    "seeWinterAid": "Vezi ajutorul de iarnă",
+    "readStory": "Citește povestea familiei Lutac",
+    "subscribe": "Abonează-te"
   },
   "Footer": {
     "ein": "EIN 38-3401779",
     "status501c3": "Organizație caritabilă 501(c)(3)",
     "address": "2060 Curtis Rd, Addison Twp, MI 48307",
-    "tagline": "Donațiile sunt deductibile fiscal în SUA"
+    "tagline": "Donațiile sunt deductibile fiscal în SUA",
+    "summary": "Un consiliu mic, donatori statornici și familii pe care le cunoaștem după nume."
   },
   "LanguageSwitcher": {
     "label": "Limbă",
     "en": "English",
     "ro": "Română"
   },
+  "Home": {
+    "hero": {
+      "eyebrow": "Organizație creștină 501(c)(3) din 1994",
+      "headline": "Alături de familiile din România din 1994.",
+      "subhead": "În 2024 am trimis aproape 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case. Nouăzeci și opt de cenți din fiecare dolar au ajuns pe teren."
+    },
+    "trustBand": {
+      "label": "2024 în cifre, din raportul anual",
+      "stat1Value": "$100K",
+      "stat1Label": "Distribuiți în 2024",
+      "stat1Detail": "Către peste cincizeci de familii și misionari, cunoscuți după nume",
+      "stat2Value": "76%",
+      "stat2Label": "Au ajuns în România",
+      "stat2Detail": "SUA 16% · Marea Britanie 5% · Africa 3%",
+      "stat3Value": "2%",
+      "stat3Label": "Cheltuieli administrative",
+      "stat3Detail": "Membrii consiliului își plătesc singuri călătoriile",
+      "stat4Value": "1994",
+      "stat4Label": "Fondată",
+      "stat4Detail": "De Nistor și Floare Forgaciu"
+    },
+    "projects": {
+      "heading": "Unde au ajuns donațiile în 2024, în cinci categorii",
+      "housingTitle": "Locuințe",
+      "housingBody": "Familia Dragomir a primit cheile casei lor în septembrie 2023. În 2024 am ajutat familia Anton să-și izoleze casa înainte de iarnă și am conectat casa familiei Barbalata la energie electrică.",
+      "medicalTitle": "Medical",
+      "medicalBody": "Marta Lutac urmează tratament pentru cancer în Răuseni. Nepotul ei Bogdan a avut două operații la ochi anul acesta. Am acoperit medicamentele și transportul la spital pentru amândoi.",
+      "firewoodTitle": "Lemne de foc și iarnă",
+      "firewoodBody": "Familia Ciobanaşu din Avrameni și familia Murariu din Moldova au primit lemne de foc și provizii înainte de frig."
+    },
+    "story": {
+      "heading": "Familii reale. Pe nume.",
+      "title": "Familia Lutac, Răuseni",
+      "excerpt": "Marta urmează tratament. Nepotul ei Bogdan a avut nevoie de două operații la ochi anul acesta. Consiliul s-a rugat împreună cu familia în această vară și a acoperit medicamentele și transportul la spital."
+    },
+    "newsletter": {
+      "heading": "O scrisoare din România, de patru ori pe an",
+      "body": "Vești de la vizitele consiliului și de la familiile alături de care mergem. Trimitem e-mail când avem ceva real de spus.",
+      "placeholder": "Adresa ta de e-mail",
+      "submit": "Abonează-te",
+      "trust": "Fără pixeli de urmărire. Dezabonează-te cu un singur clic."
+    }
+  },
+  "Donate": {
+    "intro": {
+      "headline": "Unde ajunge fiecare dolar.",
+      "subhead": "Alege o categorie mai jos sau lasă consiliul să direcționeze donația ta către familia care are cea mai mare nevoie săptămâna aceasta. Nouăzeci și opt de cenți din fiecare dolar ajung pe teren; consiliul își plătește singur călătoriile."
+    },
+    "funds": {
+      "generalLabel": "Unde este cea mai mare nevoie",
+      "generalBody": "Lasă consiliul să direcționeze donația ta către familia care are cea mai mare nevoie săptămâna aceasta.",
+      "housingLabel": "Locuințe",
+      "housingBody": "Reparații la case, izolație, conexiune electrică. Familiile Dragomir, Anton și Barbalata anul acesta.",
+      "medicalLabel": "Medical",
+      "medicalBody": "Operații, medicamente, transport la spital. Tratamentul Martei Lutac și operațiile la ochi ale lui Bogdan anul acesta.",
+      "firewoodLabel": "Lemne de foc și iarnă",
+      "firewoodBody": "Lemne de foc, facturi la utilități, provizii de iarnă. Familiile Ciobanaşu și Murariu înainte de frig.",
+      "missionLabel": "Misiune",
+      "missionBody": "Susținere pentru misionari în România, Marea Britanie, SUA și Africa.",
+      "schoolLabel": "Burse școlare",
+      "schoolBody": "Rechizite școlare și ajutor pentru taxe în Detroit, Rwanda și România."
+    },
+    "tiers": {
+      "tier25": "Cumpărături alimentare pentru o săptămână, pentru o familie.",
+      "tier50": "Lemne de foc pentru o lună, când temperatura scade.",
+      "tier100": "Medicamente și provizii pentru o vizită la spital.",
+      "tier250": "Izolarea unui perete înainte de iarnă, ca pentru familia Anton.",
+      "tier500": "Conectarea unei case la rețeaua electrică, ca pentru familia Barbalata.",
+      "custom": "Altă sumă"
+    },
+    "cadence": {
+      "monthly": "Lunar",
+      "once": "O singură dată",
+      "monthlyHelp": "Reînnoire în aceeași zi a lunii. Poți anula oricând, cu un singur clic.",
+      "onceHelp": "Donație unică, cu chitanță în căsuța ta de e-mail în mai puțin de un minut."
+    },
+    "otherWays": {
+      "heading": "Preferi să trimiți direct?",
+      "zelleHeading": "Zelle (preferăm această variantă, fără comisioane de card)",
+      "zelleBody": "Trimite la gsworldoutreach@gmail.com din aplicația băncii tale. Consiliul vede donația ta în aceeași zi.",
+      "paypalHeading": "PayPal",
+      "paypalCta": "Donează prin PayPal",
+      "checkHeading": "Cec prin poștă",
+      "checkBody": "Plătibil către: Good Samaritan. Trimite la 2060 Curtis Rd, Addison Twp, MI 48307. Așteaptă șapte până la zece zile."
+    },
+    "trust": {
+      "taxDeductible": "Deductibil fiscal în SUA. 501(c)(3). EIN 38-3401779.",
+      "cancelAnytime": "Poți anula donațiile lunare oricând, cu un singur clic.",
+      "secureProcessing": "Procesarea cardului prin Stripe via Givebutter."
+    },
+    "receiptBody": "Mulțumim. Donația ta ajunge săptămâna aceasta la o familie din România, cunoscută după nume. Suntem recunoscători pentru tine."
+  },
   "Preview": {
     "label": "Good Samaritan International · Sistem de design v1",
-    "subhead": "Aceasta este o previzualizare a tokenelor și componentelor de bază — nu este încă pagina principală. Eroul real apare în Faza 2."
+    "subhead": "Aceasta este o previzualizare a tokenelor și componentelor de bază, nu este încă pagina principală. Eroul real apare în Faza 2."
   }
 }
