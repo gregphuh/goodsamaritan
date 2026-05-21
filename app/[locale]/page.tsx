@@ -1,5 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { BrandCross } from "@/components/brand/BrandCross";
 import { LinkButton } from "@/components/primitives/Button";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
@@ -24,33 +26,52 @@ export default async function Home({
   const tStory = await getTranslations("Home.story");
   const tNews = await getTranslations("Home.newsletter");
   const tCta = await getTranslations("CTA");
+  const tSite = await getTranslations("Site");
 
   return (
     <main id="main" className="flex flex-col">
-      {/* ──────────────────────────── Hero */}
+      {/* ──────────────────────────── Hero — cross left, motto + content right */}
       <Section surface="inverse" density="spacious">
         <Container width="wide">
-          <div className="max-w-[42ch]">
-            <Text size="caption" tone="accent" className="mb-6">
-              {tHero("eyebrow")}
-            </Text>
-            <Heading as="h1" size="display" className="text-ink-inverse">
-              {tHero("headline")}
-            </Heading>
-            <Text size="body-lg" tone="inverse" className="mt-6 max-w-[55ch]">
-              {tHero("subhead")}
-            </Text>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <LinkButton href="/donate" variant="primary" size="lg">
-                {tCta("giveMonthly")}
-              </LinkButton>
-              <a
-                href="/annual-reports/2024.pdf"
-                className="inline-flex items-center justify-center gap-2 h-14 px-8 text-body-lg font-semibold rounded-sm border border-ink-inverse/30 text-ink-inverse hover:bg-brand-strong transition-colors duration-[160ms]"
-              >
-                {tCta("readReport")}
-                <ArrowUpRight size={20} weight="regular" aria-hidden="true" />
-              </a>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+            {/* Cross — the brand mark from the original site */}
+            <div className="md:col-span-4 flex justify-center md:justify-start">
+              <BrandCross
+                size={140}
+                strokeWidth={1.5}
+                className="text-ink-inverse/70 md:scale-[1.6] md:origin-left"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="md:col-span-8 max-w-[42ch]">
+              <Text size="caption" tone="accent" className="mb-4">
+                {tHero("eyebrow")}
+              </Text>
+              <Heading as="h1" size="display" className="text-ink-inverse">
+                {tHero("headline")}
+              </Heading>
+              <p className="mt-6 font-display italic text-h2 text-accent leading-snug">
+                &ldquo;{tSite("motto")}&rdquo;
+              </p>
+              <p className="mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider">
+                {tSite("mottoReference")}
+              </p>
+              <Text size="body-lg" tone="inverse" className="mt-8 max-w-[55ch]">
+                {tHero("subhead")}
+              </Text>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <LinkButton href="/donate" variant="primary" size="lg">
+                  {tCta("giveMonthly")}
+                </LinkButton>
+                <a
+                  href="/annual-reports/2024.pdf"
+                  className="inline-flex items-center justify-center gap-2 h-14 px-8 text-body-lg font-semibold rounded-sm border border-ink-inverse/30 text-ink-inverse hover:bg-brand-strong transition-colors duration-[160ms]"
+                >
+                  {tCta("readReport")}
+                  <ArrowUpRight size={20} weight="regular" aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
         </Container>
@@ -132,24 +153,38 @@ export default async function Home({
 
       {/* ──────────────────────────── Story preview */}
       <Section surface="sunken" density="default">
-        <Container width="content">
+        <Container width="wide">
           <h2 className="mb-6 text-caption text-ink-muted font-body font-semibold uppercase tracking-wider">
             {tStory("heading")}
           </h2>
-          <article className="bg-surface-raised border border-rule rounded-md p-8 md:p-10">
-            <Heading as="h3" size="h2">
-              {tStory("title")}
-            </Heading>
-            <Text size="body-lg" tone="soft" className="mt-6">
-              {tStory("excerpt")}
-            </Text>
-            <Link
-              href="/stories/lutac-family"
-              className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
-            >
-              {tCta("readStory")}
-              <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
-            </Link>
+          <article className="bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
+            <div className="relative min-h-[280px] md:min-h-0 md:aspect-auto bg-surface-sunken">
+              <Image
+                src="/images/lutac-prayer.jpg"
+                alt="Board members and the Lutac family praying together in Rauseni, Botosani county, summer 2024."
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <Heading as="h3" size="h2">
+                {tStory("title")}
+              </Heading>
+              <Text size="body-lg" tone="soft" className="mt-6">
+                {tStory("excerpt")}
+              </Text>
+              <Link
+                href="/stories/lutac-family"
+                className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
+              >
+                {tCta("readStory")}
+                <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+              </Link>
+              <p className="mt-6 text-caption text-ink-muted">
+                Shared with permission of the family.
+              </p>
+            </div>
           </article>
         </Container>
       </Section>
@@ -177,6 +212,21 @@ export default async function Home({
 
 type Category = "housing" | "medical" | "firewood";
 
+const CARD_PHOTO: Record<Category, { src: string; alt: string }> = {
+  housing: {
+    src: "/images/family-visit.jpg",
+    alt: "A board member with a Romanian family outside their home, 2024 visit.",
+  },
+  medical: {
+    src: "/images/medical-bedside.jpg",
+    alt: "Two board members at the bedside of a family member receiving medical care.",
+  },
+  firewood: {
+    src: "/images/firewood-delivery.jpg",
+    alt: "Two Romanian villagers next to a delivered pile of firewood, autumn 2024.",
+  },
+};
+
 function ProjectCard({
   category,
   title,
@@ -191,6 +241,7 @@ function ProjectCard({
   cta: string;
 }) {
   const accentColor = `var(--color-${category})`;
+  const photo = CARD_PHOTO[category];
   return (
     <article className="bg-surface-raised border border-rule rounded-md overflow-hidden flex flex-col">
       <div
@@ -198,6 +249,15 @@ function ProjectCard({
         className="h-2"
         style={{ backgroundColor: accentColor }}
       />
+      <div className="relative aspect-[4/3] bg-surface-sunken">
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 400px"
+          className="object-cover"
+        />
+      </div>
       <div className="p-6 md:p-7 flex-1 flex flex-col">
         <Heading as="h3" size="h3">
           {title}

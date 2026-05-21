@@ -47,7 +47,8 @@ export default async function AboutPage({
   setRequestLocale(locale);
 
   const tHero = await getTranslations("About.hero");
-  const tFounders = await getTranslations("About.founders");
+  const tTeam = await getTranslations("About.team");
+  const tHistory = await getTranslations("About.history");
   const tMission = await getTranslations("About.mission");
   const tFaith = await getTranslations("About.faith");
   const tWhere = await getTranslations("About.where");
@@ -80,13 +81,41 @@ export default async function AboutPage({
         </Container>
       </Section>
 
-      {/* ──────────────────────────── Founders + Mission + Faith (stacked prose) */}
+      {/* ──────────────────────────── Our team (volunteer + non-compensated, front and center) */}
       <Section density="default">
+        <Container width="content">
+          <Heading as="h2" size="h2">{tTeam("heading")}</Heading>
+          <p className="mt-4 font-display text-h3 text-ink-strong italic">
+            {tTeam("lead")}
+          </p>
+          <Text size="body-lg" tone="soft" className="mt-6">
+            {tTeam("body")}
+          </Text>
+
+          <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div>
+              <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat1Value")}</dt>
+              <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat1Label")}</dd>
+            </div>
+            <div>
+              <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat2Value")}</dt>
+              <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat2Label")}</dd>
+            </div>
+            <div>
+              <dt className="font-display text-h1 text-ink-strong leading-none">{tTeam("stat3Value")}</dt>
+              <dd className="text-body-sm font-semibold text-ink uppercase tracking-wide mt-2">{tTeam("stat3Label")}</dd>
+            </div>
+          </dl>
+        </Container>
+      </Section>
+
+      {/* ──────────────────────────── Our history + Mission + Faith (stacked prose) */}
+      <Section surface="sunken" density="default">
         <Container width="content" className="space-y-14">
           <article>
-            <Heading as="h2" size="h2">{tFounders("heading")}</Heading>
+            <Heading as="h2" size="h2">{tHistory("heading")}</Heading>
             <Text size="body-lg" tone="soft" className="mt-4">
-              {tFounders("body")}
+              {tHistory("body")}
             </Text>
           </article>
 
@@ -107,7 +136,7 @@ export default async function AboutPage({
       </Section>
 
       {/* ──────────────────────────── Where we serve */}
-      <Section surface="sunken" density="default">
+      <Section density="default">
         <Container width="wide">
           <Heading as="h2" size="h2" className="max-w-[24ch]">
             {tWhere("heading")}
@@ -135,7 +164,7 @@ export default async function AboutPage({
       </Section>
 
       {/* ──────────────────────────── Use of funds */}
-      <Section density="default">
+      <Section surface="sunken" density="default">
         <Container width="standard">
           <Heading as="h2" size="h2">{tFunds("heading")}</Heading>
           <Text size="body-lg" tone="soft" className="mt-3">{tFunds("body")}</Text>
@@ -152,7 +181,7 @@ export default async function AboutPage({
       </Section>
 
       {/* ──────────────────────────── Accountability */}
-      <Section surface="sunken" density="default">
+      <Section density="default">
         <Container width="content">
           <Heading as="h2" size="h2">{tAccountability("heading")}</Heading>
           <Text size="body-lg" tone="soft" className="mt-4">{tAccountability("body")}</Text>

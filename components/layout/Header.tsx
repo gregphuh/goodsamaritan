@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { NAV_ITEMS } from "@/lib/nav";
 import { cn } from "@/lib/cn";
+import { BrandCross } from "@/components/brand/BrandCross";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
 
@@ -20,8 +21,12 @@ export async function Header() {
       style={{ ["--header-h" as string]: "4rem" }}
     >
       <div className="mx-auto h-full max-w-[var(--container-wide)] px-5 sm:px-6 md:px-8 flex items-center justify-between gap-6">
-        <Link href="/" className="font-display text-body-lg md:text-h4 font-semibold leading-none">
-          {tSite("name")}
+        <Link
+          href="/"
+          className="inline-flex items-center gap-3 font-display text-body-lg md:text-h4 font-semibold leading-none"
+        >
+          <BrandCross size={20} strokeWidth={2.5} className="text-accent shrink-0" />
+          <span>{tSite("name")}</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden md:flex items-center gap-6">

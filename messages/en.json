@@ -1,7 +1,9 @@
 {
   "Site": {
     "name": "Good Samaritan International",
-    "tagline": "Walking with Romanian families since 1994"
+    "tagline": "Walking with Romanian families since 1994",
+    "motto": "Let all that you do be done in love",
+    "mottoReference": "1 Corinthians 16:14"
   },
   "Nav": {
     "home": "Home",
@@ -43,19 +45,19 @@
       "subhead": "In 2024 we sent nearly $100,000 to named families for groceries, medicine, firewood, and home repair. Ninety-eight cents of every dollar reached the field."
     },
     "trustBand": {
-      "label": "2024 in numbers, from the annual report",
+      "label": "Three things to know about us",
       "stat1Value": "$100K",
-      "stat1Label": "Distributed in 2024",
-      "stat1Detail": "To fifty-plus named families and missionaries",
-      "stat2Value": "76%",
-      "stat2Label": "Reached Romania",
-      "stat2Detail": "USA 16% · UK 5% · Africa 3%",
-      "stat3Value": "2%",
-      "stat3Label": "Admin overhead",
-      "stat3Detail": "Board members pay their own travel",
+      "stat1Label": "To families in 2024",
+      "stat1Detail": "Fifty-plus named families. Every dollar tagged by category.",
+      "stat2Value": "100%",
+      "stat2Label": "Volunteer board",
+      "stat2Detail": "No paid staff, ever. Board members pay their own travel.",
+      "stat3Value": "98¢",
+      "stat3Label": "Of every dollar to the field",
+      "stat3Detail": "All giving goes to families, missionaries, and projects.",
       "stat4Value": "1994",
-      "stat4Label": "Founded",
-      "stat4Detail": "By Nistor and Floare Forgaciu"
+      "stat4Label": "501(c)(3) charity",
+      "stat4Detail": "IRS EIN 38-3401779. Tax-deductible. Annual report public."
     },
     "projects": {
       "heading": "Where 2024 went, in five categories",
@@ -203,9 +205,20 @@
       "headline": "Founded in 1994. Still walking with the same families.",
       "subhead": "Good Samaritan International began the year Nistor and Floare Forgaciu started taking groceries and firewood to widows and elderly neighbors in their corner of Romania. Thirty years later, the relationships are still by name."
     },
-    "founders": {
-      "heading": "The Forgaciu family",
-      "body": "Nistor and Floare Forgaciu founded the organization in 1994 with one conviction: that following Jesus meant remembering the poor. They started small, in their own region. The work has grown, but the way it works has not changed. The board still visits each named family in person, pays for their own travel, and prays with each family before any aid is delivered."
+    "team": {
+      "heading": "Our team",
+      "lead": "Every member of our team is a volunteer. No one on this board is compensated.",
+      "body": "We take our convictions and turn them into action. Every board member volunteers their time and effort for planning and implementing projects. Travel to Romania is paid out of our own pockets. None of your gift ever pays a salary, and nothing ever has. That has been true since 1994 and we have not seen a reason to change it.",
+      "stat1Value": "100%",
+      "stat1Label": "Volunteer board",
+      "stat2Value": "$0",
+      "stat2Label": "Paid to staff, ever",
+      "stat3Value": "98¢",
+      "stat3Label": "Of every dollar to the field"
+    },
+    "history": {
+      "heading": "Our history",
+      "body": "Nistor and Floare Forgaciu founded the organization in 1994 with one conviction: that following Jesus meant remembering the poor. They started small, in their own region, carrying groceries and firewood to widows and elderly neighbors. The work has grown across three decades but the way it works has not changed. The board still visits each named family in person, prays with them in their kitchens, and stays in touch through the local pastors who first introduced them."
     },
     "mission": {
       "heading": "Our mission",

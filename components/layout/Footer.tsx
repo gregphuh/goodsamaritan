@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { NAV_ITEMS } from "@/lib/nav";
 import { Container } from "@/components/primitives/Container";
+import { BrandCross } from "@/components/brand/BrandCross";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export async function Footer() {
@@ -12,10 +13,21 @@ export async function Footer() {
   return (
     <footer className="mt-auto bg-surface-inverse text-ink-inverse">
       <Container width="wide" className="py-12 md:py-16">
-        {/* Top band: summary statement */}
-        <p className="font-display text-h3 text-ink-inverse max-w-[40ch]">
-          {tFooter("summary")}
-        </p>
+        {/* Top band: motto + summary */}
+        <div className="flex items-start gap-5">
+          <BrandCross size={32} strokeWidth={2} className="text-accent shrink-0 mt-1" />
+          <div>
+            <p className="font-display italic text-h3 text-accent leading-snug">
+              &ldquo;{tSite("motto")}&rdquo;
+            </p>
+            <p className="mt-1 text-caption text-ink-inverse/60 uppercase tracking-wider">
+              {tSite("mottoReference")}
+            </p>
+            <p className="mt-6 font-display text-h4 text-ink-inverse max-w-[40ch]">
+              {tFooter("summary")}
+            </p>
+          </div>
+        </div>
 
         {/* Middle band: nav + identity */}
         <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">

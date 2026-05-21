@@ -2,7 +2,9 @@
   "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. See docs/spec.md Q2. Particular care needed on faith-tone (avoid both Catholic-Orthodox-specific and overly casual register) and donation language (Zelle/PayPal terms may stay English).",
   "Site": {
     "name": "Good Samaritan International",
-    "tagline": "Alături de familiile din România din 1994"
+    "tagline": "Alături de familiile din România din 1994",
+    "motto": "Tot ce faceți, să fie făcut în dragoste",
+    "mottoReference": "1 Corinteni 16:14"
   },
   "Nav": {
     "home": "Acasă",
@@ -44,19 +46,19 @@
       "subhead": "În 2024 am trimis aproape 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case. Nouăzeci și opt de cenți din fiecare dolar au ajuns pe teren."
     },
     "trustBand": {
-      "label": "2024 în cifre, din raportul anual",
+      "label": "Trei lucruri de știut despre noi",
       "stat1Value": "$100K",
-      "stat1Label": "Distribuiți în 2024",
-      "stat1Detail": "Către peste cincizeci de familii și misionari, cunoscuți după nume",
-      "stat2Value": "76%",
-      "stat2Label": "Au ajuns în România",
-      "stat2Detail": "SUA 16% · Marea Britanie 5% · Africa 3%",
-      "stat3Value": "2%",
-      "stat3Label": "Cheltuieli administrative",
-      "stat3Detail": "Membrii consiliului își plătesc singuri călătoriile",
+      "stat1Label": "Către familii în 2024",
+      "stat1Detail": "Peste cincizeci de familii, cunoscute după nume. Fiecare dolar etichetat pe categorie.",
+      "stat2Value": "100%",
+      "stat2Label": "Consiliu voluntar",
+      "stat2Detail": "Niciun personal plătit, vreodată. Membrii consiliului își plătesc singuri călătoriile.",
+      "stat3Value": "98¢",
+      "stat3Label": "Din fiecare dolar pe teren",
+      "stat3Detail": "Toate donațiile merg la familii, misionari și proiecte.",
       "stat4Value": "1994",
-      "stat4Label": "Fondată",
-      "stat4Detail": "De Nistor și Floare Forgaciu"
+      "stat4Label": "Organizație 501(c)(3)",
+      "stat4Detail": "IRS EIN 38-3401779. Deductibil fiscal. Raport anual public."
     },
     "projects": {
       "heading": "Unde au ajuns donațiile în 2024, în cinci categorii",
@@ -204,9 +206,20 @@
       "headline": "Fondată în 1994. Încă mergem alături de aceleași familii.",
       "subhead": "Good Samaritan International a început în anul în care Nistor și Floare Forgaciu au început să ducă alimente și lemne de foc văduvelor și bătrânilor din colțul lor de România. Treizeci de ani mai târziu, relațiile sunt încă pe nume."
     },
-    "founders": {
-      "heading": "Familia Forgaciu",
-      "body": "Nistor și Floare Forgaciu au fondat organizația în 1994 cu o singură convingere: că a-L urma pe Isus înseamnă a-i aminti pe cei săraci. Au început modest, în regiunea lor. Lucrarea a crescut, dar felul în care funcționează nu s-a schimbat. Consiliul încă vizitează personal fiecare familie pe nume, își plătește singur călătoria și se roagă cu fiecare familie înainte de a livra orice ajutor."
+    "team": {
+      "heading": "Echipa noastră",
+      "lead": "Fiecare membru al echipei este voluntar. Nimeni din consiliu nu este remunerat.",
+      "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm.",
+      "stat1Value": "100%",
+      "stat1Label": "Consiliu voluntar",
+      "stat2Value": "$0",
+      "stat2Label": "Plătit personalului, vreodată",
+      "stat3Value": "98¢",
+      "stat3Label": "Din fiecare dolar pe teren"
+    },
+    "history": {
+      "heading": "Istoria noastră",
+      "body": "Nistor și Floare Forgaciu au fondat organizația în 1994 cu o singură convingere: că a-L urma pe Isus înseamnă a-i aminti pe cei săraci. Au început modest, în regiunea lor, ducând alimente și lemne văduvelor și bătrânilor. Lucrarea a crescut în trei decenii, dar felul în care funcționează nu s-a schimbat. Consiliul încă vizitează personal fiecare familie pe nume, se roagă cu ei în bucătărie și păstrează legătura prin pastorii locali care i-au prezentat."
     },
     "mission": {
       "heading": "Misiunea noastră",
