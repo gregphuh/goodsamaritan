@@ -126,10 +126,50 @@ export default async function Home({
         </Container>
       </Section>
 
-      {/* ──────────────────────────── Projects teaser */}
-      <Section density="default">
+      {/* ──────────────────────────── Projects (landing-page section) */}
+      <Section surface="sunken" density="default" id="projects">
         <Container width="wide">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="max-w-[60ch]">
+            <Heading as="h2" size="h2">Projects</Heading>
+            <Text size="body-lg" tone="soft" className="mt-4">
+              We organize our work in five categories. Every project below names the families we walked with, the villages we visited, and what your gift covered.
+            </Text>
+          </div>
+
+          {/* Featured project — the family in the current housing project */}
+          <article className="mt-12 bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
+            <div className="relative min-h-[280px] md:min-h-0 md:aspect-auto bg-surface-sunken">
+              <Image
+                src="/images/family-1.jpg"
+                alt="A multigenerational Romanian family inside their home, at the center of our current housing project."
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <Text size="caption" tone="accent" className="mb-3">{tStory("heading")}</Text>
+              <Heading as="h3" size="h2">
+                {tStory("title")}
+              </Heading>
+              <Text size="body-lg" tone="soft" className="mt-6">
+                {tStory("excerpt")}
+              </Text>
+              <Link
+                href="/projects/housing"
+                className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
+              >
+                Learn how housing aid works
+                <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+              </Link>
+              <p className="mt-6 text-caption text-ink-muted">
+                Shared with permission of the family.
+              </p>
+            </div>
+          </article>
+
+          {/* 3 category cards */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             <ProjectCard
               category="housing"
               title={tProj("housingTitle")}
@@ -152,44 +192,68 @@ export default async function Home({
               cta={tCta("seeWinterAid")}
             />
           </div>
+
+          {/* Photo gallery — every real photograph from the field */}
+          <div className="mt-16">
+            <Text size="caption" className="text-ink-muted mb-6">From Romania</Text>
+            <PhotoGallery />
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-sm bg-surface-raised border border-rule text-ink font-semibold text-body hover:bg-surface-sunken transition-colors duration-[160ms]"
+            >
+              See every project
+              <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+            </Link>
+          </div>
         </Container>
       </Section>
 
-      {/* ──────────────────────────── Story preview */}
-      <Section surface="sunken" density="default">
+      {/* ──────────────────────────── Mission trips */}
+      <Section density="default" id="mission-trips">
         <Container width="wide">
-          <h2 className="mb-6 text-caption text-ink-muted font-body font-semibold uppercase tracking-wider">
-            {tStory("heading")}
-          </h2>
-          <article className="bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
-            <div className="relative min-h-[280px] md:min-h-0 md:aspect-auto bg-surface-sunken">
-              <Image
-                src="/images/family-1.jpg"
-                alt="The family at the center of our current housing project, photographed inside their Romanian home."
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="p-8 md:p-10 flex flex-col justify-center">
-              <Heading as="h3" size="h2">
-                {tStory("title")}
-              </Heading>
-              <Text size="body-lg" tone="soft" className="mt-6">
-                {tStory("excerpt")}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
+            <figure className="md:col-span-6 order-2 md:order-1">
+              <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+                <Image
+                  src="/images/team-build-site.jpg"
+                  alt="Members of the board with partners on a Romanian project site."
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+            <div className="md:col-span-6 order-1 md:order-2">
+              <Heading as="h2" size="h2">Mission trips</Heading>
+              <Text size="body-lg" tone="soft" className="mt-4">
+                We do not have a 2026 trip scheduled yet. If you would consider going with us when one is set, the door is open. Past trips have meant ten days in rural Romania with a translator, partner pastors, and the families we walk with year-round.
               </Text>
-              <Link
-                href="/projects/housing"
-                className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
-              >
-                Learn how housing aid works
-                <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
-              </Link>
-              <p className="mt-6 text-caption text-ink-muted">
-                Shared with permission of the family.
-              </p>
+              <ul className="mt-6 space-y-2 text-body text-ink-soft list-disc ml-6">
+                <li>Useful skills: medical, electrical, basic construction, basic Romanian.</li>
+                <li>Typical cost: $1,500 to $2,500 (flight, ground, lodging).</li>
+                <li>Board members pay their own travel separately.</li>
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/mission-trips"
+                  className="inline-flex items-center gap-2 h-12 px-6 rounded-sm bg-accent text-on-accent font-semibold text-body hover:bg-accent-strong transition-colors duration-[160ms]"
+                >
+                  Read about trips
+                  <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+                </Link>
+                <a
+                  href="mailto:gsworldoutreach@gmail.com?subject=2026%20trip%20interest"
+                  className="inline-flex items-center gap-2 h-12 px-6 rounded-sm border border-rule text-ink font-semibold text-body hover:bg-surface-sunken transition-colors duration-[160ms]"
+                >
+                  Email the board
+                  <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
+                </a>
+              </div>
             </div>
-          </article>
+          </div>
         </Container>
       </Section>
 
@@ -211,6 +275,46 @@ export default async function Home({
         </Container>
       </Section>
     </main>
+  );
+}
+
+// Photo gallery — every real photograph the org has shared from Romania.
+// Layout: 2-col mobile, 3-col tablet, 4-col desktop. A couple of cells span
+// two columns to break the uniform-grid rhythm without going masonry.
+const GALLERY: { src: string; alt: string; span?: "wide" | "tall" }[] = [
+  { src: "/images/countryside.jpg", alt: "A Carpathian valley in Romania.", span: "wide" },
+  { src: "/images/church-build.jpg", alt: "A small Romanian church with a white cross on its roof, photographed during a construction project." },
+  { src: "/images/classroom-jesus.jpg", alt: "A Sunday-school wall in Romania painted with Jesus and children, captioned in Romanian: Let the little children come to me. Luke 18:16." },
+  { src: "/images/family-1.jpg", alt: "A multigenerational Romanian family at home." },
+  { src: "/images/classroom-children.jpg", alt: "Children in a Romanian Sunday-school classroom with their teacher." },
+  { src: "/images/food-delivery.jpg", alt: "Car trunk loaded with groceries, oil, and supplies for a family." },
+  { src: "/images/goats.jpg", alt: "Two men with a herd of goats in rural Romania." },
+  { src: "/images/team-build-site.jpg", alt: "Four men standing on a project site in Romania.", span: "wide" },
+  { src: "/images/courtyard-1.jpg", alt: "The courtyard of a Romanian home in need of repair." },
+  { src: "/images/courtyard-2.jpg", alt: "A narrow alley between two Romanian houses." },
+  { src: "/images/guest-house.jpg", alt: "Partner guest house in Romania." },
+];
+
+function PhotoGallery() {
+  return (
+    <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      {GALLERY.map((photo) => (
+        <li
+          key={photo.src}
+          className={photo.span === "wide" ? "md:col-span-2" : undefined}
+        >
+          <figure className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover transition-transform duration-[400ms] hover:scale-[1.03]"
+            />
+          </figure>
+        </li>
+      ))}
+    </ul>
   );
 }
 
