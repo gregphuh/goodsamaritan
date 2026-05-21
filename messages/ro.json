@@ -129,6 +129,46 @@
     },
     "receiptBody": "Mulțumim. Donația ta ajunge săptămâna aceasta la o familie din România, cunoscută după nume. Suntem recunoscători pentru tine."
   },
+  "MissionTrips": {
+    "hero": {
+      "eyebrow": "Pentru voluntari interesați",
+      "headline": "Călătorii misionare în România.",
+      "subhead": "Nu avem încă o călătorie programată pentru 2026. Dacă ai vrea să mergi cu noi când se stabilește una, adaugă-ți numele la lista de interes de mai jos."
+    },
+    "history": {
+      "heading": "Cum au arătat călătoriile trecute",
+      "body": "Cea mai recentă vizită a consiliului a fost în vara lui 2024. Consiliul a zburat la București, a condus prin județele Botoșani și Brașov și a stat alături de familiile Lutac, Anton, Bărbălata, Ciobanășu, Maicaru, Ghete, Curavale, Murariu și Petru Vlașcu timp de aproximativ zece zile. Fotografii și un jurnal pe familie se află în raportul anual 2024."
+    },
+    "what": {
+      "heading": "Ce ar include o călătorie"
+    },
+    "skills": {
+      "heading": "Abilități utile pe teren"
+    },
+    "cost": {
+      "heading": "Costuri estimate",
+      "body": "Voluntarii își acoperă propriul zbor (de obicei $900 până la $1.400 din SUA) și contribuie cu $500 până la $800 pentru cheltuielile la sol (cazare, mâncare, transport). Totalul se încadrează între $1.500 și $2.500. Membrii consiliului își plătesc separat călătoria."
+    },
+    "apply": {
+      "heading": "Înscrie-te pe lista de interes",
+      "body": "Scrie la gsworldoutreach@gmail.com cu subiectul \"2026 trip interest\" și o propoziție despre motivul tău. Consiliul răspunde când datele sunt fixate, estimat până la vara 2026.",
+      "cta": "Deschide e-mail către consiliu"
+    }
+  },
+  "Volunteer": {
+    "hero": {
+      "eyebrow": "Roluri în SUA",
+      "headline": "Mâini de care am avea nevoie aici în SUA.",
+      "subhead": "Suntem un consiliu mic, format integral din voluntari. Câteva roluri specifice ar înmulți ceea ce putem face fără să zburăm nicăieri."
+    },
+    "roles": {
+      "heading": "Unde avem nevoie de ajutor"
+    },
+    "contact": {
+      "heading": "Contactează consiliul",
+      "body": "Scrie la gsworldoutreach@gmail.com cu rolul care ți se potrivește, sau folosește formularul de contact."
+    }
+  },
   "Contact": {
     "hero": {
       "eyebrow": "Contactează-ne",

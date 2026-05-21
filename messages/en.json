@@ -128,6 +128,46 @@
     },
     "receiptBody": "Thank you. Your gift reaches a named Romanian family this week. We are grateful for you."
   },
+  "MissionTrips": {
+    "hero": {
+      "eyebrow": "For prospective volunteers",
+      "headline": "Romania mission trips.",
+      "subhead": "We do not have a 2026 trip scheduled yet. If you would consider going with us when one is set, add your name to the interest list below."
+    },
+    "history": {
+      "heading": "What past trips have looked like",
+      "body": "Our most recent board visit was summer 2024. The board flew to Bucharest, drove through Botosani and Brasov counties, and sat with the Lutac, Anton, Barbalata, Ciobanasu, Maicaru, Ghete, Curavale, Murariu, and Petru Vlascu families across about ten days. Photos and a per-family log are in the 2024 annual report."
+    },
+    "what": {
+      "heading": "What a trip would include"
+    },
+    "skills": {
+      "heading": "Skills that help on the ground"
+    },
+    "cost": {
+      "heading": "Expected cost",
+      "body": "Volunteers cover their own flight (typically $900 to $1,400 from the US) and contribute $500 to $800 for ground costs (lodging, food, transport). Total falls in the $1,500 to $2,500 range. Board members pay their own travel separately."
+    },
+    "apply": {
+      "heading": "Join the interest list",
+      "body": "Email gsworldoutreach@gmail.com with the subject \"2026 trip interest\" and a sentence about why. The board writes back when dates lock, expected by summer 2026.",
+      "cta": "Open mail to the board"
+    }
+  },
+  "Volunteer": {
+    "hero": {
+      "eyebrow": "US-side roles",
+      "headline": "Hands we could use stateside.",
+      "subhead": "We are a small all-volunteer board. A few specific roles would multiply what we can do without flying anywhere."
+    },
+    "roles": {
+      "heading": "Where we need help"
+    },
+    "contact": {
+      "heading": "Reach the board",
+      "body": "Email gsworldoutreach@gmail.com with the role that fits you, or use the contact form."
+    }
+  },
   "Contact": {
     "hero": {
       "eyebrow": "Get in touch",
