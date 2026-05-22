@@ -70,7 +70,7 @@ export default async function Home({
                   <span className="text-accent">{tHero("eyebrowLocale")}</span>
                 </span>
                 <span aria-hidden="true" className="text-ink-inverse/40">·</span>
-                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")} {tHero("eyebrowSince")}</span>
+                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")}</span>
               </div>
               <h1 className="font-display font-medium text-[2.125rem] md:text-[2.5rem] lg:text-[3.125rem] leading-[1.1] tracking-tight text-ink-inverse text-balance">
                 {tHero("headline")}
