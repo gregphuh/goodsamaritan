@@ -6,6 +6,7 @@ import { Heading } from "@/components/primitives/Heading";
 import { Section } from "@/components/primitives/Section";
 import { Text } from "@/components/primitives/Text";
 import { CopyableField } from "@/components/donate/CopyableField";
+import { GivebutterEmbed } from "@/components/donate/GivebutterEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildDonateActionSchema } from "@/lib/seo";
 
@@ -140,23 +141,33 @@ export default async function DonatePage({
             {tTrust("cancelAnytime")}
           </Text>
 
-          {/* Givebutter widget mount point. Replace with real embed when campaign ID is set.
+          {/* Givebutter widget. The campaign ID is non-secret (like a Stripe
+              publishable key) but lives in Vercel env so the org can swap
+              campaigns without a code push. Falls back to a dashed-border
+              placeholder when the env var isn't set — so previews stay
+              functional before the campaign lands and a misconfigured deploy
+              never shows a broken empty box.
               Docs: https://givebutter.com/help/articles/embed-options */}
-          <div
-            id="givebutter-mount"
-            role="region"
-            aria-label={tGive("formAriaLabel")}
-            data-givebutter-campaign-id="TODO-CAMPAIGN-ID"
-            className="mt-8 bg-surface-raised border-2 border-dashed border-rule rounded-md p-10 text-center"
-          >
-            <p className="font-display text-h4 text-ink-strong">{tGive("placeholderTitle")}</p>
-            <Text size="body-sm" tone="muted" className="mt-2 max-w-[50ch] mx-auto">
-              {tGive("placeholderBody")}
-            </Text>
-            <Text size="body-sm" tone="muted" className="mt-3">
-              {tGive("placeholderFallback")}
-            </Text>
-          </div>
+          {process.env.NEXT_PUBLIC_GIVEBUTTER_CAMPAIGN_ID ? (
+            <GivebutterEmbed
+              campaignId={process.env.NEXT_PUBLIC_GIVEBUTTER_CAMPAIGN_ID}
+              ariaLabel={tGive("formAriaLabel")}
+            />
+          ) : (
+            <div
+              role="region"
+              aria-label={tGive("formAriaLabel")}
+              className="mt-8 bg-surface-raised border-2 border-dashed border-rule rounded-md p-10 text-center"
+            >
+              <p className="font-display text-h4 text-ink-strong">{tGive("placeholderTitle")}</p>
+              <Text size="body-sm" tone="muted" className="mt-2 max-w-[50ch] mx-auto">
+                {tGive("placeholderBody")}
+              </Text>
+              <Text size="body-sm" tone="muted" className="mt-3">
+                {tGive("placeholderFallback")}
+              </Text>
+            </div>
+          )}
 
           <p className="mt-4 text-caption text-ink-muted">
             {tGive("configuredInside", {
