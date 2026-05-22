@@ -45,20 +45,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Site" });
+  const description =
+    locale === "ro"
+      ? "Organizație creștină 501(c)(3) care merge alături de văduve, orfani și familii din România din 1994. Anual, donatorii noștri trimit zeci de mii de dolari familiilor cunoscute pe nume — pentru alimente, medicamente, lemne de foc și reparații la case."
+      : "A 501(c)(3) Christian charity that walks with widows, orphans, and families in Romania since 1994. Each year, our donors send tens of thousands of dollars to named families for food, medicine, firewood, and home repair.";
   return {
     metadataBase: new URL("https://goodsamaritaninternational.org"),
     title: {
       default: `${t("name")} — ${t("tagline")}`,
       template: `%s · ${t("name")}`,
     },
-    description:
-      "A 501(c)(3) Christian charity that walks with widows, orphans, and families in Romania. Founded 1994. In 2024 we distributed roughly $100,000 to named families for food, medicine, firewood, and home repair.",
+    description,
     openGraph: {
       type: "website",
       siteName: t("name"),
       locale: locale === "ro" ? "ro_RO" : "en_US",
+      title: `${t("name")} — ${t("tagline")}`,
+      description,
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${t("name")} — ${t("tagline")}`,
+        },
+      ],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("name")} — ${t("tagline")}`,
+      description,
+      images: ["/og-image.png"],
+    },
     robots: { index: true, follow: true },
     alternates: {
       languages: {
