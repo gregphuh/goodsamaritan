@@ -45,8 +45,9 @@ export default async function Home({
         <Container width="wide">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start md:items-center">
             {/* Brand identity — cross + motto + verse, anchored left.
-                Cross draws in on page load (animated prop); motto fades
-                in after the cross finishes drawing. */}
+                Cross still draws in on page load (animated prop). The
+                motto and verse-reference render statically — Greg asked
+                for the text to present normally without fade/write-in. */}
             <div className="md:col-span-5 flex md:block flex-col items-center md:items-start text-center md:text-left">
               <BrandCross
                 size={170}
@@ -54,10 +55,10 @@ export default async function Home({
                 animated
                 className="text-accent"
               />
-              <p className="motto-fade-in mt-5 font-cursive text-[2.5rem] md:text-[3.125rem] lg:text-[3.75rem] text-accent leading-[1.05] max-w-[14ch] mx-auto md:mx-0">
+              <p className="mt-5 font-cursive text-[2.5rem] md:text-[3.125rem] lg:text-[3.75rem] text-accent leading-[1.05] max-w-[14ch] mx-auto md:mx-0">
                 {tSite("motto")}
               </p>
-              <p className="motto-fade-in mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider font-semibold">
+              <p className="mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider font-semibold">
                 {tSite("mottoReference")}
               </p>
             </div>
