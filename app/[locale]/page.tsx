@@ -432,8 +432,8 @@ const CARD_PHOTO: Record<Category, { src: string; alt: string }> = {
     alt: "A small Romanian church with a white cross on its roof, under construction with partners and board members at the new entrance.",
   },
   housing: {
-    src: "/images/courtyard-1.jpg",
-    alt: "Courtyard of a Romanian home in need of repair — the kind of project the housing fund supports.",
+    src: "/images/case-elena-puchia.jpg",
+    alt: "Elena Puchia in front of her newly built one-room house — the kind of completed home the housing fund delivers.",
   },
   groceries: {
     src: "/images/food-delivery.jpg",
