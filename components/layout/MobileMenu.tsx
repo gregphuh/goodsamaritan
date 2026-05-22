@@ -85,7 +85,11 @@ export function MobileMenu() {
               {tCta("giveMonthly")}
             </Link>
             <div className="mt-8 pt-6 border-t border-brand-strong">
-              <LanguageSwitcher />
+              {/* Drawer sits on bg-surface-inverse; LanguageSwitcher defaults
+                  to dark text-ink colors meant for light surfaces, so we
+                  hand it the same inverse override the Header and Footer
+                  use. Without this the EN/RO links render dark-on-dark. */}
+              <LanguageSwitcher className="text-ink-inverse [&_a]:text-ink-inverse [&_span]:text-ink-inverse/70" />
             </div>
           </nav>
         </div>
