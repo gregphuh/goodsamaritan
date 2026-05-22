@@ -38,6 +38,28 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// metadataBase has to be a fully-qualified URL or Next.js can't expand
+// relative og:image paths. We pick the right one based on where we're
+// running:
+//   • Vercel production with a custom domain → goodsamaritaninternational.org
+//   • Vercel preview / current *.vercel.app deploy → the deployment URL
+//   • Local dev → localhost
+// Once Cloudflare DNS lands and `goodsamaritaninternational.org` is added
+// in Vercel Project → Domains, VERCEL_PROJECT_PRODUCTION_URL auto-updates
+// and this stays self-correct without a code change.
+function getSiteUrl(): URL {
+  if (
+    process.env.VERCEL_ENV === "production" &&
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ) {
+    return new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+  }
+  if (process.env.VERCEL_URL) {
+    return new URL(`https://${process.env.VERCEL_URL}`);
+  }
+  return new URL("http://localhost:3000");
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -50,7 +72,7 @@ export async function generateMetadata({
       ? "Organizație creștină 501(c)(3) care merge alături de văduve, orfani și familii din România din 1994. Anual, donatorii noștri trimit zeci de mii de dolari familiilor cunoscute pe nume — pentru alimente, medicamente, lemne de foc și reparații la case."
       : "A 501(c)(3) Christian charity that walks with widows, orphans, and families in Romania since 1994. Each year, our donors send tens of thousands of dollars to named families for food, medicine, firewood, and home repair.";
   return {
-    metadataBase: new URL("https://goodsamaritaninternational.org"),
+    metadataBase: getSiteUrl(),
     title: {
       default: `${t("name")} — ${t("tagline")}`,
       template: `%s · ${t("name")}`,
