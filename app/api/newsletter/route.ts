@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { rateLimit, redactEmail, sameOriginOnly } from "@/lib/api-guards";
 
 // Stub: validates the email and accepts the request. Buttondown integration
 // (BUTTONDOWN_API_KEY env var → POST to https://api.buttondown.email/v1/subscribers)
@@ -10,6 +11,18 @@ const Body = z.object({
 });
 
 export async function POST(req: Request) {
+  if (!sameOriginOnly(req)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const limit = rateLimit(req);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfter) } },
+    );
+  }
+
   let payload: unknown;
   try {
     payload = await req.json();
@@ -23,8 +36,8 @@ export async function POST(req: Request) {
   }
 
   // TODO: wire to Buttondown once BUTTONDOWN_API_KEY is configured.
-  // For now, log + return 200 so the form flow works end-to-end.
-  console.log("[newsletter] would subscribe:", parsed.data.email);
+  // Raw email never enters the log stream.
+  console.log("[newsletter] would subscribe:", redactEmail(parsed.data.email));
 
   return NextResponse.json({ ok: true });
 }

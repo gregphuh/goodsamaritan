@@ -14,34 +14,34 @@ export async function Footer() {
 
   return (
     <footer className="mt-auto bg-surface-inverse text-ink-inverse">
-      <Container width="wide" className="py-12 md:py-16">
-        {/* Top band: motto + summary */}
-        <div className="flex items-start gap-5">
-          <BrandCross size={32} strokeWidth={2} className="text-accent shrink-0 mt-1" />
+      <Container width="wide" className="py-10 md:py-12">
+        {/* Top — motto + summary, anchored by the cross */}
+        <div className="flex items-start gap-4">
+          <BrandCross size={28} strokeWidth={2.5} className="text-accent shrink-0 mt-1" />
           <div>
-            <p className="font-display italic text-h3 text-accent leading-snug">
-              &ldquo;{tSite("motto")}&rdquo;
+            <p className="font-cursive text-[1.75rem] md:text-[2rem] text-accent leading-[1.05]">
+              {tSite("motto")}
             </p>
             <p className="mt-1 text-caption text-ink-inverse/60 uppercase tracking-wider">
               {tSite("mottoReference")}
             </p>
-            <p className="mt-6 font-display text-h4 text-ink-inverse max-w-[40ch]">
+            <p className="mt-4 text-body text-ink-inverse/90 max-w-[44ch]">
               {tFooter("summary")}
             </p>
           </div>
         </div>
 
-        {/* Middle band: nav + identity */}
-        <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
+        {/* Middle — identity / nav / trust, three even columns */}
+        <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
           <div>
-            <p className="font-display text-h4 mb-3">{tSite("name")}</p>
+            <p className="font-display text-h4 mb-2">{tSite("name")}</p>
             <p className="text-body-sm text-ink-inverse/80 flex items-center gap-2">
               <RomaniaFlag height={14} title="Flag of Romania" />
-              <span>Serving Romanian families since 1994</span>
+              <span>{tFooter("servingLine")}</span>
             </p>
-            <p className="text-body-sm text-ink-inverse/80 mt-3">{tFooter("status501c3")}</p>
-            <p className="text-body-sm text-ink-inverse/80">{tFooter("ein")}</p>
-            <p className="text-body-sm text-ink-inverse/80 mt-2">{tFooter("address")}</p>
+            <p className="text-body-sm text-ink-inverse/70 mt-3">{tFooter("status501c3")}</p>
+            <p className="text-body-sm text-ink-inverse/70">{tFooter("ein")}</p>
+            <p className="text-body-sm text-ink-inverse/70 mt-2">{tFooter("address")}</p>
             <a
               href="mailto:gsworldoutreach@gmail.com"
               className="text-body-sm text-ink-inverse/80 hover:text-ink-inverse underline underline-offset-2 mt-2 inline-block"
@@ -50,9 +50,9 @@ export async function Footer() {
             </a>
           </div>
 
-          <nav aria-label="Footer">
-            <p className="text-caption uppercase text-ink-inverse/60 mb-3">Pages</p>
-            <ul className="space-y-2">
+          <nav aria-label={tFooter("pagesLabel")}>
+            <p className="text-caption uppercase text-ink-inverse/60 mb-3">{tFooter("pagesLabel")}</p>
+            <ul className="space-y-1.5">
               {FOOTER_NAV_ITEMS.map((item) => (
                 <li key={item.key}>
                   <Link
@@ -75,55 +75,41 @@ export async function Footer() {
           </nav>
 
           <div>
-            <p className="text-caption uppercase text-ink-inverse/60 mb-3">Trust & legal</p>
-            <ul className="space-y-2">
+            <p className="text-caption uppercase text-ink-inverse/60 mb-3">{tFooter("trustLabel")}</p>
+            <ul className="space-y-1.5">
               <li>
-                <a
-                  href="/annual-reports/2024.pdf"
-                  className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline"
-                >
-                  2024 annual report (PDF)
-                </a>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline"
-                >
-                  Privacy
+                <Link href="/accountability" className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline">
+                  {tNav("accountability")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/terms"
-                  className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline"
-                >
-                  Terms
+                <Link href="/privacy" className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline">
+                  {tFooter("linkPrivacy")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-body-sm text-ink-inverse/85 hover:text-ink-inverse underline-offset-4 hover:underline">
+                  {tFooter("linkTerms")}
                 </Link>
               </li>
             </ul>
-            <div className="mt-6">
+            <div className="mt-5">
               <LanguageSwitcher className="text-ink-inverse [&_a]:text-ink-inverse [&_span]:text-ink-inverse/70" />
             </div>
           </div>
         </div>
 
-        {/* Bible — quiet closing mark, paired with Galatians 2:10 reference */}
-        <div className="mt-16 flex flex-col items-center text-center gap-3">
-          <BrandBible
-            size={48}
-            strokeWidth={1.6}
-            className="text-accent/80"
-            title="Bible"
-          />
-          <p className="text-caption text-ink-inverse/60 uppercase tracking-wider">
-            Remembering the poor · Galatians 2:10
+        {/* Closing band — Bible mark + verse + copyright on one rule */}
+        <div className="mt-8 pt-5 border-t border-ink-inverse/15 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <div className="flex items-center gap-2.5">
+            <BrandBible size={22} strokeWidth={1.8} className="text-accent/70" title="Bible" />
+            <p className="text-caption text-ink-inverse/60 uppercase tracking-wider">
+              {tFooter("verseRemembering")} · {tFooter("verseReference")}
+            </p>
+          </div>
+          <p className="text-body-sm text-ink-inverse/60">
+            &copy; {new Date().getFullYear()} {tSite("name")} · {tFooter("tagline")}
           </p>
-        </div>
-
-        {/* Bottom band: legal microcopy */}
-        <div className="mt-10 pt-6 border-t border-brand-strong text-body-sm text-ink-inverse/70">
-          <p>{tFooter("tagline")} · &copy; {new Date().getFullYear()} Good Samaritan Org.</p>
         </div>
       </Container>
     </footer>

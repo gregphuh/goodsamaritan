@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Reference source materials kept locally only (PDFs, flyers, donor reports,
+# raw photographs with PII or children's faces). The site only commits the
+# adult-only stills extracted into public/images/case-*.jpg.
+/*.pdf
+/*.PDF
+/Fam Vlascu water well - Copy.jpg

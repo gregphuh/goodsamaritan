@@ -1,5 +1,5 @@
 {
-  "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. See docs/spec.md Q2. Particular care needed on faith-tone (avoid both Catholic-Orthodox-specific and overly casual register) and donation language (Zelle/PayPal terms may stay English).",
+  "_translatorNote": "DRAFT: AI-generated placeholder Romanian. Needs review by a native speaker before launch. Faith register: Romanian evangelical Protestant (Cornilescu); avoid overly Catholic/Orthodox terms; avoid overly casual register. Brand names (Givebutter, Stripe, PayPal, Zelle, IRS) kept untranslated. Bible references translated to Romanian book names (Galateni, 1 Corinteni, Luca).",
   "Site": {
     "name": "Good Samaritan International",
     "tagline": "Alături de familiile din România din 1994",
@@ -8,43 +8,54 @@
   },
   "Nav": {
     "home": "Acasă",
-    "about": "Despre noi",
+    "about": "Despre",
     "projects": "Proiecte",
-    "annualReports": "Rapoarte anuale",
+    "ministries": "Slujiri",
+    "accountability": "Responsabilitate",
     "missionTrips": "Misiuni",
     "volunteer": "Voluntariat",
     "contact": "Contact",
     "donate": "Donează"
   },
   "CTA": {
-    "giveMonthly": "Donează lunar",
+    "giveMonthly": "Susține",
     "giveOnce": "Donează o dată",
-    "readReport": "Citește raportul 2024",
     "skipToContent": "Sari la conținut",
-    "seeHousing": "Vezi proiectele de locuințe",
-    "seeMedical": "Vezi proiectele medicale",
+    "seeHousing": "Vezi locuințele",
+    "seeMedical": "Vezi medicalul",
     "seeWinterAid": "Vezi ajutorul de iarnă",
-    "readStory": "Citește povestea familiei Lutac",
-    "subscribe": "Abonează-te"
+    "subscribe": "Abonează-te",
+    "contactUs": "Contactează-ne"
   },
   "Footer": {
     "ein": "EIN 38-3401779",
     "status501c3": "Organizație caritabilă 501(c)(3)",
     "address": "2060 Curtis Rd, Addison Twp, MI 48307",
     "tagline": "Donațiile sunt deductibile fiscal în SUA",
-    "summary": "Un consiliu mic, donatori statornici și familii pe care le cunoaștem după nume."
+    "summary": "Un consiliu mic, donatori statornici și familii alături de care am mers timp de decenii.",
+    "servingLine": "Slujind familiile din România din 1994",
+    "pagesLabel": "Pagini",
+    "trustLabel": "Încredere și legal",
+    "linkPrivacy": "Confidențialitate",
+    "linkTerms": "Termeni",
+    "verseRemembering": "Aducându-ne aminte de cei săraci",
+    "verseReference": "Galateni 2:10"
   },
   "LanguageSwitcher": {
     "label": "Limbă",
     "en": "English",
     "ro": "Română"
   },
+  "MobileMenu": {
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
+  },
   "Home": {
     "hero": {
       "eyebrowLocale": "România",
-      "eyebrowSince": "Slujind din 1994",
+      "eyebrowSince": "din 1994",
       "eyebrowFaith": "Organizație creștină 501(c)(3)",
-      "headline": "Alături de familiile din România din 1994.",
+      "headline": "Alături de familiile în nevoie din 1994.",
       "subhead": "Pentru a împlini Evanghelia, scopul nostru este să trimitem anual peste 100.000 $ unor familii cunoscute după nume, pentru alimente, medicamente, lemne de foc și reparații la case."
     },
     "trustBand": {
@@ -57,27 +68,96 @@
       "stat2Detail": "Toate donațiile merg la familii, misionari și proiecte.",
       "stat3Value": "1994",
       "stat3Label": "Organizație 501(c)(3)",
-      "stat3Detail": "IRS EIN 38-3401779. Deductibil fiscal. Raport anual public."
+      "stat3Detail": "IRS EIN 38-3401779. Deductibil fiscal. Conturile, deschise donatorilor."
+    },
+    "scripture": {
+      "verseText": "Ne-au spus numai să ne aducem aminte de cei săraci, și chiar așa am și căutat să fac.",
+      "reference": "Galateni 2:10",
+      "translation": "Cornilescu"
+    },
+    "ministriesSection": {
+      "heading": "Slujiri",
+      "body": "Ne organizăm lucrarea în cinci slujiri. Fiecare slujire de mai jos arată câte familii am însoțit anul acesta și ce a acoperit darul tău.",
+      "housingLearn": "Află cum funcționează ajutorul pentru locuințe",
+      "permissionNote": "Publicat cu permisiunea familiei.",
+      "wordTitle": "Cuvântul lui Dumnezeu",
+      "wordBody": "Sprijin pentru misionari și pastori care duc Evanghelia în satele românești și către lucrările partenere din Statele Unite, Marea Britanie și Africa.",
+      "wordCta": "Vezi lucrarea misionară",
+      "groceriesTitle": "Alimente",
+      "groceriesBody": "Pâine, lapte, ulei și alte produse esențiale pentru văduve și familii a căror pensie sau salariu lunar nu ajunge până la sfârșitul lunii.",
+      "groceriesCta": "Vezi distribuirea ajutorului"
     },
     "projects": {
       "housingTitle": "Locuințe",
-      "housingBody": "Familia Dragomir a primit cheile casei lor în septembrie 2023. În 2024 am ajutat familia Anton să-și izoleze casa înainte de iarnă și am conectat casa familiei Barbalata la energie electrică.",
+      "housingBody": "Case izolate, reparate și conectate la curent. Fiecare proiect începe cu o solicitare a unui pastor local care cunoaște familia.",
       "medicalTitle": "Medical",
-      "medicalBody": "Marta Lutac urmează tratament pentru cancer în Răuseni. Nepotul ei Bogdan a avut două operații la ochi anul acesta. Am acoperit medicamentele și transportul la spital pentru amândoi.",
+      "medicalBody": "Operații, medicamente și transport la spital pentru familii care înfruntă boli grave. Acoperim ce nu acoperă asigurarea publică.",
       "firewoodTitle": "Lemne de foc și iarnă",
-      "firewoodBody": "Familia Ciobanaşu din Avrameni și familia Murariu din Moldova au primit lemne de foc și provizii înainte de frig."
+      "firewoodBody": "Lemne de foc, facturi la utilități și provizii de iarnă, livrate înainte de frig în fiecare toamnă."
     },
     "story": {
       "heading": "Un proiect actual",
       "title": "O familie care are nevoie de o casă.",
-      "excerpt": "O familie cu mai multe generații dintr-o zonă rurală a României, trăind într-o casă deteriorată cu o curte stricată. Strângem fondurile pentru a le oferi un acoperiș adevărat și o bucătărie care să țină căldura iarna. Pastorul local îi cunoaște după nume și a mers alături de noi și înainte."
+      "excerpt": "O familie cu mai multe generații dintr-o zonă rurală a României, trăind într-o casă deteriorată cu o curte stricată. Strângem fondurile pentru a le oferi un acoperiș adevărat și o bucătărie care să țină căldura iarna. Pastorul local îi cunoaște și a mers alături de noi și înainte."
+    },
+    "gallery": {
+      "label": "Din România",
+      "countrysideAlt": "O vale a Carpaților din România — locul prin care conducem la fiecare vizită a consiliului.",
+      "classroomJesusAlt": "Un perete dintr-o școală duminicală românească pictat cu Isus și copiii, cu inscripția „Lăsați copilașii să vină la Mine” (Luca 18:16).",
+      "classroomChildrenAlt": "Copii într-o clasă de școală duminicală românească cu învățătoarea lor.",
+      "foodDeliveryAlt": "Portbagaj plin cu alimente, ulei și provizii pentru o familie.",
+      "teamBuildSiteAlt": "Patru membri ai echipei pe un șantier al unui proiect din România.",
+      "goatsAlt": "Doi bărbați cu o turmă de capre în România rurală.",
+      "guestHouseAlt": "Clădire a unei comunități partenere din România.",
+      "courtyard1Alt": "Curtea unei case românești care are nevoie de reparații.",
+      "courtyard2Alt": "O alee îngustă între două case românești."
+    },
+    "missionTripsSection": {
+      "heading": "Călătorii misionare",
+      "body": "Nu avem încă o călătorie programată pentru 2026. Dacă ai dori să mergi alături de noi când va fi stabilită, ușa este deschisă. Călătoriile trecute au însemnat zece zile în România rurală, cu un traducător, pastori parteneri și familiile alături de care mergem tot anul.",
+      "imageAlt": "Membri ai consiliului împreună cu parteneri pe un șantier al unui proiect din România.",
+      "skill1": "Abilități utile: medicale, electrice, construcții de bază, limba română de bază.",
+      "skill2": "Cost obișnuit: între $1.500 și $2.500 (zbor, deplasări, cazare).",
+      "skill3": "Membrii consiliului își plătesc separat călătoria.",
+      "ctaTrips": "Citește despre călătorii",
+      "ctaEmail": "Scrie consiliului"
+    },
+    "stories": {
+      "heading": "Povești de pe teren",
+      "intro": "Fiecare proiect începe cu o familie pe care un pastor local o cunoaște pe nume. Acestea trei sunt din anul cel mai recent.",
+      "amountLabel": "Cost proiect",
+      "completedLabel": "Status",
+      "completedValue": "Finalizat",
+      "case1Name": "Elena Puchia",
+      "case1Location": "Albești, județul Botoșani",
+      "case1Amount": "≈ 2.500 $",
+      "case1Body": "Elena are peste 60 de ani și trăia într-o cocioabă cu o singură cameră, care se prăbușea literalmente. O familie din vecini a început să-i construiască o casă mică nouă pe aceeași curte, iar noi am venit alături pentru a finaliza acoperișul, izolația, depozitul de lemne de foc și un gard și o poartă noi. Finalizat la începutul lui 2023.",
+      "case1ImageAlt": "Elena Puchia zâmbind în fața noii ei case cu o singură cameră, cu acoperiș metalic și cu fumul ieșind din coș.",
+      "case1BeforeAlt": "Casa anterioară a Elenei — o casă mică, cu pereții de tencuială crăpată și acoperișul de țigle prăbușit.",
+      "case1BeforeBadge": "Înainte",
+      "case1BeforeCaption": "Casa în care locuia Elena înainte de acest proiect.",
+      "case2Name": "Petru și Maria Vlașcu",
+      "case2Location": "Sarafinești, județul Botoșani",
+      "case2Amount": "≈ 4.000 $",
+      "case2Body": "Petru este paralizat în urma unui accident vascular. Maria, 68 de ani, căra apă cu gălețile de la vecini după ce fântâna lor a secat și spăla rufele de mână. Am săpat o fântână nouă în curte, am instalat o pompă electrică și instalație sanitară în casă și am livrat o mașină de spălat și un WC. Finalizat înainte de iarna 2022.",
+      "case2ImageAlt": "Petru așezat în pat lângă Maria, care stă în picioare alături de el, purtând o batică, în casa lor cu instalația sanitară nouă.",
+      "case3Name": "Familia Pojar",
+      "case3Location": "Tudor Vladimirescu, lângă Albești",
+      "case3Amount": "14.500 $",
+      "case3Body": "O mamă singură cu cinci copii (unul are sindrom Down), părăsită de soț cu ani în urmă. O familie din zonă a donat o casă, dar acoperișul curgea atât de tare încât trebuia să pună vase prin toată casa când ploua. Am înlocuit întreaga structură a acoperișului, am izolat pereții cu tencuială și am construit un gard pentru ca cei mici să se poată juca în siguranță în curte. Finalizat în noiembrie 2023.",
+      "case3ImageAlt": "Casa familiei Pojar după lucrări — pereți cu tencuială galbenă, acoperiș nou metalic închis la culoare și un gard maro de lemn în față."
     },
     "newsletter": {
       "heading": "O scrisoare din România, de patru ori pe an",
       "body": "Vești de la vizitele consiliului și de la familiile alături de care mergem. Trimitem e-mail când avem ceva real de spus.",
       "placeholder": "Adresa ta de e-mail",
       "submit": "Abonează-te",
-      "trust": "Fără pixeli de urmărire. Dezabonează-te cu un singur clic."
+      "submitting": "Se trimite…",
+      "trust": "Fără pixeli de urmărire. Dezabonează-te cu un singur clic.",
+      "success": "Mulțumim. Așteaptă următoarea scrisoare din România în căsuța ta de e-mail."
+    },
+    "featuredProject": {
+      "imageAlt": "O familie românească cu mai multe generații în casa lor, în centrul actualului nostru proiect pentru locuințe."
     }
   },
   "Donate": {
@@ -86,26 +166,39 @@
       "subhead": "Alege o categorie mai jos sau lasă consiliul să direcționeze donația ta către familia care are cea mai mare nevoie săptămâna aceasta. Nouăzeci și opt de cenți din fiecare dolar ajung pe teren; consiliul își plătește singur călătoriile."
     },
     "funds": {
+      "heading": "Șase moduri de a-ți direcționa darul",
+      "subtitle": "Alege orice fond de mai jos — sau alege „Unde este cea mai mare nevoie” și lasă consiliul să decidă în fiecare săptămână.",
       "generalLabel": "Unde este cea mai mare nevoie",
       "generalBody": "Lasă consiliul să direcționeze donația ta către familia care are cea mai mare nevoie săptămâna aceasta.",
       "housingLabel": "Locuințe",
-      "housingBody": "Reparații la case, izolație, conexiune electrică. Familiile Dragomir, Anton și Barbalata anul acesta.",
+      "housingBody": "Reparații la case, izolație, conexiune electrică pentru familii românești înainte de iarnă.",
       "medicalLabel": "Medical",
-      "medicalBody": "Operații, medicamente, transport la spital. Tratamentul Martei Lutac și operațiile la ochi ale lui Bogdan anul acesta.",
+      "medicalBody": "Operații, medicamente, transport la spital pentru familii care înfruntă boli grave.",
       "firewoodLabel": "Lemne de foc și iarnă",
-      "firewoodBody": "Lemne de foc, facturi la utilități, provizii de iarnă. Familiile Ciobanaşu și Murariu înainte de frig.",
+      "firewoodBody": "Lemne de foc, facturi la utilități, provizii de iarnă livrate înainte de frig.",
       "missionLabel": "Misiune",
       "missionBody": "Susținere pentru misionari în România, Marea Britanie, SUA și Africa.",
       "schoolLabel": "Burse școlare",
       "schoolBody": "Rechizite școlare și ajutor pentru taxe în Detroit, Rwanda și România."
     },
     "tiers": {
+      "heading": "Sume sugerate, cu ceea ce acoperă",
+      "subtitle": "Fiecare prag este ancorat într-o cheltuială reală de pe teren, nu într-o categorie.",
       "tier25": "Cumpărături alimentare pentru o săptămână, pentru o familie.",
       "tier50": "Lemne de foc pentru o lună, când temperatura scade.",
       "tier100": "Medicamente și provizii pentru o vizită la spital.",
-      "tier250": "Izolarea unui perete înainte de iarnă, ca pentru familia Anton.",
-      "tier500": "Conectarea unei case la rețeaua electrică, ca pentru familia Barbalata.",
-      "custom": "Altă sumă"
+      "tier250": "Izolarea unui perete înainte de iarnă.",
+      "tier500": "Conectarea unei case la rețeaua electrică.",
+      "custom": "Altă sumă",
+      "customNote": "{custom}: alege orice sumă în formularul de mai jos."
+    },
+    "give": {
+      "heading": "Card sau bancă, lunar sau o singură dată",
+      "placeholderTitle": "Formularul Givebutter se încarcă aici",
+      "placeholderBody": "Inserează scriptul și eticheta widget-ului Givebutter în acest spațiu. Formularul va afișa comutatorul lunar/o singură dată, selectorul de fond și sumele predefinite.",
+      "placeholderFallback": "Până atunci, metodele de mai jos sunt complet active.",
+      "configuredInside": "{monthly} · {once} · {custom} — toate configurate în Givebutter.",
+      "formAriaLabel": "Formular de donație"
     },
     "cadence": {
       "monthly": "Lunar",
@@ -115,63 +208,94 @@
     },
     "otherWays": {
       "heading": "Preferi să trimiți direct?",
+      "preferredBadge": "Preferat",
       "zelleHeading": "Zelle (preferăm această variantă, fără comisioane de card)",
       "zelleBody": "Trimite la gsworldoutreach@gmail.com din aplicația băncii tale. Consiliul vede donația ta în aceeași zi.",
+      "zelleEmailLabel": "Adresă de e-mail pentru Zelle",
       "paypalHeading": "PayPal",
+      "paypalIntro": "Trimite la aceeași adresă de e-mail prin fluxul „send money” al PayPal.",
       "paypalCta": "Donează prin PayPal",
       "checkHeading": "Cec prin poștă",
-      "checkBody": "Plătibil către: Good Samaritan. Trimite la 2060 Curtis Rd, Addison Twp, MI 48307. Așteaptă șapte până la zece zile."
+      "checkBody": "Plătibil către: Good Samaritan. Trimite la 2060 Curtis Rd, Addison Twp, MI 48307. Așteaptă șapte până la zece zile.",
+      "checkPayableLabel": "Plătibil către",
+      "checkPayableName": "Good Samaritan",
+      "checkMailingLabel": "Adresă de corespondență"
     },
     "trust": {
       "taxDeductible": "Deductibil fiscal în SUA. 501(c)(3). EIN 38-3401779.",
       "cancelAnytime": "Poți anula donațiile lunare oricând, cu un singur clic.",
-      "secureProcessing": "Procesarea cardului prin Stripe via Givebutter."
+      "secureProcessing": "Procesare card prin Stripe via Givebutter."
     },
-    "receiptBody": "Mulțumim. Donația ta ajunge săptămâna aceasta la o familie din România, cunoscută după nume. Suntem recunoscători pentru tine."
+    "closing": "Indiferent de metoda aleasă, fiecare dar este confirmat în șapte zile și inclus pe panoul de Responsabilitate al anului următor, pe categorii.",
+    "receiptBody": "Mulțumim. Darul tău ajunge săptămâna aceasta la o familie din România. Suntem recunoscători pentru tine."
   },
   "MissionTrips": {
+    "metaTitle": "Călătorii misionare",
     "hero": {
-      "eyebrow": "Pentru voluntari interesați",
+      "eyebrow": "Călătorii misionare",
       "headline": "Călătorii misionare în România.",
-      "subhead": "Nu avem încă o călătorie programată pentru 2026. Dacă ai vrea să mergi cu noi când se stabilește una, adaugă-ți numele la lista de interes de mai jos."
+      "subhead": "Nu avem încă o călătorie programată pentru 2026. Dacă ai dori să mergi alături de noi când va fi stabilită una, adaugă-ți numele pe lista de interes de mai jos."
     },
     "history": {
       "heading": "Cum au arătat călătoriile trecute",
-      "body": "Cea mai recentă vizită a consiliului a fost în vara lui 2024. Consiliul a zburat la București, a condus prin județele Botoșani și Brașov și a stat alături de familiile Lutac, Anton, Bărbălata, Ciobanășu, Maicaru, Ghete, Curavale, Murariu și Petru Vlașcu timp de aproximativ zece zile. Fotografii și un jurnal pe familie se află în raportul anual 2024."
+      "body": "Cea mai recentă vizită a consiliului a fost în vara lui 2024. Consiliul a zburat la București, a străbătut județele Botoșani și Brașov și a petrecut aproximativ zece zile alături de familii din întreaga regiune. Scrie consiliului pentru detalii despre un anumit sat — păstrăm un jurnal intern pentru fiecare familie."
     },
     "what": {
-      "heading": "Ce ar include o călătorie"
+      "heading": "Ce ar include o călătorie",
+      "item1": "Zboruri dus-întors la București (voluntarul plătește)",
+      "item2": "Transport la sol prin județe românești rurale",
+      "item3": "Cazare la pastori parteneri sau pensiuni modeste",
+      "item4": "Mese cu familiile pe care le vizităm",
+      "item5": "Un traducător alături de echipă la fiecare vizită"
     },
     "skills": {
-      "heading": "Abilități utile pe teren"
+      "heading": "Abilități utile pe teren",
+      "item1": "Pregătire medicală (asistente, medici, paramedici)",
+      "item2": "Construcții sau noțiuni de bază în domeniul electric",
+      "item3": "Limba română de bază — nu este obligatorie",
+      "item4": "Răbdare pentru drumuri lungi pe șosele dificile",
+      "item5": "Disponibilitate de a fi alături de cei în suferință"
     },
     "cost": {
       "heading": "Costuri estimate",
-      "body": "Voluntarii își acoperă propriul zbor (de obicei $900 până la $1.400 din SUA) și contribuie cu $500 până la $800 pentru cheltuielile la sol (cazare, mâncare, transport). Totalul se încadrează între $1.500 și $2.500. Membrii consiliului își plătesc separat călătoria."
+      "body": "Voluntarii își acoperă propriul zbor (de obicei între $900 și $1.400 din SUA) și contribuie cu $500 până la $800 pentru cheltuielile la sol (cazare, mâncare, transport). Totalul se încadrează între $1.500 și $2.500. Membrii consiliului își plătesc separat călătoria."
     },
     "apply": {
       "heading": "Înscrie-te pe lista de interes",
-      "body": "Scrie la gsworldoutreach@gmail.com cu subiectul \"2026 trip interest\" și o propoziție despre motivul tău. Consiliul răspunde când datele sunt fixate, estimat până la vara 2026.",
-      "cta": "Deschide e-mail către consiliu"
+      "body": "Scrie la gsworldoutreach@gmail.com cu subiectul „Trip interest” și o propoziție despre motiv. Consiliul răspunde când datele sunt confirmate.",
+      "cta": "Deschide e-mail către consiliu",
+      "ctaContactForm": "Folosește mai degrabă formularul de contact"
     }
   },
   "Volunteer": {
+    "metaTitle": "Voluntariat",
     "hero": {
       "eyebrow": "Roluri în SUA",
       "headline": "Mâini de care am avea nevoie aici în SUA.",
       "subhead": "Suntem un consiliu mic, format integral din voluntari. Câteva roluri specifice ar înmulți ceea ce putem face fără să zburăm nicăieri."
     },
     "roles": {
-      "heading": "Unde avem nevoie de ajutor"
+      "heading": "Unde avem nevoie de ajutor",
+      "role1Title": "Responsabil cu evidența donațiilor",
+      "role1Body": "Introducere ușoară de date, trimestrial. Corelarea donațiilor prin Zelle, PayPal și cecuri; etichetare pe fonduri. În prezent, președintele consiliului face acest lucru manual.",
+      "role2Title": "Redactor pentru Responsabilitate",
+      "role2Body": "Ajută la pregătirea actualizărilor pentru pagina Responsabilitate, pornind de la notițele și fotografiile consiliului. Trei sau patru seri de lucru în fiecare noiembrie.",
+      "role3Title": "Gazde pentru evenimente",
+      "role3Body": "Găzduiește o întâlnire mică de donatori la biserica sau acasă o dată pe an. Consiliul oferă fotografii și povestiri; tu oferi cafeaua și încăperea.",
+      "role4Title": "Coordonator pentru rețele sociale",
+      "role4Body": "Încă nu avem conturi pe rețele sociale. Dacă ai vrea să le creezi și să publici actualizări trimestriale, scrie-ne."
     },
     "contact": {
       "heading": "Contactează consiliul",
-      "body": "Scrie la gsworldoutreach@gmail.com cu rolul care ți se potrivește, sau folosește formularul de contact."
+      "body": "Scrie la gsworldoutreach@gmail.com cu rolul care ți se potrivește, sau folosește formularul de contact.",
+      "ctaForm": "Folosește formularul de contact",
+      "ctaEmail": "Scrie direct consiliului"
     }
   },
   "Contact": {
+    "metaTitle": "Contact",
     "hero": {
-      "eyebrow": "Contactează-ne",
+      "eyebrow": "Ia legătura cu noi",
       "headline": "Scrie direct consiliului.",
       "subhead": "Fiecare mesaj ajunge la aceeași adresă de e-mail pe care consiliul o citește zilnic. Cineva răspunde în maximum șapte zile."
     },
@@ -189,7 +313,8 @@
       "submitting": "Se trimite…",
       "successHeading": "Mulțumim. Consiliul a primit mesajul.",
       "successBody": "Cineva din consiliu răspunde în șapte zile. Dacă este urgent, scrie direct la gsworldoutreach@gmail.com.",
-      "errorPrefix": "Nu s-a putut trimite"
+      "errorPrefix": "Nu s-a putut trimite",
+      "unknownError": "Eroare necunoscută"
     },
     "alt": {
       "heading": "Sau scrie direct",
@@ -199,6 +324,7 @@
     }
   },
   "About": {
+    "metaTitle": "Povestea noastră",
     "hero": {
       "eyebrow": "Despre organizație",
       "headline": "Fondată în 1994. Încă mergem alături de aceleași familii.",
@@ -207,11 +333,11 @@
     "team": {
       "heading": "Echipa noastră",
       "lead": "Fiecare membru al echipei este voluntar. Nimeni nu este remunerat.",
-      "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din donația ta nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm."
+      "body": "Ne transformăm convingerile în acțiune. Fiecare membru al consiliului oferă voluntar timp și efort pentru planificarea și implementarea proiectelor. Călătoriile în România sunt plătite din buzunarul propriu. Nimic din darul tău nu plătește vreodată un salariu. A fost adevărat din 1994 și nu am văzut niciun motiv să schimbăm."
     },
     "history": {
       "heading": "Istoria noastră",
-      "body": "Nistor și Floare Forgaciu au fondat organizația în 1994 cu o singură convingere: că a-L urma pe Isus înseamnă a-i aminti pe cei săraci. Au început modest, în regiunea lor, ducând alimente și lemne văduvelor și bătrânilor. Lucrarea a crescut în trei decenii, dar felul în care funcționează nu s-a schimbat. Consiliul încă vizitează personal fiecare familie pe nume, se roagă cu ei în bucătărie și păstrează legătura prin pastorii locali care i-au prezentat."
+      "body": "Nistor și Floare Forgaciu au fondat organizația în 1994 cu o singură convingere: că a-L urma pe Isus înseamnă a ne aduce aminte de cei săraci. Au început modest, în regiunea lor, ducând alimente și lemne văduvelor și bătrânilor. Lucrarea a crescut în trei decenii, dar felul în care funcționează nu s-a schimbat. Consiliul încă vizitează personal fiecare familie, se roagă cu ei în bucătărie și păstrează legătura prin pastorii locali care i-au prezentat."
     },
     "mission": {
       "heading": "Misiunea noastră",
@@ -219,32 +345,181 @@
     },
     "faith": {
       "heading": "Ce credem",
-      "body": "Suntem o organizație creștină 501(c)(3). Lucrarea noastră este înrădăcinată în chemarea apostolilor de a-i aminti pe cei săraci (Galateni 2:10). Colaborăm cu bisericile locale în fiecare regiune în care slujim. Familiile alături de care mergem nu sunt proiecte de finalizat, ci aproapele de iubit."
-    },
-    "where": {
-      "heading": "Unde slujim",
-      "body": "România reprezintă 76% din ajutorul oferit în 2024, cu Statele Unite la 16%, Marea Britanie la 5% și Africa la 3%. Anii anteriori au ajuns în Moldova, Canada, Spania, Uganda, Haiti, Rwanda și Grecia."
-    },
-    "funds": {
-      "heading": "Unde ajunge dolarul tău",
-      "needyLabel": "Familii în nevoie",
-      "missionLabel": "Susținere misionari",
-      "housingLabel": "Reparații și achiziții de locuințe",
-      "aidLabel": "Distribuirea ajutorului",
-      "schoolLabel": "Burse",
-      "adminLabel": "Administrație"
-    },
-    "accountability": {
-      "heading": "Responsabilitate",
-      "body": "Fiecare membru al consiliului este voluntar. Fiecare călătorie în România este plătită din buzunar. Raportul anual 2024 numește familii, sate și categorii de proiecte, astfel încât fiecare dolar este urmăribil.",
-      "reportLink": "Citește raportul anual 2024 (PDF)",
-      "irsLink": "Verifică statutul nostru 501(c)(3) la IRS",
-      "einLine": "IRS EIN 38-3401779"
+      "body": "Suntem o organizație creștină 501(c)(3). Lucrarea noastră este înrădăcinată în chemarea apostolilor de a ne aduce aminte de cei săraci (Galateni 2:10). Colaborăm cu bisericile locale în fiecare regiune în care slujim. Familiile alături de care mergem nu sunt proiecte de finalizat, ci aproapele de iubit."
     },
     "contact": {
-      "heading": "Contactează-ne",
+      "heading": "Ia legătura cu noi",
       "body": "Scrie la gsworldoutreach@gmail.com sau la 2060 Curtis Rd, Addison Twp, MI 48307."
     }
+  },
+  "Accountability": {
+    "metaTitle": "Responsabilitate",
+    "metaDescription": "Cum dă socoteală un consiliu mic pentru fiecare dolar. Țări atinse, familii ajutate, bani distribuiți.",
+    "hero": {
+      "eyebrow": "Responsabilitate",
+      "headline": "Fiecare dolar, dat seama.",
+      "subhead": "Transparența este modul în care o organizație mică câștigă încrederea donatorilor care dau cu inima curată. Panoul de mai jos arată unde merge lucrarea, cine primește și ce acoperă darul tău."
+    },
+    "stats": {
+      "countriesValue": "10",
+      "countriesLabel": "Țări atinse",
+      "countriesDetail": "România, Moldova, SUA, Marea Britanie, Spania, Guatemala, Niger, Rwanda, Orientul Mijlociu și altele",
+      "familiesValue": "60+",
+      "familiesLabel": "Familii însoțite",
+      "familiesDetail": "Fiecare vizitată personal, fiecare cunoscută consiliului",
+      "efficiencyValue": "98¢",
+      "efficiencyLabel": "Din fiecare dolar pe teren",
+      "efficiencyDetail": "Toate donațiile merg la familii, misionari și proiecte."
+    },
+    "geographic": {
+      "heading": "Distribuție pe țări",
+      "body": "România reprezintă majoritatea lucrării noastre anuale. Cele mai recente donații au ajuns și în Statele Unite, Marea Britanie, Guatemala, Spania și Niger.",
+      "ariaLabel": "Distribuție pe țări",
+      "romania": "România",
+      "unitedStates": "Statele Unite",
+      "unitedKingdom": "Marea Britanie",
+      "guatemala": "Guatemala",
+      "spain": "Spania",
+      "niger": "Niger"
+    },
+    "fundsUse": {
+      "heading": "Utilizarea fondurilor",
+      "body": "Sprijinul direct pentru familii și locuințe constituie majoritatea covârșitoare. Administrarea este de un cent la fiecare dolar.",
+      "ariaLabel": "Utilizarea fondurilor",
+      "needyFamilies": "Familii în nevoie",
+      "housing": "Locuințe",
+      "missionarySupport": "Susținere misionari",
+      "aidDelivery": "Distribuirea ajutorului",
+      "churchBuild": "Construcție biserică",
+      "administration": "Administrare"
+    },
+    "closing": {
+      "heading": "Întrebări despre un dar?",
+      "body": "Vrei detalii despre o anumită familie, sat sau categorie de proiect? Scrie la <email>gsworldoutreach@gmail.com</email> și un membru al consiliului îți va răspunde în șapte zile."
+    }
+  },
+  "Ministries": {
+    "metaTitle": "Slujiri",
+    "metaDescription": "Slujirile de locuințe, medicală, lemne de foc, misiune și burse, din 1994. Vizitate de un membru al consiliului, finanțate de donatori care dau cu inima curată.",
+    "hero": {
+      "eyebrow": "Slujiri",
+      "headline": "Slujiri de ajutor, an după an.",
+      "subhead": "Ne organizăm lucrarea în cinci slujiri. Fiecare dintre ele arată câte familii am însoțit anul acesta și ce a acoperit darul tău. Numele sunt păstrate confidențiale din respect pentru familii."
+    },
+    "empty": "Nicio slujire publicată încă. Revino curând.",
+    "fallbackPending": "(traducere în lucru)",
+    "familiesHelped": "{count, plural, one {# familie ajutată anul acesta} few {# familii ajutate anul acesta} other {# de familii ajutate anul acesta}}",
+    "readAbout": "Citește despre {title}"
+  },
+  "Project": {
+    "notFound": "Proiectul nu a fost găsit",
+    "fallbackNotice": "(Versiunea originală în engleză. Traducerea în lucru.)",
+    "familiesLabel": "Familii",
+    "villagesLabel": "Sate",
+    "donateHeading": "Donează pentru {title}",
+    "donateBody": "Darul tău merge direct la următoarea familie despre care consiliul aude în această categorie.",
+    "allMinistries": "Toate slujirile",
+    "back": "Înapoi la toate slujirile"
+  },
+  "Privacy": {
+    "metaTitle": "Confidențialitate",
+    "metaDescription": "Cum gestionează Good Samaritan International informațiile donatorilor și ale vizitatorilor. Nu vindem niciodată datele donatorilor.",
+    "hero": {
+      "eyebrow": "Confidențialitate",
+      "headline": "Cum gestionăm informațiile tale.",
+      "subhead": "Nu vindem datele donatorilor. Nu împărtășim listele de donatori. Colectăm doar ceea ce avem nevoie pentru a trimite chitanțe fiscale, a procesa darurile și a te ține la curent dacă ne ceri."
+    },
+    "lastUpdatedLabel": "Ultima actualizare:",
+    "collect": {
+      "heading": "Ce colectăm",
+      "donation": "<strong>Informații despre donație.</strong> Nume, e-mail, adresă poștală, sumă donată și metodă. Datele cardului sunt procesate de Stripe prin Givebutter; nu vedem și nu stocăm niciodată numerele complete ale cardurilor.",
+      "newsletter": "<strong>Abonări la newsletter.</strong> Doar e-mail. Stocate la furnizorul nostru de e-mail (Buttondown).",
+      "contact": "<strong>Mesaje din formularul de contact.</strong> Numele, e-mailul, subiectul și mesajul tău, trimise direct la căsuța consiliului.",
+      "analytics": "<strong>Statistici de site.</strong> Vizualizări de pagini anonime și agregate prin Plausible. Fără cookies, fără pixeli de urmărire, fără stocare de IP."
+    },
+    "use": {
+      "heading": "Ce facem cu acestea",
+      "receipt": "Îți trimitem chitanța pentru donația deductibilă fiscal (cerută de IRS).",
+      "newsletter": "Îți trimitem newsletter-ul la care te-ai abonat (de aproximativ patru ori pe an).",
+      "ack": "Răspundem mesajului tău dacă ai folosit formularul de contact.",
+      "aggregate": "Publicăm totaluri anonime și agregate ale donațiilor pe pagina noastră de Responsabilitate."
+    },
+    "never": {
+      "heading": "Ce nu facem niciodată",
+      "sell": "Nu vindem, închiriem sau schimbăm informații despre donatori cu nimeni.",
+      "share": "Nu împărtășim liste de donatori cu alte organizații non-profit.",
+      "publish": "Nu publicăm numele unui donator fără permisiunea explicită.",
+      "track": "Nu folosim pixeli de urmărire în newslettere."
+    },
+    "who": {
+      "heading": "Cine altcineva îți vede datele",
+      "body": "Doar furnizorii care ne ajută să operăm site-ul: Givebutter (procesarea donațiilor), Stripe (procesarea cardurilor), Buttondown (newsletter) și furnizorul nostru de găzduire. Fiecare este obligat de propriile sale condiții de confidențialitate. Nu dăm informațiile tale niciunei alte terțe părți."
+    },
+    "retention": {
+      "heading": "Cât timp le păstrăm",
+      "body": "Înregistrările despre donații sunt păstrate timp de șapte ani (standardul IRS pentru organizațiile caritabile). Abonările la newsletter rămân active până te dezabonezi (un clic în orice e-mail). Mesajele din formularul de contact sunt păstrate atâta timp cât conversația este utilă, de obicei sub doi ani."
+    },
+    "choices": {
+      "heading": "Opțiunile tale",
+      "body": "Scrie la <email>gsworldoutreach@gmail.com</email> pentru a solicita o copie a datelor tale, a corecta ceva greșit sau a-ți șterge informațiile (cu excepția înregistrărilor despre donații, supuse regulii IRS de păstrare de șapte ani)."
+    },
+    "children": {
+      "heading": "Copii",
+      "body": "Acest site nu se adresează copiilor sub 13 ani și nu colectăm cu bună știință informații de la ei."
+    },
+    "changes": {
+      "heading": "Modificări",
+      "body": "Dacă actualizăm această politică, data din partea de sus se schimbă. Modificările semnificative vor fi anunțate în următorul newsletter."
+    }
+  },
+  "Terms": {
+    "metaTitle": "Termeni",
+    "metaDescription": "Termeni de utilizare pentru site-ul Good Samaritan International și pentru procesarea donațiilor.",
+    "hero": {
+      "eyebrow": "Termeni de utilizare",
+      "headline": "Acordul, pe înțelesul tuturor.",
+      "subhead": "Prin utilizarea acestui site sau prin donație, ești de acord cu termenii de mai jos. I-am păstrat scurți și ușor de citit."
+    },
+    "lastUpdatedLabel": "Ultima actualizare:",
+    "about": {
+      "heading": "Despre noi",
+      "body": "Good Samaritan International este o organizație caritabilă 501(c)(3) din Statele Unite, IRS EIN 38-3401779, adresă poștală 2060 Curtis Rd, Addison Twp, MI 48307. Site-ul este operat de consiliu."
+    },
+    "donations": {
+      "heading": "Donații",
+      "item1": "Toate donațiile sunt deductibile fiscal în Statele Unite, în limita permisă de lege. Vei primi o chitanță pentru IRS.",
+      "item2": "Donațiile cu cardul sau prin bancă sunt procesate de Stripe prin Givebutter. Donațiile prin Zelle și PayPal ajung direct în contul nostru bancar.",
+      "item3": "Donațiile lunare recurente pot fi anulate oricând prin link-ul chitanței din Givebutter sau scriind la gsworldoutreach@gmail.com. Anularea intră în vigoare înainte de următoarea plată lunară.",
+      "item4": "Donațiile nu sunt rambursabile, cu excepția erorilor tehnice (debitare dublă, sumă greșită). Pentru a solicita o rambursare motivată, scrie-ne în termen de 60 de zile de la donație.",
+      "item5": "Direcționarea pe fonduri (Locuințe, Medical etc.) este onorată în măsura posibilităților. Consiliul își rezervă dreptul de a redirecționa un dar destinat unui fond, dacă acel fond este deja acoperit integral, cu înștiințarea donatorului."
+    },
+    "content": {
+      "heading": "Conținutul site-ului",
+      "body": "Povestirile, descrierile de proiecte și fotografiile de pe acest site sunt corecte după știința noastră la momentul publicării. Povestirile despre familii sunt publicate doar cu consimțământul familiei. Dacă crezi că un conținut de pe acest site este inexact sau ar trebui eliminat, scrie la gsworldoutreach@gmail.com."
+    },
+    "acceptable": {
+      "heading": "Utilizare acceptabilă",
+      "body": "Nu copia și revinde conținutul nostru. Nu te da drept organizația sau consiliul. Nu folosi site-ul pentru a hărțui pe nimeni. În rest, ești bine venit aici."
+    },
+    "warranty": {
+      "heading": "Fără garanții",
+      "body": "Site-ul este furnizat „așa cum este”. Încercăm să-l păstrăm corect și online, dar nu garantăm timpul de funcționare, exactitatea fiecărui detaliu sau că link-urile către servicii externe (IRS, Givebutter etc.) vor funcționa întotdeauna."
+    },
+    "disputes": {
+      "heading": "Litigii",
+      "body": "Litigiile privind donațiile sau acest site sunt guvernate de legile statului Michigan și soluționate în Oakland County, Michigan. Preferăm puternic să rezolvăm orice îngrijorare mai întâi prin e-mail și nu a fost nevoie să procedăm altfel."
+    },
+    "changes": {
+      "heading": "Modificări",
+      "body": "Dacă acești termeni se schimbă, data din partea de sus se schimbă. Modificările semnificative vor fi anunțate în următorul newsletter."
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "Scrie la <email>gsworldoutreach@gmail.com</email> sau trimite scrisoare la 2060 Curtis Rd, Addison Twp, MI 48307."
+    }
+  },
+  "LegalDate": {
+    "lastUpdated": "21 mai 2026"
   },
   "Preview": {
     "label": "Good Samaritan International · Sistem de design v1",

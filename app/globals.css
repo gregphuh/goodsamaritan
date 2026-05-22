@@ -119,7 +119,7 @@
    * ---------------------------------------------------------------------- */
   --font-display: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --font-body:    var(--font-source-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-cursive: var(--font-sacramento), "Brush Script MT", "Lucida Handwriting", cursive;
+  --font-cursive: var(--font-caveat), "Marker Felt", "Bradley Hand", "Brush Script MT", cursive;
 
   /* ---------------------------------------------------------------- Type
    * Used by text-* utilities. Mobile size; desktop sizes applied per
@@ -276,9 +276,25 @@
   to { stroke-dashoffset: 0; }
 }
 
+/* Motto writes left-to-right as the cross is drawing, so the brand mark
+ * and the words appear together like a single calligraphic gesture.
+ * clip-path animates from inset(0 100% 0 0) (fully hidden) to
+ * inset(0 0 0 0) (fully revealed). Starts ~0.5s in so the cross's
+ * vertical beam is well underway, finishes ~2.3s in (right around when
+ * the horizontal beam completes). */
+.motto-write {
+  clip-path: inset(0 100% 0 0);
+  animation: motto-write 1.8s 0.5s var(--ease-out) forwards;
+}
+
+@keyframes motto-write {
+  to { clip-path: inset(0 0 0 0); }
+}
+
+/* Verse reference fades in after the motto finishes writing. */
 .motto-fade-in {
   opacity: 0;
-  animation: motto-fade-in 0.9s 1.6s ease-out forwards;
+  animation: motto-fade-in 0.6s 2.4s ease-out forwards;
 }
 
 @keyframes motto-fade-in {

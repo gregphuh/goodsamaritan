@@ -9,11 +9,18 @@ import { getAllProjects } from "@/lib/content";
 import { Link } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description:
-    "Housing, medical, firewood, mission, and scholarship work since 1994. Every project named, photographed in the annual report, visited by a board member.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Ministries" });
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  };
+}
 
 export default async function ProjectsPage({
   params,
@@ -24,20 +31,22 @@ export default async function ProjectsPage({
   setRequestLocale(locale);
 
   const projects = await getAllProjects(locale as Locale);
+  const tHero = await getTranslations("Ministries.hero");
+  const tPage = await getTranslations("Ministries");
   const tCta = await getTranslations("CTA");
 
   return (
     <main id="main" className="flex flex-col">
-      <Section surface="inverse" density="default">
+      <Section surface="inverse" density="spacious">
         <Container width="content">
           <Text size="caption" tone="accent" className="mb-6">
-            Projects
+            {tHero("eyebrow")}
           </Text>
           <Heading as="h1" size="display" className="text-ink-inverse">
-            Categories of aid, by year and by name.
+            {tHero("headline")}
           </Heading>
           <Text size="body-lg" tone="inverse" className="mt-6">
-            We organize our work in five categories. Each project below lists the families we walked with this year, the villages we visited, and what your gift covered.
+            {tHero("subhead")}
           </Text>
         </Container>
       </Section>
@@ -46,7 +55,7 @@ export default async function ProjectsPage({
         <Container width="wide">
           {projects.length === 0 ? (
             <Text size="body-lg" tone="muted">
-              No projects published yet. Check back soon.
+              {tPage("empty")}
             </Text>
           ) : (
             <ul className="space-y-8">
@@ -61,11 +70,11 @@ export default async function ProjectsPage({
                     <div className="p-8 md:p-10">
                       <div className="flex items-baseline gap-3 mb-2">
                         <Text size="caption" tone="muted">
-                          {project.year} · {project.category}
+                          {project.category}
                         </Text>
                         {project.localeFellBack ? (
                           <Text size="caption" tone="muted">
-                            (translation pending)
+                            {tPage("fallbackPending")}
                           </Text>
                         ) : null}
                       </div>
@@ -75,18 +84,15 @@ export default async function ProjectsPage({
                       </Text>
                       {project.families.length > 0 ? (
                         <Text size="body-sm" tone="muted" className="mt-4">
-                          Families this year: {project.families.join(", ")}
-                          {project.villages.length > 0 ? (
-                            <> &middot; Villages: {project.villages.join(", ")}</>
-                          ) : null}
+                          {tPage("familiesHelped", { count: project.families.length })}
                         </Text>
                       ) : null}
                       <div className="mt-6 flex flex-wrap items-center gap-4">
                         <Link
-                          href={`/projects/${project.slug}`}
+                          href={`/ministries/${project.slug}`}
                           className="inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
                         >
-                          Read about {project.title.toLowerCase()}
+                          {tPage("readAbout", { title: project.title.toLowerCase() })}
                           <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
                         </Link>
                         <Link

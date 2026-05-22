@@ -64,7 +64,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const project = await getProjectBySlug(locale as Locale, slug);
-  if (!project) return { title: "Project not found" };
+  const t = await getTranslations({ locale, namespace: "Project" });
+  if (!project) return { title: t("notFound") };
   return {
     title: project.title,
     description: project.summary,
@@ -83,6 +84,7 @@ export default async function ProjectDetailPage({
   if (!project) notFound();
 
   const tCta = await getTranslations("CTA");
+  const tProject = await getTranslations("Project");
 
   return (
     <main id="main" className="flex flex-col">
@@ -107,7 +109,7 @@ export default async function ProjectDetailPage({
             </Text>
             {project.localeFellBack ? (
               <Text size="caption" tone="inverse" className="opacity-70">
-                (Original English version. Translation in progress.)
+                {tProject("fallbackNotice")}
               </Text>
             ) : null}
           </div>
@@ -122,13 +124,13 @@ export default async function ProjectDetailPage({
             <dl className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
               {project.families.length > 0 ? (
                 <div>
-                  <dt className="text-caption text-ink-inverse/70 uppercase tracking-wider">Families</dt>
+                  <dt className="text-caption text-ink-inverse/70 uppercase tracking-wider">{tProject("familiesLabel")}</dt>
                   <dd className="mt-1 text-body text-ink-inverse">{project.families.join(", ")}</dd>
                 </div>
               ) : null}
               {project.villages.length > 0 ? (
                 <div>
-                  <dt className="text-caption text-ink-inverse/70 uppercase tracking-wider">Villages</dt>
+                  <dt className="text-caption text-ink-inverse/70 uppercase tracking-wider">{tProject("villagesLabel")}</dt>
                   <dd className="mt-1 text-body text-ink-inverse">{project.villages.join(", ")}</dd>
                 </div>
               ) : null}
@@ -173,18 +175,18 @@ export default async function ProjectDetailPage({
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <Heading as="h2" size="h3">
-                Give to {project.title.toLowerCase()}
+                {tProject("donateHeading", { title: project.title.toLowerCase() })}
               </Heading>
               <Text size="body" tone="soft" className="mt-2 max-w-[55ch]">
-                Your gift goes directly to the next family the board hears about in this category.
+                {tProject("donateBody")}
               </Text>
             </div>
             <div className="flex flex-wrap gap-3">
               <LinkButton href="/donate" variant="primary" size="md">
                 {tCta("giveMonthly")}
               </LinkButton>
-              <LinkButton href="/projects" variant="secondary" size="md">
-                All projects
+              <LinkButton href="/ministries" variant="secondary" size="md">
+                {tProject("allMinistries")}
               </LinkButton>
             </div>
           </div>
@@ -195,11 +197,11 @@ export default async function ProjectDetailPage({
       <Section density="compact">
         <Container width="content">
           <Link
-            href="/projects"
+            href="/ministries"
             className="inline-flex items-center gap-2 text-body-sm text-ink-soft hover:text-ink-strong underline-offset-4 hover:underline"
           >
             <span aria-hidden="true">&larr;</span>
-            Back to all projects
+            {tProject("back")}
           </Link>
         </Container>
       </Section>

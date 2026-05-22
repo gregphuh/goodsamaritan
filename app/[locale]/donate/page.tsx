@@ -36,6 +36,8 @@ export default async function DonatePage({
   const tCadence = await getTranslations("Donate.cadence");
   const tOther = await getTranslations("Donate.otherWays");
   const tTrust = await getTranslations("Donate.trust");
+  const tGive = await getTranslations("Donate.give");
+  const tDonate = await getTranslations("Donate");
 
   const funds = [
     { key: "general", label: tFunds("generalLabel"), body: tFunds("generalBody"), tint: "var(--color-brand)" },
@@ -58,7 +60,7 @@ export default async function DonatePage({
     <main id="main" className="flex flex-col">
       <JsonLd data={buildDonateActionSchema(locale)} />
       {/* ──────────────────────────── Intro */}
-      <Section surface="inverse" density="default">
+      <Section surface="inverse" density="spacious">
         <Container width="content">
           <Heading as="h1" size="display" className="text-ink-inverse">
             {tIntro("headline")}
@@ -73,10 +75,10 @@ export default async function DonatePage({
       <Section density="default">
         <Container width="wide">
           <Heading as="h2" size="h2">
-            Six ways to direct your gift
+            {tFunds("heading")}
           </Heading>
           <Text size="body-lg" tone="soft" className="mt-3 max-w-[60ch]">
-            Pick any fund below — or choose &ldquo;Where most needed&rdquo; and let the board decide each week.
+            {tFunds("subtitle")}
           </Text>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {funds.map((f) => (
@@ -99,10 +101,10 @@ export default async function DonatePage({
       <Section surface="sunken" density="default">
         <Container width="standard">
           <Heading as="h2" size="h2">
-            Suggested amounts, with what they reach
+            {tTiers("heading")}
           </Heading>
           <Text size="body-lg" tone="soft" className="mt-3 max-w-[60ch]">
-            Every tier is anchored to a real 2024 expense, not a category.
+            {tTiers("subtitle")}
           </Text>
           <ul className="mt-8 divide-y divide-rule border-y border-rule">
             {tiers.map((t) => (
@@ -113,7 +115,7 @@ export default async function DonatePage({
             ))}
           </ul>
           <Text size="body-sm" tone="muted" className="mt-4">
-            {tTiers("custom")}: pick any amount on the form below.
+            {tTiers("customNote", { custom: tTiers("custom") })}
           </Text>
         </Container>
       </Section>
@@ -122,7 +124,7 @@ export default async function DonatePage({
       <Section density="default" id="give">
         <Container width="content">
           <Heading as="h2" size="h2">
-            Card or bank, monthly or one-time
+            {tGive("heading")}
           </Heading>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-body-sm text-ink-soft">
             <span className="inline-flex items-center gap-1.5">
@@ -143,21 +145,25 @@ export default async function DonatePage({
           <div
             id="givebutter-mount"
             role="region"
-            aria-label="Donation form"
+            aria-label={tGive("formAriaLabel")}
             data-givebutter-campaign-id="TODO-CAMPAIGN-ID"
             className="mt-8 bg-surface-raised border-2 border-dashed border-rule rounded-md p-10 text-center"
           >
-            <p className="font-display text-h4 text-ink-strong">Givebutter form loads here</p>
+            <p className="font-display text-h4 text-ink-strong">{tGive("placeholderTitle")}</p>
             <Text size="body-sm" tone="muted" className="mt-2 max-w-[50ch] mx-auto">
-              Drop your Givebutter widget script and <code className="font-body">&lt;givebutter-widget&gt;</code> tag into this slot. The form will show monthly/one-time toggle, fund selector, and tier amounts as configured in your Givebutter campaign.
+              {tGive("placeholderBody")}
             </Text>
             <Text size="body-sm" tone="muted" className="mt-3">
-              Until then, the methods below are fully active.
+              {tGive("placeholderFallback")}
             </Text>
           </div>
 
           <p className="mt-4 text-caption text-ink-muted">
-            {tCadence("monthly")} · {tCadence("once")} · {tTiers("custom")} all configured inside Givebutter.
+            {tGive("configuredInside", {
+              monthly: tCadence("monthly"),
+              once: tCadence("once"),
+              custom: tTiers("custom"),
+            })}
           </p>
         </Container>
       </Section>
@@ -172,11 +178,11 @@ export default async function DonatePage({
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Zelle */}
             <article className="bg-surface-raised border border-rule rounded-md p-6 flex flex-col">
-              <Text size="caption" tone="accent" className="mb-2">Preferred</Text>
+              <Text size="caption" tone="accent" className="mb-2">{tOther("preferredBadge")}</Text>
               <Heading as="h3" size="h4">{tOther("zelleHeading")}</Heading>
               <Text size="body-sm" tone="soft" className="mt-3 flex-1">{tOther("zelleBody")}</Text>
               <div className="mt-4">
-                <CopyableField value="gsworldoutreach@gmail.com" label="Zelle email address" />
+                <CopyableField value="gsworldoutreach@gmail.com" label={tOther("zelleEmailLabel")} />
               </div>
             </article>
 
@@ -184,7 +190,7 @@ export default async function DonatePage({
             <article className="bg-surface-raised border border-rule rounded-md p-6 flex flex-col">
               <Heading as="h3" size="h4">{tOther("paypalHeading")}</Heading>
               <Text size="body-sm" tone="soft" className="mt-3 flex-1">
-                Send to the same email via PayPal&rsquo;s send-money flow.
+                {tOther("paypalIntro")}
               </Text>
               <a
                 href="https://www.paypal.com/donate?business=gsworldoutreach@gmail.com&item_name=Good+Samaritan+International&currency_code=USD"
@@ -202,14 +208,14 @@ export default async function DonatePage({
               <Text size="body-sm" tone="soft" className="mt-3">{tOther("checkBody")}</Text>
               <div className="mt-4 space-y-3">
                 <div>
-                  <Text size="caption" tone="muted" className="mb-1">Payable to</Text>
-                  <CopyableField value="Good Samaritan" label="Check payable name" />
+                  <Text size="caption" tone="muted" className="mb-1">{tOther("checkPayableLabel")}</Text>
+                  <CopyableField value={tOther("checkPayableName")} label={tOther("checkPayableLabel")} />
                 </div>
                 <div>
-                  <Text size="caption" tone="muted" className="mb-1">Mailing address</Text>
+                  <Text size="caption" tone="muted" className="mb-1">{tOther("checkMailingLabel")}</Text>
                   <CopyableField
                     value="2060 Curtis Rd, Addison Twp, MI 48307"
-                    label="Mailing address"
+                    label={tOther("checkMailingLabel")}
                   />
                 </div>
               </div>
@@ -222,7 +228,7 @@ export default async function DonatePage({
       <Section surface="inverse" density="compact">
         <Container width="content">
           <Text size="body-lg" tone="inverse" className="max-w-[60ch]">
-            Whichever method you choose, every gift is acknowledged within seven days and counted in next year&rsquo;s annual report by category.
+            {tDonate("closing")}
           </Text>
         </Container>
       </Section>

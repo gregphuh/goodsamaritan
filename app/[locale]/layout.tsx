@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { Sacramento, Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { Caveat, Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
 import { DonateBar } from "@/components/layout/DonateBar";
 import { Footer } from "@/components/layout/Footer";
@@ -24,11 +24,14 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-const sacramento = Sacramento({
-  variable: "--font-sacramento",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600"],
+  // "block" hides the motto for up to 3s until Caveat finishes loading,
+  // which prevents the Source-Serif fallback from briefly showing as a
+  // block-letter flash. The motto only renders once it can render cursive.
+  display: "block",
 });
 
 export function generateStaticParams() {
@@ -82,7 +85,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sourceSerif.variable} ${sourceSans.variable} ${sacramento.variable} h-full`}
+      className={`${sourceSerif.variable} ${sourceSans.variable} ${caveat.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-surface text-ink pb-[5rem] md:pb-0">
         <a

@@ -9,41 +9,52 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "annualReports": "Annual reports",
-    "missionTrips": "Mission trips",
+    "ministries": "Ministries",
+    "accountability": "Accountability",
+    "missionTrips": "Missions",
     "volunteer": "Volunteer",
     "contact": "Contact",
     "donate": "Donate"
   },
   "CTA": {
-    "giveMonthly": "Give monthly",
+    "giveMonthly": "Give Support",
     "giveOnce": "Give once",
-    "readReport": "Read the 2024 report",
     "skipToContent": "Skip to content",
     "seeHousing": "See housing",
     "seeMedical": "See medical",
     "seeWinterAid": "See winter aid",
-    "readStory": "Read the Lutacs' story",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "contactUs": "Contact us"
   },
   "Footer": {
     "ein": "EIN 38-3401779",
     "status501c3": "501(c)(3) charitable organization",
     "address": "2060 Curtis Rd, Addison Twp, MI 48307",
     "tagline": "All donations tax-deductible",
-    "summary": "A small board, faithful donors, and families we know by name."
+    "summary": "A small board, faithful donors, and families we have walked with for decades.",
+    "servingLine": "Serving Romanian families since 1994",
+    "pagesLabel": "Pages",
+    "trustLabel": "Trust & legal",
+    "linkPrivacy": "Privacy",
+    "linkTerms": "Terms",
+    "verseRemembering": "Remembering the poor",
+    "verseReference": "Galatians 2:10"
   },
   "LanguageSwitcher": {
     "label": "Language",
     "en": "English",
     "ro": "Română"
   },
+  "MobileMenu": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
   "Home": {
     "hero": {
       "eyebrowLocale": "Romania",
-      "eyebrowSince": "Serving since 1994",
+      "eyebrowSince": "since 1994",
       "eyebrowFaith": "A Christian 501(c)(3)",
-      "headline": "Walking with Romanian families since 1994.",
+      "headline": "Walking with needy families since 1994.",
       "subhead": "To fulfill the Gospel, our goal is to annually send over $100,000 to named families for groceries, medicine, firewood, and home repair."
     },
     "trustBand": {
@@ -56,27 +67,96 @@
       "stat2Detail": "All giving goes to families, missionaries, and projects.",
       "stat3Value": "1994",
       "stat3Label": "501(c)(3) charity",
-      "stat3Detail": "IRS EIN 38-3401779. Tax-deductible. Annual report public."
+      "stat3Detail": "IRS EIN 38-3401779. Tax-deductible. Books open to donors."
+    },
+    "scripture": {
+      "verseText": "All they asked was that we should continue to remember the poor — the very thing I was eager to do.",
+      "reference": "Galatians 2:10",
+      "translation": "NIV"
+    },
+    "ministriesSection": {
+      "heading": "Ministries",
+      "body": "We organize our work in five ministries. Every ministry below shows how many families we walked with this year and what your gift covered.",
+      "housingLearn": "Learn how housing aid works",
+      "permissionNote": "Shared with permission of the family.",
+      "wordTitle": "Word of God",
+      "wordBody": "Supporting missionaries and pastors who bring the Gospel to Romanian villages and to partner ministries in the United States, the UK, and Africa.",
+      "wordCta": "See mission work",
+      "groceriesTitle": "Groceries",
+      "groceriesBody": "Bread, milk, oil, and other essentials for widows and families whose monthly pension or wages don't stretch to the end of the month.",
+      "groceriesCta": "See aid delivery"
     },
     "projects": {
       "housingTitle": "Housing",
-      "housingBody": "The Dragomir family received the keys to their home in September 2023. In 2024 we helped the Anton family insulate theirs before winter, and connected the Barbalata home to electrical service.",
+      "housingBody": "Homes weatherized, repaired, and connected to electricity. Each project starts with a request from a local pastor who knows the family.",
       "medicalTitle": "Medical",
-      "medicalBody": "Marta Lutac is undergoing cancer treatment in Rauseni. Her grandson Bogdan had two eye surgeries this year. We covered medicine and hospital travel for both.",
+      "medicalBody": "Surgeries, medicine, and hospital travel for families facing serious illness. We cover the gap public insurance leaves behind.",
       "firewoodTitle": "Firewood and winter",
-      "firewoodBody": "The Ciobanasu family in Avrameni and the Murariu family in Moldova received firewood and supplies before the cold."
+      "firewoodBody": "Firewood, utility bills, and winter supplies delivered before the cold each autumn."
     },
     "story": {
       "heading": "A current project",
       "title": "A family in need of a home.",
-      "excerpt": "A multigenerational family in rural Romania, living in a damaged house with a broken courtyard. We are raising the funds to give them a real roof and a kitchen that holds heat through winter. The local pastor knows them by name and has walked with us before."
+      "excerpt": "A multigenerational family in rural Romania, living in a damaged house with a broken courtyard. We are raising the funds to give them a real roof and a kitchen that holds heat through winter. The local pastor knows them and has walked with us before."
+    },
+    "gallery": {
+      "label": "From Romania",
+      "countrysideAlt": "A Carpathian valley in Romania — the kind of place we drive through on every board visit.",
+      "classroomJesusAlt": "A Romanian Sunday-school wall painted with Jesus and children, captioned 'Let the little children come to me' (Luke 18:16).",
+      "classroomChildrenAlt": "Children in a Romanian Sunday-school classroom with their teacher.",
+      "foodDeliveryAlt": "Car trunk loaded with groceries, oil, and supplies for a family.",
+      "teamBuildSiteAlt": "Four members of the team on a Romanian project site.",
+      "goatsAlt": "Two men with a herd of goats in rural Romania.",
+      "guestHouseAlt": "Partner community building in Romania.",
+      "courtyard1Alt": "The courtyard of a Romanian home in need of repair.",
+      "courtyard2Alt": "A narrow alley between two Romanian houses."
+    },
+    "missionTripsSection": {
+      "heading": "Mission trips",
+      "body": "We do not have a 2026 trip scheduled yet. If you would consider going with us when one is set, the door is open. Past trips have meant ten days in rural Romania with a translator, partner pastors, and the families we walk with year-round.",
+      "imageAlt": "Members of the board with partners on a Romanian project site.",
+      "skill1": "Useful skills: medical, electrical, basic construction, basic Romanian.",
+      "skill2": "Typical cost: $1,500 to $2,500 (flight, ground, lodging).",
+      "skill3": "Board members pay their own travel separately.",
+      "ctaTrips": "Read about trips",
+      "ctaEmail": "Email the board"
+    },
+    "stories": {
+      "heading": "Stories from the field",
+      "intro": "Every project starts with a family a local pastor knows by name. These three are from our most recent year.",
+      "amountLabel": "Project cost",
+      "completedLabel": "Status",
+      "completedValue": "Completed",
+      "case1Name": "Elena Puchia",
+      "case1Location": "Albeşti, Botoşani county",
+      "case1Amount": "≈ $2,500",
+      "case1Body": "Elena is in her 60s and was living in a one-room shack that was literally falling apart. A neighbor family started building her a small new house on the same lot and we came alongside to finish the roof, insulation, firewood storage, and a new fence and gate. Completed early 2023.",
+      "case1ImageAlt": "Elena Puchia smiling in front of her newly built one-room house with a metal roof and a wood-burning stove venting smoke.",
+      "case1BeforeAlt": "Elena's previous home — a small house with crumbling plaster walls and a sagging tile roof.",
+      "case1BeforeBadge": "Before",
+      "case1BeforeCaption": "The home Elena was living in before this project.",
+      "case2Name": "Petru and Maria Vlaşcu",
+      "case2Location": "Sarafineşti, Botoşani county",
+      "case2Amount": "≈ $4,000",
+      "case2Body": "Petru is paralyzed after a stroke. Maria, 68, was carrying water in buckets from the neighbors after their well dried up, and washing all the laundry by hand. We drilled a new well in their yard, installed an electric pump and indoor plumbing, and delivered a washing machine and toilet. Completed before winter 2022.",
+      "case2ImageAlt": "Petru sitting up in bed beside Maria, who stands at his side wearing a headscarf, inside their newly plumbed home.",
+      "case3Name": "The Pojar family",
+      "case3Location": "Tudor Vladimirescu, near Albeşti",
+      "case3Amount": "$14,500",
+      "case3Body": "A single mother of five (one of her children has Down syndrome) whose husband had left years earlier. A family from the area donated a house, but the roof leaked so badly she had to set pots through the house when it rained. We replaced the entire roof structure, insulated the walls with stucco, and built a fence so the children could play safely in the yard. Completed November 2023.",
+      "case3ImageAlt": "The Pojar family's house after work — yellow stucco exterior, a brand-new dark metal roof, and a brown wooden fence across the front."
     },
     "newsletter": {
       "heading": "A letter from Romania, four times a year",
       "body": "Updates from the board's visits and the families we walk with. We email when there's something real to say.",
       "placeholder": "Your email",
       "submit": "Subscribe",
-      "trust": "No tracking pixels. Unsubscribe in one click."
+      "submitting": "Sending…",
+      "trust": "No tracking pixels. Unsubscribe in one click.",
+      "success": "Thank you. Look for the next letter from Romania in your inbox."
+    },
+    "featuredProject": {
+      "imageAlt": "A multigenerational Romanian family inside their home, at the center of our current housing project."
     }
   },
   "Donate": {
@@ -85,26 +165,39 @@
       "subhead": "Choose a category below, or let us put your gift where the need is greatest this week. Ninety-eight cents of every dollar reaches the field; the board pays its own travel."
     },
     "funds": {
+      "heading": "Six ways to direct your gift",
+      "subtitle": "Pick any fund below — or choose \"Where most needed\" and let the board decide each week.",
       "generalLabel": "Where most needed",
       "generalBody": "Let the board direct your gift to the family most in need this week.",
       "housingLabel": "Housing",
-      "housingBody": "Home repair, insulation, electrical service. The Dragomir, Anton, and Barbalata families this year.",
+      "housingBody": "Home repair, insulation, electrical service for Romanian families before winter.",
       "medicalLabel": "Medical",
-      "medicalBody": "Surgeries, medicine, hospital travel. Marta Lutac's treatment and Bogdan's eye surgeries this year.",
+      "medicalBody": "Surgeries, medicine, hospital travel for families facing serious illness.",
       "firewoodLabel": "Firewood and winter",
-      "firewoodBody": "Firewood, utility bills, winter supplies. The Ciobanasu and Murariu families before the cold.",
+      "firewoodBody": "Firewood, utility bills, winter supplies delivered before the cold.",
       "missionLabel": "Mission",
       "missionBody": "Missionary support in Romania, the UK, the US, and Africa.",
       "schoolLabel": "Scholarships",
       "schoolBody": "School supplies and tuition aid in Detroit, Rwanda, and Romania."
     },
     "tiers": {
+      "heading": "Suggested amounts, with what they reach",
+      "subtitle": "Every tier is anchored to a real field expense, not a category.",
       "tier25": "A week of groceries for one family.",
       "tier50": "A month of firewood when the temperature drops.",
       "tier100": "Medicine and supplies for one hospital visit.",
-      "tier250": "Insulating one wall before winter, like the Anton family.",
-      "tier500": "Connecting a home to electrical service, like the Barbalata family.",
-      "custom": "Other amount"
+      "tier250": "Insulating one wall before winter.",
+      "tier500": "Connecting a home to electrical service.",
+      "custom": "Other amount",
+      "customNote": "{custom}: pick any amount on the form below."
+    },
+    "give": {
+      "heading": "Card or bank, monthly or one-time",
+      "placeholderTitle": "Givebutter form loads here",
+      "placeholderBody": "Drop the Givebutter widget script and tag into this slot. The form will show monthly/one-time toggle, fund selector, and tier amounts.",
+      "placeholderFallback": "Until then, the methods below are fully active.",
+      "configuredInside": "{monthly} · {once} · {custom} all configured inside Givebutter.",
+      "formAriaLabel": "Donation form"
     },
     "cadence": {
       "monthly": "Monthly",
@@ -114,35 +207,53 @@
     },
     "otherWays": {
       "heading": "Prefer to send it directly?",
+      "preferredBadge": "Preferred",
       "zelleHeading": "Zelle (we prefer this, no card fees)",
       "zelleBody": "Send to gsworldoutreach@gmail.com from your bank app. The board sees your gift the same day.",
+      "zelleEmailLabel": "Zelle email address",
       "paypalHeading": "PayPal",
+      "paypalIntro": "Send to the same email via PayPal's send-money flow.",
       "paypalCta": "Give via PayPal",
       "checkHeading": "Check by mail",
-      "checkBody": "Make payable to: Good Samaritan. Mail to 2060 Curtis Rd, Addison Twp, MI 48307. Allow seven to ten days."
+      "checkBody": "Make payable to: Good Samaritan. Mail to 2060 Curtis Rd, Addison Twp, MI 48307. Allow seven to ten days.",
+      "checkPayableLabel": "Payable to",
+      "checkPayableName": "Good Samaritan",
+      "checkMailingLabel": "Mailing address"
     },
     "trust": {
       "taxDeductible": "Tax-deductible. 501(c)(3). EIN 38-3401779.",
       "cancelAnytime": "Cancel monthly giving anytime in one click.",
       "secureProcessing": "Card processing by Stripe via Givebutter."
     },
-    "receiptBody": "Thank you. Your gift reaches a named Romanian family this week. We are grateful for you."
+    "closing": "Whichever method you choose, every gift is acknowledged within seven days and counted on next year's Accountability dashboard by category.",
+    "receiptBody": "Thank you. Your gift reaches a Romanian family this week. We are grateful for you."
   },
   "MissionTrips": {
+    "metaTitle": "Mission trips",
     "hero": {
-      "eyebrow": "For prospective volunteers",
+      "eyebrow": "Mission trips",
       "headline": "Romania mission trips.",
       "subhead": "We do not have a 2026 trip scheduled yet. If you would consider going with us when one is set, add your name to the interest list below."
     },
     "history": {
       "heading": "What past trips have looked like",
-      "body": "Our most recent board visit was summer 2024. The board flew to Bucharest, drove through Botosani and Brasov counties, and sat with the Lutac, Anton, Barbalata, Ciobanasu, Maicaru, Ghete, Curavale, Murariu, and Petru Vlascu families across about ten days. Photos and a per-family log are in the 2024 annual report."
+      "body": "Our most recent board visit was summer 2024. The board flew to Bucharest, drove through Botosani and Brasov counties, and spent about ten days with families across the region. Email the board for details on a specific village — we keep a per-family log internally."
     },
     "what": {
-      "heading": "What a trip would include"
+      "heading": "What a trip would include",
+      "item1": "Flights to and from Bucharest (volunteer pays)",
+      "item2": "Ground transport across rural Romanian counties",
+      "item3": "Lodging with partner pastors or budget guesthouses",
+      "item4": "Meals with the families we visit",
+      "item5": "A translator alongside the team at every visit"
     },
     "skills": {
-      "heading": "Skills that help on the ground"
+      "heading": "Skills that help on the ground",
+      "item1": "Medical training (nurses, doctors, EMTs)",
+      "item2": "Construction or basic electrical",
+      "item3": "Basic Romanian (limba română) — not required",
+      "item4": "Patience for long drives on rough roads",
+      "item5": "Willingness to sit with grief"
     },
     "cost": {
       "heading": "Expected cost",
@@ -150,25 +261,38 @@
     },
     "apply": {
       "heading": "Join the interest list",
-      "body": "Email gsworldoutreach@gmail.com with the subject \"2026 trip interest\" and a sentence about why. The board writes back when dates lock, expected by summer 2026.",
-      "cta": "Open mail to the board"
+      "body": "Email gsworldoutreach@gmail.com with the subject \"Trip interest\" and a sentence about why. The board writes back when dates lock.",
+      "cta": "Open mail to the board",
+      "ctaContactForm": "Use the contact form instead"
     }
   },
   "Volunteer": {
+    "metaTitle": "Volunteer",
     "hero": {
       "eyebrow": "US-side roles",
       "headline": "Hands we could use stateside.",
       "subhead": "We are a small all-volunteer board. A few specific roles would multiply what we can do without flying anywhere."
     },
     "roles": {
-      "heading": "Where we need help"
+      "heading": "Where we need help",
+      "role1Title": "Donor records keeper",
+      "role1Body": "Light data entry, quarterly. Match donations across Zelle, PayPal, and checks; tag by fund. Currently the board chair does this by hand.",
+      "role2Title": "Accountability writer",
+      "role2Body": "Help draft updates for the Accountability page from the board's notes and photos. Three to four evenings of work each November.",
+      "role3Title": "Event hosts",
+      "role3Body": "Host a small donor gathering at your church or home once a year. The board provides photos and stories; you provide coffee and a room.",
+      "role4Title": "Social media coordinator",
+      "role4Body": "We do not yet have social accounts. If you would set them up and post quarterly updates, write to us."
     },
     "contact": {
       "heading": "Reach the board",
-      "body": "Email gsworldoutreach@gmail.com with the role that fits you, or use the contact form."
+      "body": "Email gsworldoutreach@gmail.com with the role that fits you, or use the contact form.",
+      "ctaForm": "Use the contact form",
+      "ctaEmail": "Email the board directly"
     }
   },
   "Contact": {
+    "metaTitle": "Contact",
     "hero": {
       "eyebrow": "Get in touch",
       "headline": "Reach the board directly.",
@@ -188,7 +312,8 @@
       "submitting": "Sending…",
       "successHeading": "Thank you. The board has the message.",
       "successBody": "Someone from the board responds within seven days. If it is urgent, write to gsworldoutreach@gmail.com directly.",
-      "errorPrefix": "Could not send"
+      "errorPrefix": "Could not send",
+      "unknownError": "Unknown error"
     },
     "alt": {
       "heading": "Or write directly",
@@ -198,6 +323,7 @@
     }
   },
   "About": {
+    "metaTitle": "Our story",
     "hero": {
       "eyebrow": "About the organization",
       "headline": "Founded in 1994. Still walking with the same families.",
@@ -210,7 +336,7 @@
     },
     "history": {
       "heading": "Our history",
-      "body": "Nistor and Floare Forgaciu founded the organization in 1994 with one conviction: that following Jesus meant remembering the poor. They started small, in their own region, carrying groceries and firewood to widows and elderly neighbors. The work has grown across three decades but the way it works has not changed. The board still visits each named family in person, prays with them in their kitchens, and stays in touch through the local pastors who first introduced them."
+      "body": "Nistor and Floare Forgaciu founded the organization in 1994 with one conviction: that following Jesus meant remembering the poor. They started small, in their own region, carrying groceries and firewood to widows and elderly neighbors. The work has grown across three decades but the way it works has not changed. The board still visits each family in person, prays with them in their kitchens, and stays in touch through the local pastors who first introduced them."
     },
     "mission": {
       "heading": "Our mission",
@@ -220,30 +346,179 @@
       "heading": "What we believe",
       "body": "We are a Christian 501(c)(3). Our work is rooted in the call of the apostles to remember the poor (Galatians 2:10). We partner with local churches in every region we serve. The families we walk with are not projects to be completed but neighbors to be loved."
     },
-    "where": {
-      "heading": "Where we serve",
-      "body": "Romania carries 76% of 2024 aid, with the United States at 16%, the United Kingdom at 5%, and Africa at 3%. Past years have reached Moldova, Canada, Spain, Uganda, Haiti, Rwanda, and Greece."
-    },
-    "funds": {
-      "heading": "Where your dollar goes",
-      "needyLabel": "Needy families",
-      "missionLabel": "Missionary support",
-      "housingLabel": "Housing repair and purchase",
-      "aidLabel": "Aid delivery",
-      "schoolLabel": "Scholarships",
-      "adminLabel": "Administration"
-    },
-    "accountability": {
-      "heading": "Accountability",
-      "body": "Every board member is a volunteer. Every trip to Romania is paid out of pocket. The 2024 annual report names families, villages, and project categories so every dollar is traceable.",
-      "reportLink": "Read the 2024 annual report (PDF)",
-      "irsLink": "Verify our 501(c)(3) status with the IRS",
-      "einLine": "IRS EIN 38-3401779"
-    },
     "contact": {
       "heading": "Get in touch",
       "body": "Email gsworldoutreach@gmail.com or write to 2060 Curtis Rd, Addison Twp, MI 48307."
     }
+  },
+  "Accountability": {
+    "metaTitle": "Accountability",
+    "metaDescription": "How a small board accounts for every dollar. Countries reached, families helped, money distributed.",
+    "hero": {
+      "eyebrow": "Accountability",
+      "headline": "Every dollar, accounted for.",
+      "subhead": "Transparency is how a small charity earns the trust of donors who give in good faith. The dashboard below shows where the work goes, who receives it, and what your gift covers."
+    },
+    "stats": {
+      "countriesValue": "10",
+      "countriesLabel": "Countries reached",
+      "countriesDetail": "Romania, Moldova, USA, UK, Spain, Guatemala, Niger, Rwanda, Middle East, and others",
+      "familiesValue": "60+",
+      "familiesLabel": "Families walked with",
+      "familiesDetail": "Each visited in person, each known to the board",
+      "efficiencyValue": "98¢",
+      "efficiencyLabel": "Of every dollar to the field",
+      "efficiencyDetail": "All giving goes to families, missionaries, and projects."
+    },
+    "geographic": {
+      "heading": "Distribution by country",
+      "body": "Romania carries the majority of our annual work. Most recent giving also reached the United States, the United Kingdom, Guatemala, Spain, and Niger.",
+      "ariaLabel": "Distribution by country",
+      "romania": "Romania",
+      "unitedStates": "United States",
+      "unitedKingdom": "United Kingdom",
+      "guatemala": "Guatemala",
+      "spain": "Spain",
+      "niger": "Niger"
+    },
+    "fundsUse": {
+      "heading": "Use of funds",
+      "body": "Direct support to families and housing makes up the overwhelming majority. Administration is one cent on the dollar.",
+      "ariaLabel": "Use of funds",
+      "needyFamilies": "Needy families",
+      "housing": "Housing",
+      "missionarySupport": "Missionary support",
+      "aidDelivery": "Aid delivery",
+      "churchBuild": "Church building",
+      "administration": "Administration"
+    },
+    "closing": {
+      "heading": "Questions about a gift?",
+      "body": "Want details about a specific family, village, or project category? Email <email>gsworldoutreach@gmail.com</email> and a board member will write back within seven days."
+    }
+  },
+  "Ministries": {
+    "metaTitle": "Ministries",
+    "metaDescription": "Housing, medical, firewood, mission, and scholarship ministries since 1994. Visited by a board member, funded by donors who give in good faith.",
+    "hero": {
+      "eyebrow": "Ministries",
+      "headline": "Ministries of aid, year by year.",
+      "subhead": "We organize our work in five ministries. Each one below shows how many families we walked with this year and what your gift covered. Names are kept private out of respect for the families."
+    },
+    "empty": "No ministries published yet. Check back soon.",
+    "fallbackPending": "(translation pending)",
+    "familiesHelped": "{count, plural, one {# family helped this year} other {# families helped this year}}",
+    "readAbout": "Read about {title}"
+  },
+  "Project": {
+    "notFound": "Project not found",
+    "fallbackNotice": "(Original English version. Translation in progress.)",
+    "familiesLabel": "Families",
+    "villagesLabel": "Villages",
+    "donateHeading": "Give to {title}",
+    "donateBody": "Your gift goes directly to the next family the board hears about in this category.",
+    "allMinistries": "All ministries",
+    "back": "Back to all ministries"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy",
+    "metaDescription": "How Good Samaritan International handles donor and visitor information. We do not sell donor data, ever.",
+    "hero": {
+      "eyebrow": "Privacy",
+      "headline": "How we handle your information.",
+      "subhead": "We do not sell donor data. We do not share donor lists. We collect only what we need to send tax receipts, process gifts, and keep you updated if you ask us to."
+    },
+    "lastUpdatedLabel": "Last updated:",
+    "collect": {
+      "heading": "What we collect",
+      "donation": "<strong>Donation information.</strong> Name, email, mailing address, donation amount, and method. Card data is processed by Stripe via Givebutter; we never see or store full card numbers.",
+      "newsletter": "<strong>Newsletter signups.</strong> Email only. Stored in our email provider (Buttondown).",
+      "contact": "<strong>Contact form messages.</strong> Your name, email, subject, and message, sent directly to the board inbox.",
+      "analytics": "<strong>Site analytics.</strong> Anonymous, aggregated page-view counts via Plausible. No cookies, no tracking pixels, no IP storage."
+    },
+    "use": {
+      "heading": "What we do with it",
+      "receipt": "Send your tax-deductible donation receipt (required by the IRS).",
+      "newsletter": "Send the newsletter you signed up for (about four times a year).",
+      "ack": "Acknowledge your message if you used the contact form.",
+      "aggregate": "Publish anonymous aggregate giving totals on our Accountability page."
+    },
+    "never": {
+      "heading": "What we never do",
+      "sell": "Sell, rent, or trade donor information to anyone.",
+      "share": "Share donor lists with other nonprofits.",
+      "publish": "Publish a donor's name without explicit permission.",
+      "track": "Use tracking pixels in newsletters."
+    },
+    "who": {
+      "heading": "Who else sees your data",
+      "body": "Only the providers who help us run the site: Givebutter (donation processing), Stripe (card processing), Buttondown (newsletter), and our hosting provider. Each is bound by their own privacy terms. We do not give your information to any other third party."
+    },
+    "retention": {
+      "heading": "How long we keep it",
+      "body": "Donation records are retained for seven years (IRS standard for charitable organizations). Newsletter subscriptions stay active until you unsubscribe (one click in any email). Contact form messages are kept as long as the conversation is useful, typically under two years."
+    },
+    "choices": {
+      "heading": "Your choices",
+      "body": "Email <email>gsworldoutreach@gmail.com</email> to request a copy of your data, correct anything that's wrong, or have your information deleted (subject to the seven-year IRS retention rule for donation records)."
+    },
+    "children": {
+      "heading": "Children",
+      "body": "This site is not directed at children under 13, and we do not knowingly collect information from them."
+    },
+    "changes": {
+      "heading": "Changes",
+      "body": "If we update this policy, the date at the top changes. Material changes will be announced in the next newsletter."
+    }
+  },
+  "Terms": {
+    "metaTitle": "Terms",
+    "metaDescription": "Terms of use for the Good Samaritan International website and donation processing.",
+    "hero": {
+      "eyebrow": "Terms of use",
+      "headline": "The agreement, in plain English.",
+      "subhead": "By using this site or donating, you agree to the terms below. We've kept them short and readable."
+    },
+    "lastUpdatedLabel": "Last updated:",
+    "about": {
+      "heading": "About us",
+      "body": "Good Samaritan International is a US 501(c)(3) charitable organization, IRS EIN 38-3401779, mailing address 2060 Curtis Rd, Addison Twp, MI 48307. The site is operated by the board."
+    },
+    "donations": {
+      "heading": "Donations",
+      "item1": "All donations are tax-deductible in the United States to the extent allowed by law. You will receive a receipt for IRS purposes.",
+      "item2": "Card and bank donations are processed by Stripe via Givebutter. Zelle and PayPal donations go directly to our bank-linked account.",
+      "item3": "Recurring monthly donations can be cancelled at any time through your Givebutter receipt link, or by emailing gsworldoutreach@gmail.com. Cancellation takes effect before the next monthly charge.",
+      "item4": "Donations are non-refundable except for technical errors (duplicate charge, wrong amount). To request a refund for cause, email us within 60 days of the donation.",
+      "item5": "Fund designations (Housing, Medical, etc.) are honored to the extent practical. The board reserves the right to redirect a designated gift if the named fund is already fully met, with notice to the donor."
+    },
+    "content": {
+      "heading": "Site content",
+      "body": "Stories, project descriptions, and photos on this site are accurate to the best of our knowledge at the time of publication. Family stories are published only with the consent of the named family. If you believe content on this site is inaccurate or should be removed, write to gsworldoutreach@gmail.com."
+    },
+    "acceptable": {
+      "heading": "Acceptable use",
+      "body": "Don't copy and resell our content. Don't impersonate the organization or its board. Don't use the site to harass anyone. Other than that, you're welcome here."
+    },
+    "warranty": {
+      "heading": "No warranty",
+      "body": "The site is provided as-is. We try to keep it accurate and online, but we don't guarantee uptime, accuracy of every detail, or that links to external services (IRS, Givebutter, etc.) will always work."
+    },
+    "disputes": {
+      "heading": "Disputes",
+      "body": "Disputes about donations or this site are governed by the laws of the State of Michigan and resolved in Oakland County, Michigan. We strongly prefer to resolve any concern by email first, and have never had to do otherwise."
+    },
+    "changes": {
+      "heading": "Changes",
+      "body": "If these terms change, the date at the top changes. Material changes will be announced in the next newsletter."
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "Email <email>gsworldoutreach@gmail.com</email> or write to 2060 Curtis Rd, Addison Twp, MI 48307."
+    }
+  },
+  "LegalDate": {
+    "lastUpdated": "May 21, 2026"
   },
   "Preview": {
     "label": "Good Samaritan International · Design system v1",

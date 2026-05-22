@@ -12,31 +12,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Volunteer.hero" });
+  const t = await getTranslations({ locale, namespace: "Volunteer" });
+  const tHero = await getTranslations({ locale, namespace: "Volunteer.hero" });
   return {
-    title: "Volunteer",
-    description: t("subhead"),
+    title: t("metaTitle"),
+    description: tHero("subhead"),
   };
 }
-
-const ROLES = [
-  {
-    title: "Donor records keeper",
-    body: "Light data entry, quarterly. Match donations across Zelle, PayPal, and checks; tag by fund. Currently the board chair does this by hand.",
-  },
-  {
-    title: "Annual report writer",
-    body: "Help draft the next annual report from the board's notes and photos. Three to four evenings of work each November.",
-  },
-  {
-    title: "Event hosts",
-    body: "Host a small donor gathering at your church or home once a year. The board provides photos and stories; you provide coffee and a room.",
-  },
-  {
-    title: "Social media coordinator",
-    body: "We do not yet have social accounts. If you would set them up and post quarterly updates, write to us.",
-  },
-];
 
 export default async function VolunteerPage({
   params,
@@ -50,9 +32,16 @@ export default async function VolunteerPage({
   const tRoles = await getTranslations("Volunteer.roles");
   const tContact = await getTranslations("Volunteer.contact");
 
+  const roles = [
+    { title: tRoles("role1Title"), body: tRoles("role1Body") },
+    { title: tRoles("role2Title"), body: tRoles("role2Body") },
+    { title: tRoles("role3Title"), body: tRoles("role3Body") },
+    { title: tRoles("role4Title"), body: tRoles("role4Body") },
+  ];
+
   return (
     <main id="main" className="flex flex-col">
-      <Section surface="inverse" density="default">
+      <Section surface="inverse" density="spacious">
         <Container width="content">
           <Text size="caption" tone="accent" className="mb-6">{tHero("eyebrow")}</Text>
           <Heading as="h1" size="display" className="text-ink-inverse">{tHero("headline")}</Heading>
@@ -64,7 +53,7 @@ export default async function VolunteerPage({
         <Container width="standard">
           <Heading as="h2" size="h2">{tRoles("heading")}</Heading>
           <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {ROLES.map((role) => (
+            {roles.map((role) => (
               <li
                 key={role.title}
                 className="bg-surface-raised border border-rule rounded-md p-6 md:p-7"
@@ -83,7 +72,7 @@ export default async function VolunteerPage({
           <Text size="body-lg" tone="soft" className="mt-4">{tContact("body")}</Text>
           <div className="mt-8 flex flex-wrap gap-4">
             <LinkButton href="/contact" variant="primary" size="lg">
-              Use the contact form
+              {tContact("ctaForm")}
             </LinkButton>
             <LinkButton
               href="mailto:gsworldoutreach@gmail.com?subject=Volunteer"
@@ -91,7 +80,7 @@ export default async function VolunteerPage({
               size="lg"
               external
             >
-              Email the board directly
+              {tContact("ctaEmail")}
             </LinkButton>
           </div>
         </Container>

@@ -38,7 +38,7 @@ export function NewsletterForm() {
   if (state === "ok") {
     return (
       <p className="text-body-lg text-ink-inverse" role="status">
-        Thank you. Look for the next letter from Romania in your inbox.
+        {t("success")}
       </p>
     );
   }
@@ -76,7 +76,7 @@ export function NewsletterForm() {
           "disabled:opacity-60",
         )}
       >
-        {state === "submitting" ? "Sending…" : t("submit")}
+        {state === "submitting" ? t("submitting") : t("submit")}
       </button>
       {state === "error" && errorMsg ? (
         <p id="newsletter-error" className="text-body-sm text-danger-bright sm:basis-full" role="alert">

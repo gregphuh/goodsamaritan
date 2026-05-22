@@ -15,6 +15,7 @@ export function MobileMenu() {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const tNav = useTranslations("Nav");
   const tCta = useTranslations("CTA");
+  const tMenu = useTranslations("MobileMenu");
 
   // Close on Escape, lock body scroll, move focus into drawer
   useEffect(() => {
@@ -42,7 +43,7 @@ export function MobileMenu() {
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label={open ? tMenu("closeMenu") : tMenu("openMenu")}
         onClick={() => setOpen(!open)}
         className={cn(
           "md:hidden inline-flex items-center justify-center h-11 w-11 rounded-sm",

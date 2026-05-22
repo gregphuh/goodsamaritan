@@ -28,6 +28,12 @@ export default async function Home({
   const tNews = await getTranslations("Home.newsletter");
   const tCta = await getTranslations("CTA");
   const tSite = await getTranslations("Site");
+  const tScripture = await getTranslations("Home.scripture");
+  const tMin = await getTranslations("Home.ministriesSection");
+  const tGallery = await getTranslations("Home.gallery");
+  const tTrips = await getTranslations("Home.missionTripsSection");
+  const tFeatured = await getTranslations("Home.featuredProject");
+  const tStories = await getTranslations("Home.stories");
 
   return (
     <main id="main" className="flex flex-col">
@@ -35,55 +41,43 @@ export default async function Home({
            Left column carries the brand mark (cross + motto + verse).
            Right column carries the message (eyebrow + headline + CTAs).
            This split de-crowds the center of the banner. */}
-      <Section surface="inverse" density="spacious">
+      <Section surface="inverse" density="default">
         <Container width="wide">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start md:items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start md:items-center">
             {/* Brand identity — cross + motto + verse, anchored left.
                 Cross draws in on page load (animated prop); motto fades
                 in after the cross finishes drawing. */}
             <div className="md:col-span-5 flex md:block flex-col items-center md:items-start text-center md:text-left">
               <BrandCross
-                size={200}
+                size={170}
                 strokeWidth={5.5}
                 animated
-                className="text-ink-inverse/85"
+                className="text-accent"
               />
-              <p className="motto-fade-in mt-6 font-cursive text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] text-accent leading-[1.1] max-w-[14ch] mx-auto md:mx-0">
+              <p className="motto-fade-in mt-5 font-cursive text-[2.5rem] md:text-[3.125rem] lg:text-[3.75rem] text-accent leading-[1.05] max-w-[14ch] mx-auto md:mx-0">
                 {tSite("motto")}
               </p>
-              <p className="motto-fade-in mt-3 text-body-sm text-ink-inverse/70 uppercase tracking-wider font-semibold">
+              <p className="motto-fade-in mt-2 text-caption text-ink-inverse/70 uppercase tracking-wider font-semibold">
                 {tSite("mottoReference")}
               </p>
             </div>
 
             {/* Message — eyebrow + headline + subhead + CTAs */}
             <div className="md:col-span-7">
-              <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-body-sm font-semibold uppercase tracking-wider">
+              <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-body-sm font-semibold uppercase tracking-wider">
                 <span className="inline-flex items-center gap-2">
-                  <RomaniaFlag height={20} title="Flag of Romania" />
+                  <RomaniaFlag height={18} title="Flag of Romania" />
                   <span className="text-accent">{tHero("eyebrowLocale")}</span>
                 </span>
                 <span aria-hidden="true" className="text-ink-inverse/40">·</span>
-                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")} since 1994</span>
+                <span className="text-ink-inverse/70">{tHero("eyebrowFaith")} {tHero("eyebrowSince")}</span>
               </div>
-              <h1 className="font-display font-medium text-[2.25rem] md:text-[2.75rem] lg:text-[3.5rem] leading-[1.1] tracking-tight text-ink-inverse text-balance">
+              <h1 className="font-display font-medium text-[2.125rem] md:text-[2.5rem] lg:text-[3.125rem] leading-[1.1] tracking-tight text-ink-inverse text-balance">
                 {tHero("headline")}
               </h1>
-              <p className="mt-6 text-[1.125rem] md:text-[1.375rem] leading-[1.5] text-ink-inverse/90 max-w-[58ch]">
+              <p className="mt-5 text-[1.125rem] md:text-[1.25rem] leading-[1.5] text-ink-inverse/90 max-w-[58ch]">
                 {tHero("subhead")}
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <LinkButton href="/donate" variant="primary" size="lg">
-                  {tCta("giveMonthly")}
-                </LinkButton>
-                <a
-                  href="/annual-reports/2024.pdf"
-                  className="inline-flex items-center justify-center gap-2 h-14 px-8 text-body-lg font-semibold rounded-sm border border-ink-inverse/30 text-ink-inverse hover:bg-brand-strong transition-colors duration-[160ms]"
-                >
-                  {tCta("readReport")}
-                  <ArrowUpRight size={20} weight="regular" aria-hidden="true" />
-                </a>
-              </div>
             </div>
           </div>
         </Container>
@@ -119,29 +113,68 @@ export default async function Home({
       <Section density="default">
         <Container width="content" className="text-center">
           <div className="inline-block text-left">
-            <Scripture reference="Galatians 2:10" translation="NIV">
-              All they asked was that we should continue to remember the poor — the very thing I was eager to do.
+            <Scripture reference={tScripture("reference")} translation={tScripture("translation")}>
+              {tScripture("verseText")}
             </Scripture>
           </div>
         </Container>
       </Section>
 
-      {/* ──────────────────────────── Projects (landing-page section) */}
-      <Section surface="sunken" density="default" id="projects">
+      {/* ──────────────────────────── Ministries (landing-page section) */}
+      <Section surface="sunken" density="default" id="ministries">
         <Container width="wide">
           <div className="max-w-[60ch]">
-            <Heading as="h2" size="h2">Projects</Heading>
+            <Heading as="h2" size="h2">{tMin("heading")}</Heading>
             <Text size="body-lg" tone="soft" className="mt-4">
-              We organize our work in five categories. Every project below names the families we walked with, the villages we visited, and what your gift covered.
+              {tMin("body")}
             </Text>
           </div>
 
+          {/* 5 category cards — Word of God leads, then physical aid categories */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <ProjectCard
+              category="word"
+              title={tMin("wordTitle")}
+              body={tMin("wordBody")}
+              href="/ministries"
+              cta={tMin("wordCta")}
+            />
+            <ProjectCard
+              category="housing"
+              title={tProj("housingTitle")}
+              body={tProj("housingBody")}
+              href="/ministries/housing"
+              cta={tCta("seeHousing")}
+            />
+            <ProjectCard
+              category="groceries"
+              title={tMin("groceriesTitle")}
+              body={tMin("groceriesBody")}
+              href="/ministries"
+              cta={tMin("groceriesCta")}
+            />
+            <ProjectCard
+              category="medical"
+              title={tProj("medicalTitle")}
+              body={tProj("medicalBody")}
+              href="/ministries/medical"
+              cta={tCta("seeMedical")}
+            />
+            <ProjectCard
+              category="firewood"
+              title={tProj("firewoodTitle")}
+              body={tProj("firewoodBody")}
+              href="/ministries/firewood"
+              cta={tCta("seeWinterAid")}
+            />
+          </div>
+
           {/* Featured project — the family in the current housing project */}
-          <article className="mt-12 bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
+          <article className="mt-16 bg-surface-raised border border-rule rounded-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
             <div className="relative min-h-[280px] md:min-h-0 md:aspect-auto bg-surface-sunken">
               <Image
                 src="/images/family-1.jpg"
-                alt="A multigenerational Romanian family inside their home, at the center of our current housing project."
+                alt={tFeatured("imageAlt")}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -156,57 +189,103 @@ export default async function Home({
                 {tStory("excerpt")}
               </Text>
               <Link
-                href="/projects/housing"
+                href="/ministries/housing"
                 className="mt-8 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
               >
-                Learn how housing aid works
+                {tMin("housingLearn")}
                 <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
               </Link>
               <p className="mt-6 text-caption text-ink-muted">
-                Shared with permission of the family.
+                {tMin("permissionNote")}
               </p>
             </div>
           </article>
 
-          {/* 3 category cards */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ProjectCard
-              category="housing"
-              title={tProj("housingTitle")}
-              body={tProj("housingBody")}
-              href="/projects/housing"
-              cta={tCta("seeHousing")}
-            />
-            <ProjectCard
-              category="medical"
-              title={tProj("medicalTitle")}
-              body={tProj("medicalBody")}
-              href="/projects/medical"
-              cta={tCta("seeMedical")}
-            />
-            <ProjectCard
-              category="firewood"
-              title={tProj("firewoodTitle")}
-              body={tProj("firewoodBody")}
-              href="/projects/firewood"
-              cta={tCta("seeWinterAid")}
-            />
+          {/* Stories from the field — three completed projects */}
+          <div className="mt-16">
+            <div className="max-w-[60ch]">
+              <Heading as="h2" size="h2">{tStories("heading")}</Heading>
+              <Text size="body-lg" tone="soft" className="mt-4">
+                {tStories("intro")}
+              </Text>
+            </div>
+
+            <div className="mt-12 space-y-12">
+              {STORIES.map((story, idx) => {
+                const reversed = idx % 2 === 1;
+                return (
+                  <article
+                    key={story.n}
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
+                  >
+                    <figure className={reversed ? "md:col-span-6 md:order-2" : "md:col-span-6"}>
+                      <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+                        <Image
+                          src={story.image}
+                          alt={tStories(`case${story.n}ImageAlt`)}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      {story.beforeImage ? (
+                        <figcaption className="mt-3 grid grid-cols-2 gap-3">
+                          <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+                            <Image
+                              src={story.beforeImage}
+                              alt={tStories(`case${story.n}BeforeAlt`)}
+                              fill
+                              sizes="(max-width: 768px) 50vw, 25vw"
+                              className="object-cover"
+                            />
+                            <span className="absolute left-2 top-2 text-caption font-semibold uppercase tracking-wider bg-surface-inverse/85 text-ink-inverse px-2 py-0.5 rounded-sm">
+                              {tStories(`case${story.n}BeforeBadge`)}
+                            </span>
+                          </div>
+                          <div className="text-caption text-ink-muted self-center">
+                            {tStories(`case${story.n}BeforeCaption`)}
+                          </div>
+                        </figcaption>
+                      ) : null}
+                    </figure>
+
+                    <div className={reversed ? "md:col-span-6 md:order-1" : "md:col-span-6"}>
+                      <Heading as="h3" size="h3">{tStories(`case${story.n}Name`)}</Heading>
+                      <Text size="caption" tone="muted" className="mt-1 uppercase tracking-wider">
+                        {tStories(`case${story.n}Location`)}
+                      </Text>
+                      <Text size="body-lg" tone="soft" className="mt-4">
+                        {tStories(`case${story.n}Body`)}
+                      </Text>
+                      <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-body-sm">
+                        <div>
+                          <dt className="text-caption text-ink-muted uppercase tracking-wider">
+                            {tStories("amountLabel")}
+                          </dt>
+                          <dd className="mt-1 font-display text-h4 text-ink-strong tabular-nums">
+                            {tStories(`case${story.n}Amount`)}
+                          </dd>
+                        </div>
+                        <div>
+                          <dt className="text-caption text-ink-muted uppercase tracking-wider">
+                            {tStories("completedLabel")}
+                          </dt>
+                          <dd className="mt-1 text-body text-ink font-semibold">
+                            {tStories("completedValue")}
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
           </div>
 
           {/* Photo gallery — every real photograph from the field */}
           <div className="mt-16">
-            <Text size="caption" className="text-ink-muted mb-6">From Romania</Text>
-            <PhotoGallery />
-          </div>
-
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 h-12 px-6 rounded-sm bg-surface-raised border border-rule text-ink font-semibold text-body hover:bg-surface-sunken transition-colors duration-[160ms]"
-            >
-              See every project
-              <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
-            </Link>
+            <Text size="caption" className="text-ink-muted mb-6">{tGallery("label")}</Text>
+            <PhotoGallery tGallery={tGallery} />
           </div>
         </Container>
       </Section>
@@ -219,7 +298,7 @@ export default async function Home({
               <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
                 <Image
                   src="/images/team-build-site.jpg"
-                  alt="Members of the board with partners on a Romanian project site."
+                  alt={tTrips("imageAlt")}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -227,28 +306,28 @@ export default async function Home({
               </div>
             </figure>
             <div className="md:col-span-6 order-1 md:order-2">
-              <Heading as="h2" size="h2">Mission trips</Heading>
+              <Heading as="h2" size="h2">{tTrips("heading")}</Heading>
               <Text size="body-lg" tone="soft" className="mt-4">
-                We do not have a 2026 trip scheduled yet. If you would consider going with us when one is set, the door is open. Past trips have meant ten days in rural Romania with a translator, partner pastors, and the families we walk with year-round.
+                {tTrips("body")}
               </Text>
               <ul className="mt-6 space-y-2 text-body text-ink-soft list-disc ml-6">
-                <li>Useful skills: medical, electrical, basic construction, basic Romanian.</li>
-                <li>Typical cost: $1,500 to $2,500 (flight, ground, lodging).</li>
-                <li>Board members pay their own travel separately.</li>
+                <li>{tTrips("skill1")}</li>
+                <li>{tTrips("skill2")}</li>
+                <li>{tTrips("skill3")}</li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/mission-trips"
                   className="inline-flex items-center gap-2 h-12 px-6 rounded-sm bg-accent text-on-accent font-semibold text-body hover:bg-accent-strong transition-colors duration-[160ms]"
                 >
-                  Read about trips
+                  {tTrips("ctaTrips")}
                   <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
                 </Link>
                 <a
-                  href="mailto:gsworldoutreach@gmail.com?subject=2026%20trip%20interest"
+                  href="mailto:gsworldoutreach@gmail.com?subject=Trip%20interest"
                   className="inline-flex items-center gap-2 h-12 px-6 rounded-sm border border-rule text-ink font-semibold text-body hover:bg-surface-sunken transition-colors duration-[160ms]"
                 >
-                  Email the board
+                  {tTrips("ctaEmail")}
                   <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
                 </a>
               </div>
@@ -278,56 +357,91 @@ export default async function Home({
   );
 }
 
-// Photo gallery — every real photograph the org has shared from Romania.
-// Layout: 2-col mobile, 3-col tablet, 4-col desktop. A couple of cells span
-// two columns to break the uniform-grid rhythm without going masonry.
-const GALLERY: { src: string; alt: string; span?: "wide" | "tall" }[] = [
-  { src: "/images/countryside.jpg", alt: "A Carpathian valley in Romania.", span: "wide" },
-  { src: "/images/church-build.jpg", alt: "A small Romanian church with a white cross on its roof, photographed during a construction project." },
-  { src: "/images/classroom-jesus.jpg", alt: "A Sunday-school wall in Romania painted with Jesus and children, captioned in Romanian: Let the little children come to me. Luke 18:16." },
-  { src: "/images/family-1.jpg", alt: "A multigenerational Romanian family at home." },
-  { src: "/images/classroom-children.jpg", alt: "Children in a Romanian Sunday-school classroom with their teacher." },
-  { src: "/images/food-delivery.jpg", alt: "Car trunk loaded with groceries, oil, and supplies for a family." },
-  { src: "/images/goats.jpg", alt: "Two men with a herd of goats in rural Romania." },
-  { src: "/images/team-build-site.jpg", alt: "Four men standing on a project site in Romania.", span: "wide" },
-  { src: "/images/courtyard-1.jpg", alt: "The courtyard of a Romanian home in need of repair." },
-  { src: "/images/courtyard-2.jpg", alt: "A narrow alley between two Romanian houses." },
-  { src: "/images/guest-house.jpg", alt: "Partner guest house in Romania." },
-];
+// Photo gallery — one full-width establishing shot, then a tight grid of
+// smaller thumbnails. Category-specific photos already appear on the cards
+// above, so this gallery only carries images that aren't duplicated there.
+const STORIES = [
+  { n: 1, image: "/images/case-elena-puchia.jpg", beforeImage: "/images/case-elena-before.jpg" as string | null },
+  { n: 2, image: "/images/case-vlascu-family.jpg", beforeImage: null as string | null },
+  { n: 3, image: "/images/case-pojar-house.jpg", beforeImage: null as string | null },
+] as const;
 
-function PhotoGallery() {
+const GRID_PHOTO_KEYS = [
+  { src: "/images/classroom-jesus.jpg", altKey: "classroomJesusAlt" },
+  { src: "/images/classroom-children.jpg", altKey: "classroomChildrenAlt" },
+  { src: "/images/food-delivery.jpg", altKey: "foodDeliveryAlt" },
+  { src: "/images/team-build-site.jpg", altKey: "teamBuildSiteAlt" },
+  { src: "/images/goats.jpg", altKey: "goatsAlt" },
+  { src: "/images/guest-house.jpg", altKey: "guestHouseAlt" },
+  { src: "/images/courtyard-1.jpg", altKey: "courtyard1Alt" },
+  { src: "/images/courtyard-2.jpg", altKey: "courtyard2Alt" },
+] as const;
+
+type GalleryT = (key: string) => string;
+
+function PhotoGallery({ tGallery }: { tGallery: GalleryT }) {
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-      {GALLERY.map((photo) => (
-        <li
-          key={photo.src}
-          className={photo.span === "wide" ? "md:col-span-2" : undefined}
-        >
-          <figure className="relative aspect-[4/3] rounded-md overflow-hidden border border-rule bg-surface-sunken">
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover transition-transform duration-[400ms] hover:scale-[1.03]"
-            />
-          </figure>
-        </li>
-      ))}
-    </ul>
+    <div className="space-y-4">
+      {/* Hero — full-width establishing shot */}
+      <figure className="relative aspect-[21/9] rounded-md overflow-hidden border border-rule bg-surface-sunken">
+        <Image
+          src="/images/countryside.jpg"
+          alt={tGallery("countrysideAlt")}
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </figure>
+
+      {/* Eight smaller thumbnails in a tight grid */}
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {GRID_PHOTO_KEYS.map((photo) => (
+          <li key={photo.src}>
+            <figure className="relative aspect-square rounded-md overflow-hidden border border-rule bg-surface-sunken">
+              <Image
+                src={photo.src}
+                alt={tGallery(photo.altKey)}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-[400ms] hover:scale-[1.03]"
+              />
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-type Category = "housing" | "medical" | "firewood";
+type Category = "word" | "housing" | "groceries" | "medical" | "firewood";
+
+// Maps category → CSS custom-property name used for the top accent stripe.
+// "word" and "groceries" reuse existing tint tokens (mission slate, school
+// moss) so we don't need to add new palette entries.
+const CATEGORY_TINT: Record<Category, string> = {
+  word: "var(--color-mission)",
+  housing: "var(--color-housing)",
+  groceries: "var(--color-school)",
+  medical: "var(--color-medical)",
+  firewood: "var(--color-firewood)",
+};
 
 const CARD_PHOTO: Record<Category, { src: string; alt: string }> = {
+  word: {
+    src: "/images/church-build.jpg",
+    alt: "A small Romanian church with a white cross on its roof, under construction with partners and board members at the new entrance.",
+  },
   housing: {
     src: "/images/courtyard-1.jpg",
     alt: "Courtyard of a Romanian home in need of repair — the kind of project the housing fund supports.",
   },
-  medical: {
+  groceries: {
     src: "/images/food-delivery.jpg",
-    alt: "Car trunk packed with groceries and supplies for a Romanian family.",
+    alt: "Car trunk packed with bread, oil, and other groceries for a Romanian family.",
+  },
+  medical: {
+    src: "/images/guest-house.jpg",
+    alt: "A partner community building in Romania where medical aid is coordinated.",
   },
   firewood: {
     src: "/images/goats.jpg",
@@ -348,7 +462,7 @@ function ProjectCard({
   href: string;
   cta: string;
 }) {
-  const accentColor = `var(--color-${category})`;
+  const accentColor = CATEGORY_TINT[category];
   const photo = CARD_PHOTO[category];
   return (
     <article className="bg-surface-raised border border-rule rounded-md overflow-hidden flex flex-col">

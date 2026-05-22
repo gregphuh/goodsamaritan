@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { rateLimit, redactEmail, sameOriginOnly } from "@/lib/api-guards";
 
 // Stub: validates the payload and accepts it. The board reads
 // gsworldoutreach@gmail.com daily. When the org picks an email transport
@@ -13,6 +14,18 @@ const Body = z.object({
 });
 
 export async function POST(req: Request) {
+  if (!sameOriginOnly(req)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const limit = rateLimit(req);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfter) } },
+    );
+  }
+
   let payload: unknown;
   try {
     payload = await req.json();
@@ -26,10 +39,10 @@ export async function POST(req: Request) {
   }
 
   // TODO: forward to gsworldoutreach@gmail.com via Resend/Postmark/etc.
+  // PII redacted: raw email never enters the log stream.
   console.log("[contact] message received:", {
     subject: parsed.data.subject,
-    name: parsed.data.name,
-    email: parsed.data.email,
+    email: redactEmail(parsed.data.email),
     length: parsed.data.message.length,
   });
 

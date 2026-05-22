@@ -155,7 +155,7 @@ export function buildDonateActionSchema(locale: string) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Project (per /projects/[slug])
+// Project (per /ministries/[slug])
 // ─────────────────────────────────────────────────────────────────────────────
 
 type ProjectSchemaInput = {
@@ -170,7 +170,7 @@ type ProjectSchemaInput = {
 };
 
 export function buildProjectSchema(p: ProjectSchemaInput) {
-  const path = p.locale === "en" ? `/projects/${p.slug}` : `/${p.locale}/projects/${p.slug}`;
+  const path = p.locale === "en" ? `/ministries/${p.slug}` : `/${p.locale}/ministries/${p.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Project",

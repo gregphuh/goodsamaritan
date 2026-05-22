@@ -3,8 +3,8 @@ import { Heading } from "@/components/primitives/Heading";
 
 /**
  * Component map for MDX prose content. Maps native markdown elements to
- * our primitives so /projects/[slug] and /stories/[slug] inherit the same
- * type scale, spacing, and color tokens as the rest of the site.
+ * our primitives so /ministries/[slug] inherits the same type scale,
+ * spacing, and color tokens as the rest of the site.
  */
 export function getMdxComponents(): MDXComponents {
   return {

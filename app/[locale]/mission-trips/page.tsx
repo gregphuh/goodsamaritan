@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/primitives/Container";
 import { Heading } from "@/components/primitives/Heading";
 import { Section } from "@/components/primitives/Section";
@@ -14,28 +13,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "MissionTrips.hero" });
+  const t = await getTranslations({ locale, namespace: "MissionTrips" });
+  const tHero = await getTranslations({ locale, namespace: "MissionTrips.hero" });
   return {
-    title: "Mission trips",
-    description: t("subhead"),
+    title: t("metaTitle"),
+    description: tHero("subhead"),
   };
 }
-
-const TRIP_INCLUDES = [
-  "Flights to and from Bucharest (volunteer pays)",
-  "Ground transport across rural Romanian counties",
-  "Lodging with partner pastors or budget guesthouses",
-  "Meals with the families we visit",
-  "A translator alongside the team at every visit",
-];
-
-const HELPFUL_SKILLS = [
-  "Medical training (nurses, doctors, EMTs)",
-  "Construction or basic electrical",
-  "Basic Romanian (limba română) — not required",
-  "Patience for long drives on rough roads",
-  "Willingness to sit with grief",
-];
 
 export default async function MissionTripsPage({
   params,
@@ -52,9 +36,25 @@ export default async function MissionTripsPage({
   const tCost = await getTranslations("MissionTrips.cost");
   const tApply = await getTranslations("MissionTrips.apply");
 
+  const tripIncludes = [
+    tWhat("item1"),
+    tWhat("item2"),
+    tWhat("item3"),
+    tWhat("item4"),
+    tWhat("item5"),
+  ];
+
+  const helpfulSkills = [
+    tSkills("item1"),
+    tSkills("item2"),
+    tSkills("item3"),
+    tSkills("item4"),
+    tSkills("item5"),
+  ];
+
   return (
     <main id="main" className="flex flex-col">
-      <Section surface="inverse" density="default" className="relative overflow-hidden">
+      <Section surface="inverse" density="spacious" className="relative overflow-hidden">
         <div aria-hidden="true" className="absolute inset-0">
           <Image
             src="/images/countryside.jpg"
@@ -78,19 +78,12 @@ export default async function MissionTripsPage({
           <article>
             <Heading as="h2" size="h2">{tHistory("heading")}</Heading>
             <Text size="body-lg" tone="soft" className="mt-4">{tHistory("body")}</Text>
-            <a
-              href="/annual-reports/2024.pdf"
-              className="mt-6 inline-flex items-center gap-2 text-body font-semibold text-accent-strong hover:underline underline-offset-4"
-            >
-              Read the 2024 annual report (PDF)
-              <ArrowUpRight size={18} weight="regular" aria-hidden="true" />
-            </a>
           </article>
 
           <article>
             <Heading as="h2" size="h2">{tWhat("heading")}</Heading>
             <ul className="mt-4 space-y-2 text-body-lg text-ink-soft list-disc ml-6">
-              {TRIP_INCLUDES.map((line) => (
+              {tripIncludes.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
@@ -99,7 +92,7 @@ export default async function MissionTripsPage({
           <article>
             <Heading as="h2" size="h2">{tSkills("heading")}</Heading>
             <ul className="mt-4 space-y-2 text-body-lg text-ink-soft list-disc ml-6">
-              {HELPFUL_SKILLS.map((line) => (
+              {helpfulSkills.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
@@ -118,7 +111,7 @@ export default async function MissionTripsPage({
           <Text size="body-lg" tone="soft" className="mt-4">{tApply("body")}</Text>
           <div className="mt-8 flex flex-wrap gap-4">
             <LinkButton
-              href="mailto:gsworldoutreach@gmail.com?subject=2026%20trip%20interest"
+              href="mailto:gsworldoutreach@gmail.com?subject=Trip%20interest"
               variant="primary"
               size="lg"
               external
@@ -126,7 +119,7 @@ export default async function MissionTripsPage({
               {tApply("cta")}
             </LinkButton>
             <LinkButton href="/contact" variant="secondary" size="lg">
-              Use the contact form instead
+              {tApply("ctaContactForm")}
             </LinkButton>
           </div>
         </Container>

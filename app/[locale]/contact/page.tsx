@@ -12,10 +12,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Contact.hero" });
+  const t = await getTranslations({ locale, namespace: "Contact" });
+  const tHero = await getTranslations({ locale, namespace: "Contact.hero" });
   return {
-    title: "Contact",
-    description: t("subhead"),
+    title: t("metaTitle"),
+    description: tHero("subhead"),
   };
 }
 
@@ -32,7 +33,7 @@ export default async function ContactPage({
 
   return (
     <main id="main" className="flex flex-col">
-      <Section surface="inverse" density="default">
+      <Section surface="inverse" density="spacious">
         <Container width="content">
           <Text size="caption" tone="accent" className="mb-6">
             {tHero("eyebrow")}
