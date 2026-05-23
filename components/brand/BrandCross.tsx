@@ -22,6 +22,10 @@ export function BrandCross({
   animated?: boolean;
 }) {
   return (
+    // strokeLinecap="butt": the half-circle round caps were rendering as
+    // small visible "dots" at the four cross tips. Bezier curves still
+    // give it the calligraphic hand-drawn feel; the ends just finish
+    // cleanly now instead of bulging.
     <svg
       width={size}
       height={Math.round(size * 1.4)}
@@ -29,7 +33,7 @@ export function BrandCross({
       fill="none"
       stroke="currentColor"
       strokeWidth={strokeWidth}
-      strokeLinecap="round"
+      strokeLinecap="butt"
       strokeLinejoin="round"
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
