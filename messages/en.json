@@ -59,12 +59,12 @@
     },
     "trustBand": {
       "label": "Three things to know about us",
-      "stat1Value": "100%",
-      "stat1Label": "Volunteer",
-      "stat1Detail": "No paid staff, ever. We pay our own travel.",
-      "stat2Value": "98¢",
-      "stat2Label": "Of every dollar to the field",
-      "stat2Detail": "All giving goes to families, missionaries, and projects.",
+      "stat1Value": "98¢",
+      "stat1Label": "Of every dollar to the field",
+      "stat1Detail": "All giving goes to families, missionaries, and projects.",
+      "stat2Value": "100%",
+      "stat2Label": "Volunteer",
+      "stat2Detail": "No paid staff, ever. We pay our own travel.",
       "stat3Value": "1994",
       "stat3Label": "501(c)(3) charity",
       "stat3Detail": "IRS EIN 38-3401779. Tax-deductible. Books open to donors."

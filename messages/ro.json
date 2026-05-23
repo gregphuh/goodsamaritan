@@ -60,12 +60,12 @@
     },
     "trustBand": {
       "label": "Trei lucruri de știut despre noi",
-      "stat1Value": "100%",
-      "stat1Label": "Voluntari",
-      "stat1Detail": "Niciun personal plătit, vreodată. Ne plătim singuri călătoriile.",
-      "stat2Value": "98¢",
-      "stat2Label": "Din fiecare dolar pe teren",
-      "stat2Detail": "Toate donațiile merg la familii, misionari și proiecte.",
+      "stat1Value": "98¢",
+      "stat1Label": "Din fiecare dolar pe teren",
+      "stat1Detail": "Toate donațiile merg la familii, misionari și proiecte.",
+      "stat2Value": "100%",
+      "stat2Label": "Voluntari",
+      "stat2Detail": "Niciun personal plătit, vreodată. Ne plătim singuri călătoriile.",
       "stat3Value": "1994",
       "stat3Label": "Organizație 501(c)(3)",
       "stat3Detail": "IRS EIN 38-3401779. Deductibil fiscal. Conturile, deschise donatorilor."
