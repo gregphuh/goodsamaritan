@@ -45,14 +45,15 @@ export default async function Home({
         <Container width="wide">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start md:items-center">
             {/* Brand identity — cross + motto + verse, anchored left.
-                Everything renders statically at first paint. The cross
-                used to draw in (vertical beam 0.2s, horizontal 1.0s),
-                but once the motto stopped fading in to mask the gap,
-                the staggered two-beam draw read as "two starting points." */}
+                Cross draws in on page load — both beams animate together
+                (same delay, same duration) so the cross reads as one
+                gesture, not two separate starting points. Motto + verse
+                render statically. */}
             <div className="md:col-span-5 flex md:block flex-col items-center md:items-start text-center md:text-left">
               <BrandCross
                 size={170}
                 strokeWidth={5.5}
+                animated
                 className="text-accent"
               />
               <p className="mt-5 font-cursive text-[2.5rem] md:text-[3.125rem] lg:text-[3.75rem] text-accent leading-[1.05] max-w-[14ch] mx-auto md:mx-0">
