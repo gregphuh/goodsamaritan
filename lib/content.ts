@@ -9,7 +9,9 @@ import type { Locale } from "@/i18n/routing";
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const PROJECT_CATEGORIES = [
+  "word",
   "housing",
+  "groceries",
   "medical",
   "firewood",
   "mission",
@@ -25,6 +27,11 @@ const ProjectFrontmatter = z.object({
   summary: z.string().min(20).max(240),
   year: z.number().int().min(1994).max(2030),
   featured: z.boolean().default(false),
+  // Optional manual ordering for the /ministries listing. Lower numbers
+  // render first; ties fall through to year-desc then slug-asc. Lets us
+  // match the home page's canonical order (word, housing, groceries,
+  // medical, firewood) without inferring it from category names.
+  order: z.number().int().default(999),
   families: z.array(z.string()).default([]),
   villages: z.array(z.string()).default([]),
   heroImage: z.string().optional(),
@@ -189,7 +196,10 @@ export async function getAllProjects(locale: Locale): Promise<Project[]> {
   return projects
     .filter((p): p is Project => p !== null)
     .sort((a, b) => {
-      // Featured first, then newer year first, then slug alpha.
+      // Explicit order first (lower = earlier), then featured, then newer
+      // year, then slug alpha. The order field lets us match the home
+      // page's canonical sequence on the listing page.
+      if (a.order !== b.order) return a.order - b.order;
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
       if (a.year !== b.year) return b.year - a.year;
       return a.slug.localeCompare(b.slug);

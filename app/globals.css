@@ -104,6 +104,11 @@
   --color-firewood: var(--gs-rust);
   --color-mission:  var(--gs-slate);
   --color-medical:  var(--gs-berry);
+  /* Two extra category tints alias existing palette tokens so the home
+   * page (5 ministry cards) and the /ministries listing share the same
+   * stripe color per category. */
+  --color-word:      var(--gs-slate);
+  --color-groceries: var(--gs-moss);
 
   /* Transparent + currentColor pass-through */
   --color-transparent: transparent;
